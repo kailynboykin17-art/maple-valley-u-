@@ -68,6 +68,59 @@ The tackle is perfectly legal. Brooke lands on her butt in a puddle. Coach blows
 @add Team_Respect -2
 Coach makes Brooke apologize. It's the fakest apology in recorded history. The team decides you're a snitch.
 *b_done
+@bg soccer_pitch_day
+@show jordan
+After practice, a tall guy in a football hoodie is waiting by the fence. Jordan sees him and her whole voice changes.
+Jordan: (high, soft, sugary) Hiiii, Isiahhh. You came to watch meee?
+The entire team freezes. Jordan Ellis. Intense, stubborn, Philly Jordan Ellis. Using a baby voice.
+@show maya
+Maya: (already recording) I have never been more alive.
+@show brooke
+Brooke: (very calm, gripping her water bottle so hard it crinkles) Who is THAT.
+> [Bold] "That's Isiah. Jordan's new guy. Didn't you know?" -> i1
+> [Sweet] "Brooke... are you okay?" -> i2
+> [Bitchy] "Jealous, Brooke?" -> i3
+> [Good] Mind your business. Stretch. -> i4
+*i1
+@add Drama 2
+@add Brooke_Friendship -1
+Brooke: (smiling, terrifying) No. I did not know. How fun.
+She drinks her entire water bottle without breathing.
+@jump i_done
+*i2
+@add Brooke_Friendship 3
+Brooke: (quietly, still smiling) She used that voice with me. Freshman year. I thought it was only for me.
+For a second, the perfect smile slips.
+@jump i_done
+*i3
+@add Brooke_Friendship -2
+@add Drama 1
+Brooke: Of a FOOTBALL player? Please. I'm thrilled for her. I'm so thrilled I could scream.
+She does not scream. She kicks a ball into the parking lot instead.
+@jump i_done
+*i4
+@add Simone_Friendship 1
+@show simone
+Simone: (stretching next to you) Smart. This one's gonna get loud.
+*i_done
+@show jordan
+Later, in the locker room, Jordan sits next to you and drops her face into her hands.
+Jordan: (normal voice) Okay. Don't judge me. I like him. I really like him. And I also... still like Brooke. Like, a lot. Both. At the same time. Is that insane?
+> [Sweet] "It's not insane. Feelings don't take turns." -> j1
+> [Bold] "Then you have to be honest with both of them." -> j2
+> [Bitchy] "It's a little insane. But it's very you." -> j3
+*j1
+@add Jordan_Friendship 3
+Jordan: (exhaling) ...Okay. Okay. Thank you. Nobody's said that to me.
+@jump j_done
+*j2
+@add Jordan_Friendship 2
+Jordan: Honest. Right. Me. Honest. With Brooke. (pause) I'd rather run suicides.
+@jump j_done
+*j3
+@add Jordan_Friendship 2
+Jordan: (laughing despite herself) Yeah. It's extremely me.
+*j_done
 @show riley
 After practice, Riley grabs your arm.
 Riley: I need a favor. Cover for me tonight. If Nia asks, I'm at your place studying.

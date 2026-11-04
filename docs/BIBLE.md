@@ -57,3 +57,4 @@ Romance canon: Jayden dates Suki but he and Paris (childhood friends) have mutua
 London: in recovery from an eating disorder since age 14 (with the twins' early birth, it's why Frank & Vega are so protective). Handle with care: recovery-focused, no numbers/behaviors, never played for drama. Support: weekly therapist (Dr. Ames), Maya Ellis check-ins.
 Tone rule: nobody on either team is evil. Cassie is a sweet gossip, not a villain. Messy, not mean.
 Character Stories: play as anyone (romfs/arcs.txt, scripts in romfs/script/arcs/). 31 arcs written (everyone but the assistant coaches).
+Jordan is seeing Isiah (football); uses a baby/soft-girl voice with him; Brooke is jealous; Jordan genuinely likes both.
