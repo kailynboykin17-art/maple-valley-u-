@@ -1,0 +1,87 @@
+@title EPISODE 01 • FIRST IMPRESSIONS
+@bg track_stadium_morning
+Six a.m. Maple Valley University. The track is still wet, the sky is pink, and London Sterling is already annoyed.
+@show london
+Holloway: Sterling. You're late.
+London: I'm four minutes early to the part of practice that matters.
+Holloway: Cute. Two extra laps. Want to try for three?
+> [Bitchy] "Put it on my dad's tab." -> c1_bitchy
+> [Sweet] "Sorry, Coach. Won't happen again." -> c1_sweet
+> [Bold] Start running before she finishes. -> c1_bold
+> [Bad] "Traffic was crazy." (It wasn't.) -> c1_bad
+*c1_bitchy
+@add Coach_Respect -2
+@add London_Confidence 1
+Holloway: Your dad's tab doesn't cover my patience. Three laps.
+London: Worth it.
+@jump c1_done
+*c1_sweet
+@add Coach_Respect 2
+Holloway: ...Huh. Okay. Two laps, and I'm writing down the date.
+@jump c1_done
+*c1_bold
+@add Coach_Respect 1
+@add London_Confidence 1
+Holloway: (calling after her) That still counts as talking back, Sterling!
+@jump c1_done
+*c1_bad
+@add Coach_Respect -1
+Holloway: You live eleven minutes away in a penthouse with a driver. Three laps.
+*c1_done
+@show diggy
+Halfway through lap two, a sprinter jogs past going the wrong direction. Grey hoodie. Annoying smile.
+Diggy: Daddy's donation don't cover cardio, huh?
+> [Bitchy] "Did I ask you something?" -> c2_bitchy
+> [Bold] "Worry about your 400, sprinter." -> c2_bold
+> [Sweet] Laugh. "Okay, that was a little funny." -> c2_sweet
+> [Good] Ignore him and keep your pace. -> c2_good
+*c2_bitchy
+@add Diggy_Trust -1
+Diggy: Nah. But you answered anyway.
+London: Keep running into people, you'll be a 400 guy with a 600 time.
+Diggy: Ooh. You know my event. I'm flattered.
+@jump c2_done
+*c2_bold
+@add Diggy_Affection 2
+Diggy: Oh, she knows my event.
+London: I know everybody's event. It's called paying attention. Try it.
+@jump c2_done
+*c2_sweet
+@add Diggy_Affection 1
+@add Diggy_Trust 1
+Diggy: See? She human.
+London: Barely. Don't tell anyone.
+@jump c2_done
+*c2_good
+@add London_Confidence 1
+London runs past him without a glance. He laughs anyway. Somehow that's worse.
+*c2_done
+@bg locker_room
+@show paris
+Paris: Can you please not start a war on day one?
+London: He started it.
+Paris: You started it in your head three weeks ago when you saw his name on the roster.
+London: I don't even know his name.
+Paris: Duncan Williams. Everybody calls him Diggy. You said it twice in the car.
+> [Bitchy] "Mind your business, Paris." -> c3_bitchy
+> [Sweet] "...Okay, maybe I said it once." -> c3_sweet
+> [Bold] "Because he's annoying. Twice." -> c3_bold
+*c3_bitchy
+@add Paris_Friendship -2
+Paris goes quiet and ties her spikes a little too tight. London feels it, and doesn't apologize. Yet.
+@jump c3_done
+*c3_sweet
+@add Paris_Friendship 2
+Paris: Mm-hm. I'm telling Mom.
+London: You will not.
+@jump c3_done
+*c3_bold
+@add Paris_Friendship 1
+Paris: Annoying people don't usually get their name said twice.
+*c3_done
+@show cassie
+Cassie: (sliding in) Okay, who's annoying? Because I have a list and I'm accepting additions.
+London: Nobody.
+Cassie: Nobody is a sprinter, six-one, curly hair, works at the campus rec desk on Thursdays?
+Paris covers her mouth. London stares at the ceiling and asks God for patience.
+@load s1/ep02.mvs

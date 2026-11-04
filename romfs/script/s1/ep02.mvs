@@ -1,0 +1,54 @@
+@title EPISODE 02 • THE PENTHOUSE RULE
+@bg penthouse_evening
+The Sterling penthouse has a view of the whole valley, a chef's kitchen nobody uses, and one rule.
+@show paris
+Paris: Mom called. Twice. She wants to know if we're "focused."
+London: That's code for boys.
+Paris: It's code for boys.
+London's phone buzzes. Unknown number. "Coach says we're partnered for the community 5K fundraiser. — D."
+> [Bitchy] Reply: "Lose my number." -> a_bitchy
+> [Sweet] Reply: "Fine. Don't be late." -> a_sweet
+> [Bold] Reply: "Who gave you my number?" -> a_bold
+> [Bad] Leave him on read for six hours. -> a_bad
+*a_bitchy
+@add Diggy_Affection -1
+D: Can't. Coach made a group chat. You're in it too, Sterling.
+@jump a_done
+*a_sweet
+@add Diggy_Affection 2
+D: Says the girl who was late.
+London: Four minutes EARLY.
+D: lol ok
+@jump a_done
+*a_bold
+@add Diggy_Trust 1
+D: Cassie. She charged me a smoothie.
+London: She undersold me.
+@jump a_done
+*a_bad
+@add Diggy_Trust -1
+At 2:14 a.m. she finally replies: "k". She hears nothing back. It bothers her more than it should.
+*a_done
+@show paris
+Paris: Who are you smiling at?
+London: I'm not smiling. My face is relaxed.
+Paris: Your face has never been relaxed in its life.
+Paris's own phone lights up. Jayden. A heart emoji. She flips it face-down fast.
+> [Good] Pretend you didn't see it. -> b_good
+> [Bitchy] "Jayden? Mom's best friend's SON? Groundbreaking." -> b_bitchy
+> [Sweet] "...You like him, huh?" -> b_sweet
+*b_good
+@add Paris_Friendship 2
+Paris notices you noticing, and noticing you not saying anything. She squeezes your hand on the way to the kitchen.
+@jump b_done
+*b_bitchy
+@add Paris_Friendship -2
+Paris: At least mine has a mom Mom trusts.
+That one lands. Neither of them says goodnight.
+@jump b_done
+*b_sweet
+@add Paris_Friendship 2
+Paris: Don't say it out loud. If you say it out loud it's real.
+London: It's real, Paris.
+*b_done
+@load s1/ep03.mvs

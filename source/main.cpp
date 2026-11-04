@@ -1,0 +1,264 @@
+// Maple Valley U — 3DS visual novel engine
+// Top screen: background, character portrait, gold-trimmed dialogue box (like the mockup).
+// Bottom screen: 2x2 choice buttons with tone tags (Sweet / Bitchy / Good / Bad / Bold),
+// relationship meters, and the title menu. Autosaves to sdmc:/3ds/maple-valley-u.sav
+#include <3ds.h>
+#include <citro2d.h>
+#include <map>
+#include <string>
+#include <vector>
+#include <fstream>
+#include <sstream>
+#include <cstring>
+
+struct Line { std::string op, a, b; };
+struct Choice { std::string tone, text, label; };
+
+static std::vector<Line> script;
+static std::map<std::string, size_t> labels;
+static std::map<std::string, int> vars;
+static std::string curFile, epTitle, bgName, portrait;
+static size_t pc = 0;
+
+// ---------- textures ----------
+struct Img { C3D_Tex tex; Tex3DS_SubTexture sub; C2D_Image img; bool ok = false; };
+static std::map<std::string, Img*> texCache;
+
+static Img* loadTex(const std::string& path, int w, int h, int W, int H) {
+    auto it = texCache.find(path);
+    if (it != texCache.end()) return it->second;
+    Img* im = new Img();
+    FILE* f = fopen(path.c_str(), "rb");
+    if (f && C3D_TexInit(&im->tex, W, H, GPU_RGBA8)) {
+        fread(im->tex.data, 1, W * H * 4, f);
+        GSPGPU_FlushDataCache(im->tex.data, W * H * 4);
+        C3D_TexSetFilter(&im->tex, GPU_LINEAR, GPU_LINEAR);
+        im->sub = { (u16)w, (u16)h, 0.0f, 1.0f, (float)w / W, 1.0f - (float)h / H };
+        im->img = { &im->tex, &im->sub };
+        im->ok = true;
+    }
+    if (f) fclose(f);
+    texCache[path] = im;
+    return im;
+}
+
+// ---------- script ----------
+static void load(const std::string& file) {
+    script.clear(); labels.clear(); pc = 0; curFile = file; portrait.clear();
+    std::ifstream f("romfs:/script/" + file);
+    std::string s;
+    while (std::getline(f, s)) {
+        while (!s.empty() && (s.back() == '\r' || s.back() == ' ')) s.pop_back();
+        if (s.empty() || s[0] == '#') continue;
+        if (s[0] == '*') { labels[s.substr(1)] = script.size(); continue; }
+        Line l;
+        if (s.rfind("> ", 0) == 0) {
+            size_t ar = s.rfind("->");
+            l = { "choice", s.substr(2, ar - 3), s.substr(ar + 3) };
+        } else if (s[0] == '@') {
+            std::istringstream ss(s.substr(1)); ss >> l.op >> l.a; std::getline(ss, l.b);
+            if (!l.b.empty() && l.b[0] == ' ') l.b.erase(0, 1);
+        } else {
+            size_t c = s.find(": ");
+            if (c != std::string::npos && c < 24) l = { "say", s.substr(0, c), s.substr(c + 2) };
+            else l = { "say", "", s };
+        }
+        script.push_back(l);
+    }
+}
+
+static void saveGame() {
+    FILE* f = fopen("sdmc:/3ds/maple-valley-u.sav", "w");
+    if (!f) return;
+    fprintf(f, "%s\n%u\n", curFile.c_str(), (unsigned)pc);
+    for (auto& v : vars) fprintf(f, "%s %d\n", v.first.c_str(), v.second);
+    fclose(f);
+}
+static bool loadGame() {
+    std::ifstream f("sdmc:/3ds/maple-valley-u.sav");
+    std::string file; size_t p;
+    if (!(f >> file >> p)) return false;
+    load(file); pc = p > 0 ? p - 1 : 0;
+    vars.clear(); std::string k; int v;
+    while (f >> k >> v) vars[k] = v;
+    return true;
+}
+
+// ---------- state ----------
+enum Mode { TITLE, PLAY };
+static Mode mode = TITLE;
+static std::string speaker, text;
+static std::vector<Choice> choices;
+static int sel = 0, titleSel = 0;
+static size_t shown = 0; // typewriter
+
+static void advance() {
+    choices.clear(); shown = 0;
+    while (pc < script.size()) {
+        Line l = script[pc++];
+        if (l.op == "say") { speaker = l.a; text = l.b; return; }
+        if (l.op == "choice") {
+            Choice c; c.label = l.b; c.text = l.a;
+            if (!l.a.empty() && l.a[0] == '[') { size_t e = l.a.find(']'); c.tone = l.a.substr(1, e - 1); c.text = l.a.substr(e + 2); }
+            choices.push_back(c);
+            if (pc >= script.size() || script[pc].op != "choice") { sel = 0; saveGame(); return; }
+            continue;
+        }
+        if (l.op == "title") epTitle = l.a + (l.b.empty() ? "" : " " + l.b);
+        else if (l.op == "bg") bgName = l.a;
+        else if (l.op == "show") portrait = l.a;
+        else if (l.op == "hide") portrait.clear();
+        else if (l.op == "add") vars[l.a] += atoi(l.b.c_str());
+        else if (l.op == "jump") pc = labels[l.a];
+        else if (l.op == "if") { std::istringstream ss(l.b); int v; std::string t; ss >> v >> t; if (vars[l.a] >= v) pc = labels[t]; }
+        else if (l.op == "ifnot") { std::istringstream ss(l.b); int v; std::string t; ss >> v >> t; if (vars[l.a] < v) pc = labels[t]; }
+        else if (l.op == "load") { load(l.a); saveGame(); }
+    }
+    speaker = ""; text = "To be continued...";
+}
+
+static void startFile(const std::string& f) { vars.clear(); load(f); advance(); mode = PLAY; }
+
+// ---------- drawing ----------
+static C2D_TextBuf buf;
+static u32 C(u8 r, u8 g, u8 b, u8 a = 255) { return C2D_Color32(r, g, b, a); }
+
+static void txt(const std::string& s, float x, float y, float sc, u32 col, float wrap = 0, bool center = false) {
+    C2D_Text t; C2D_TextParse(&t, buf, s.c_str()); C2D_TextOptimize(&t);
+    u32 fl = C2D_WithColor | (wrap > 0 ? C2D_WordWrap : 0) | (center ? C2D_AlignCenter : 0);
+    C2D_DrawText(&t, fl, x, y, 0.5f, sc, sc, col, wrap);
+}
+static void frame(float x, float y, float w, float h, u32 fill, u32 line) {
+    C2D_DrawRectSolid(x, y, 0, w, h, line);
+    C2D_DrawRectSolid(x + 1, y + 1, 0, w - 2, h - 2, fill);
+}
+static u32 toneColor(const std::string& t) {
+    if (t == "Sweet") return C(0xF2, 0x9C, 0xC0);
+    if (t == "Bitchy") return C(0xD9, 0x4A, 0x5A);
+    if (t == "Good") return C(0x8F, 0xD1, 0x9E);
+    if (t == "Bad") return C(0x9A, 0x6B, 0xD8);
+    if (t == "Bold") return C(0xE8, 0xC2, 0x7A);
+    return C(0xCC, 0xCC, 0xCC);
+}
+// placeholder backgrounds: warm gradient per location until real bg art is added
+static void drawBg() {
+    u32 a = C(0x3A, 0x2A, 0x24), b = C(0x12, 0x10, 0x14);
+    if (bgName.find("track") != std::string::npos || bgName.find("field") != std::string::npos) { a = C(0x5C, 0x3A, 0x2E); b = C(0x1E, 0x2A, 0x22); }
+    else if (bgName.find("night") != std::string::npos || bgName.find("party") != std::string::npos) { a = C(0x2A, 0x1C, 0x3A); b = C(0x0A, 0x08, 0x12); }
+    else if (bgName.find("penthouse") != std::string::npos) { a = C(0x6A, 0x50, 0x3C); b = C(0x24, 0x1A, 0x16); }
+    else if (bgName.find("soccer") != std::string::npos || bgName.find("pitch") != std::string::npos) { a = C(0x1C, 0x3A, 0x2A); b = C(0x08, 0x10, 0x0C); }
+    C2D_DrawRectangle(0, 0, 0, 400, 240, a, a, b, b);
+    std::string loc = bgName; for (auto& ch : loc) { if (ch == '_') ch = ' '; else ch = toupper(ch); }
+    txt(loc, 12, 128, 0.38f, C(255, 255, 255, 70));
+}
+
+int main() {
+    romfsInit(); gfxInitDefault();
+    C3D_Init(C3D_DEFAULT_CMDBUF_SIZE); C2D_Init(C2D_DEFAULT_MAX_OBJECTS); C2D_Prepare();
+    C3D_RenderTarget* top = C2D_CreateScreenTarget(GFX_TOP, GFX_LEFT);
+    C3D_RenderTarget* bot = C2D_CreateScreenTarget(GFX_BOTTOM, GFX_LEFT);
+    buf = C2D_TextBufNew(8192);
+    const u32 gold = C(0xD8, 0xB8, 0x7A), cream = C(0xF6, 0xEC, 0xE1), pink = C(0xF0, 0x7E, 0xB0),
+              panel = C(0x14, 0x0E, 0x0C, 0xD8), green = C(0x0E, 0x3B, 0x26);
+    Img* logo = loadTex("romfs:/gfx/logo.tex", 64, 64, 64, 64);
+    Img* poster = loadTex("romfs:/gfx/title.tex", 400, 225, 512, 256);
+    std::ifstream probe("sdmc:/3ds/maple-valley-u.sav"); bool hasSave = probe.good(); probe.close();
+    const char* menu[] = { "Continue", "Season 1: One Pace at a Time", "Season 2: MVU Women's Soccer" };
+
+    while (aptMainLoop()) {
+        hidScanInput(); u32 k = hidKeysDown(); touchPosition tp; hidTouchRead(&tp);
+        if (k & KEY_START) { if (mode == PLAY) saveGame(); break; }
+
+        if (mode == TITLE) {
+            if (k & KEY_DOWN) titleSel = (titleSel + 1) % 3;
+            if (k & KEY_UP) titleSel = (titleSel + 2) % 3;
+            if (k & KEY_TOUCH) for (int i = 0; i < 3; i++) if (tp.py >= 70 + i * 50 && tp.py < 110 + i * 50) { titleSel = i; k |= KEY_A; }
+            if (k & KEY_A) {
+                if (titleSel == 0 && hasSave && loadGame()) { advance(); mode = PLAY; }
+                else if (titleSel == 1) startFile("s1/ep01.mvs");
+                else if (titleSel == 2) startFile("s2/ep01.mvs");
+            }
+        } else {
+            if (shown < text.size()) shown += 2;
+            if (!choices.empty()) {
+                int n = choices.size();
+                if (k & KEY_RIGHT) sel = (sel + 1) % n;
+                if (k & KEY_LEFT) sel = (sel + n - 1) % n;
+                if (k & KEY_DOWN) sel = (sel + 2) % n;
+                if (k & KEY_UP) sel = (sel + n - 2 + n) % n;
+                if (k & KEY_TOUCH) for (int i = 0; i < n; i++) {
+                    int x = 8 + (i % 2) * 156, y = 56 + (i / 2) * 76;
+                    if (tp.px >= x && tp.px < x + 148 && tp.py >= y && tp.py < y + 68) { sel = i; k |= KEY_A; }
+                }
+                if ((k & KEY_A) && shown >= text.size()) {
+                    if (!choices[sel].tone.empty()) vars["Tone_" + choices[sel].tone]++;
+                    pc = labels[choices[sel].label]; advance();
+                } else if (k & KEY_A) shown = text.size();
+            } else if (k & (KEY_A | KEY_TOUCH)) {
+                if (shown < text.size()) shown = text.size(); else advance();
+            }
+            if (k & KEY_B) { saveGame(); mode = TITLE; hasSave = true; }
+        }
+
+        C2D_TextBufClear(buf);
+        C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
+        // ---------- TOP ----------
+        C2D_TargetClear(top, C(0, 0, 0)); C2D_SceneBegin(top);
+        if (mode == TITLE) {
+            C2D_DrawRectangle(0, 0, 0, 400, 240, green, green, C(0x06, 0x14, 0x0C), C(0x06, 0x14, 0x0C));
+            if (poster->ok) C2D_DrawImageAt(poster->img, 0, 8, 0.5f, nullptr, 1.0f, 1.0f);
+            else if (logo->ok) C2D_DrawImageAt(logo->img, 168, 34, 0.5f, nullptr, 1.0f, 1.0f);
+            txt("Touch or press A", 200, 205, 0.4f, C(255, 255, 255, 140), 0, true);
+        } else {
+            drawBg();
+            if (!portrait.empty()) {
+                Img* p = loadTex("romfs:/gfx/char/" + portrait + ".tex", 192, 256, 256, 256);
+                if (p->ok) C2D_DrawImageAt(p->img, 212, 22, 0.5f, nullptr, 0.82f, 0.82f);
+            }
+            // header bar
+            C2D_DrawRectSolid(0, 0, 0, 400, 20, C(0x0C, 0x08, 0x08, 0xC8));
+            C2D_DrawRectSolid(0, 20, 0, 400, 1, gold);
+            txt("MAPLE VALLEY UNIVERSITY", 8, 4, 0.40f, cream);
+            txt(epTitle, 392 - epTitle.size() * 5.0f, 4, 0.40f, gold);
+            // dialogue box
+            frame(8, 150, 384, 84, panel, gold);
+            if (!speaker.empty()) { std::string up = speaker; for (auto& ch : up) ch = toupper(ch); txt(up, 18, 154, 0.55f, pink); }
+            txt(text.substr(0, shown), 18, speaker.empty() ? 160 : 174, 0.48f, cream, 364);
+            if (shown >= text.size() && choices.empty()) txt("v", 378, 220, 0.4f, gold);
+        }
+        // ---------- BOTTOM ----------
+        C2D_TargetClear(bot, C(0x14, 0x0E, 0x0C)); C2D_SceneBegin(bot);
+        if (mode == TITLE) {
+            txt("MAPLE VALLEY U", 160, 22, 0.7f, gold, 0, true);
+            for (int i = 0; i < 3; i++) {
+                bool off = (i == 0 && !hasSave);
+                frame(20, 70 + i * 50, 280, 40, i == titleSel ? C(0x3A, 0x2A, 0x20) : C(0x1E, 0x16, 0x12), gold);
+                txt(menu[i], 160, 82 + i * 50, 0.48f, off ? C(120, 110, 100) : cream, 0, true);
+            }
+        } else if (!choices.empty()) {
+            txt("What does she do?", 160, 20, 0.5f, gold, 0, true);
+            for (size_t i = 0; i < choices.size() && i < 4; i++) {
+                int x = 8 + (i % 2) * 156, y = 56 + (i / 2) * 76;
+                frame(x, y, 148, 68, (int)i == sel ? C(0x3A, 0x2A, 0x20) : C(0x1E, 0x16, 0x12), (int)i == sel ? gold : C(0x6A, 0x58, 0x40));
+                if (!choices[i].tone.empty()) txt(choices[i].tone, x + 6, y + 4, 0.38f, toneColor(choices[i].tone));
+                txt(choices[i].text, x + 6, y + 20, 0.42f, cream, 136);
+            }
+        } else {
+            txt("RELATIONSHIPS", 160, 10, 0.5f, gold, 0, true);
+            int row = 0;
+            for (auto& v : vars) {
+                if (v.first.rfind("Tone_", 0) == 0 || row > 8) continue;
+                txt(v.first, 14, 34 + row * 21, 0.4f, cream);
+                int w = v.second * 8; if (w > 140) w = 140; if (w < -140) w = -140;
+                C2D_DrawRectSolid(170, 38 + row * 21, 0, 140, 8, C(0x30, 0x24, 0x1E));
+                if (w > 0) C2D_DrawRectSolid(170, 38 + row * 21, 0, w, 8, pink);
+                else if (w < 0) C2D_DrawRectSolid(170, 38 + row * 21, 0, -w, 8, C(0x90, 0x40, 0x48));
+                row++;
+            }
+            txt("A: next   B: save & menu   START: quit", 160, 224, 0.38f, C(200, 190, 170), 0, true);
+        }
+        C3D_FrameEnd(0);
+    }
+    C2D_TextBufDelete(buf); C2D_Fini(); C3D_Fini(); gfxExit(); romfsExit();
+    return 0;
+}

@@ -1,0 +1,54 @@
+@title EPISODE 05 • THE FUNDRAISER 5K
+@bg downtown_morning
+@show diggy
+Charity 5K downtown. London and Diggy in matching purple bibs. Little kids keep asking if they're married.
+Diggy: Kid number four. You want to answer this one?
+London: Tell her we're colleagues.
+Diggy: She's six, Sterling.
+Mile two. A little boy trips and skins both knees. His mom is way back in the crowd.
+> [Sweet] Stop and help him, race be damned. -> k_sweet
+> [Bold] "Diggy, carry him. I'll find his mom." -> k_bold
+> [Bad] Keep running — somebody else will stop. -> k_bad
+*k_sweet
+@add Diggy_Affection 3
+@add Diggy_Trust 2
+You kneel in the street in your $300 running shoes. Diggy watches you like he's seeing you for the first time.
+Diggy: Huh.
+London: What?
+Diggy: Nothing. Just... huh.
+@jump k_done
+*k_bold
+@add Diggy_Trust 2
+@add Team_Reputation 2
+Teamwork, perfectly. Two minutes later the kid is laughing on Diggy's shoulders. You finish together, last, and somehow it's the best race all year.
+@jump k_done
+*k_bad
+@add Diggy_Affection -2
+@add Diggy_Trust -2
+You look back once. Diggy stopped. Of course he did. At the finish line he doesn't say a word to you, and that's louder than anything.
+*k_done
+@bg diner_night
+@show diggy
+After: a 24-hour diner, because Diggy says real runners eat pancakes after races.
+Diggy: Can I ask you something real?
+London: Depends how real.
+Diggy: Why you act like you hate everybody?
+> [Sweet] "...Because if I like people, they can leave." -> d_sweet
+> [Bitchy] "I don't act. I'm committed to the role." -> d_bitchy
+> [Bold] "Why do YOU act like nothing bothers you?" -> d_bold
+*d_sweet
+@add Diggy_Trust 3
+@add Diggy_Affection 2
+@add London_Confidence -1
+He doesn't joke. He doesn't push. He just slides the syrup over and says, "I'm not going anywhere. Somebody gotta beat you at the 300."
+@jump d_done
+*d_bitchy
+@add Diggy_Affection 1
+Diggy: (laughing) See, that's the problem. You're funny. Hard to stay mad at funny.
+@jump d_done
+*d_bold
+@add Diggy_Trust 2
+Diggy: (quiet) 'Cause my mama works doubles. Things bothering me don't pay the light bill.
+For once, London doesn't have a comeback.
+*d_done
+@load s1/ep06.mvs

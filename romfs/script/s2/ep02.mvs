@@ -1,0 +1,32 @@
+@title S2 EP 02 • GOSSIP HARDER
+@bg party_house_night
+@show riley
+Riley: First party of the season! House rules: no crying before midnight, no texting exes, no—
+@show nia
+Nia: Riley, you've broken every one of those rules already.
+Riley: I'm setting an example of what not to do. It's leadership.
+Across the room, Nicole and Valentina are talking to the same baseball player. Neither is smiling anymore.
+> [Bold] Walk over and pull Valentina away. -> p_bold
+> [Sweet] Get Nicole a drink and change the subject. -> p_sweet
+> [Bad] Record it. Maya will pay. -> p_bad
+> [Good] Text Simone: "Code red, kitchen." -> p_good
+*p_bold
+@add Valentina_Friendship 1
+@add Nicole_Friendship 1
+Valentina: Ugh, FINE. But only because your outfit is cute.
+@jump p_done
+*p_sweet
+@add Nicole_Friendship 2
+Nicole: (exhaling) Thank you. I was about to say something I'd regret on a Monday.
+@jump p_done
+*p_bad
+@add Drama 2
+@add Maya_Friendship 2
+@add Nicole_Friendship -2
+By morning, three teams have seen it. Nicole knows exactly who filmed it.
+@jump p_done
+*p_good
+@add Simone_Friendship 2
+Simone arrives like a bouncer with a ponytail. Crisis averted. For now.
+*p_done
+@load s2/ep03.mvs

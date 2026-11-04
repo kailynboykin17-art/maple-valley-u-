@@ -1,0 +1,52 @@
+@title EPISODE 04 • SUKI'S SECRET
+@bg dorm_hallway_night
+@show suki
+Suki is crying in the stairwell. Suki never cries. Suki laughs too loud and borrows your lip gloss and never gives it back.
+Suki: Don't. Don't be nice to me. I can't handle you being nice to me.
+> [Sweet] Sit down next to her without a word. -> s_sweet
+> [Bitchy] "Okay. Then I'll be mean. What did you do?" -> s_bitchy
+> [Good] "Do you want me to get Jamal?" -> s_good
+*s_sweet
+@add Suki_Friendship 3
+She leans on your shoulder. Five minutes. Ten. Then, quiet:
+@jump s_done
+*s_bitchy
+@add Suki_Friendship 1
+Suki laughs, wet and broken. "See, that's why I like you."
+@jump s_done
+*s_good
+@add Suki_Friendship -1
+Suki: NO. God, no. Not Jamal. Please.
+*s_done
+Suki: I kissed somebody at the Kappa party. Somebody who isn't Jamal.
+London: Who?
+Suki: ...Jayden.
+London's stomach drops. Paris's Jayden. Mom's best friend's son. Heart-emoji Jayden.
+> [Bold] "You have to tell Jamal. Tonight." -> t_bold
+> [Bad] "Then nobody ever finds out." -> t_bad
+> [Bitchy] "You kissed PARIS'S Jayden?" -> t_bitchy
+> [Sweet] "Okay. We'll figure it out. Together." -> t_sweet
+*t_bold
+@add Suki_Friendship -1
+@add Team_Reputation 1
+Suki: You don't get it. Your life is perfect. Mine is held together with tape.
+@jump t_done
+*t_bad
+@add Suki_Friendship 2
+@add Secret_Kept 1
+@add Paris_Friendship -1
+You promise. It feels like swallowing a stone.
+@jump t_done
+*t_bitchy
+@add Suki_Friendship -2
+Suki: They're not even together! ...Are they?
+London doesn't answer. That's the answer.
+@jump t_done
+*t_sweet
+@add Suki_Friendship 2
+Suki: I don't deserve you.
+London: Correct. But you got me anyway.
+*t_done
+@hide
+Down the hall, a door clicks shut. Light under it. Cassie's room.
+@load s1/ep05.mvs

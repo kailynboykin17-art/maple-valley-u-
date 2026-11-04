@@ -1,0 +1,57 @@
+@title EPISODE 03 • PARTNER DRILLS
+@bg track_stadium_day
+@show diggy
+Holloway pairs distance with sprints for "cross-training." Everyone knows it's punishment.
+Diggy: You pace like you got somewhere to be.
+London: I do. Ahead of you.
+Diggy: In a 200? Sterling, I'd lap you twice and come back for my water.
+> [Bold] "Race me. 300 meters. Middle ground." -> r_bold
+> [Sweet] "Then teach me your start." -> r_sweet
+> [Bitchy] "Talk is cheap. Like your spikes." -> r_bitchy
+> [Good] "Let's just do the drill." -> r_good
+*r_bold
+@add Diggy_Affection 2
+@add Team_Reputation 1
+The whole team stops to watch. Diggy wins by a step. London makes him earn it.
+Diggy: (breathing hard) Okay. Okay. You're fast.
+London: I know.
+@jump r_done
+*r_sweet
+@add Diggy_Affection 1
+@add Diggy_Trust 2
+He shows her his block start. Hands close, voice low, very serious. For four seconds she forgets to be mean.
+@jump r_done
+*r_bitchy
+@add Diggy_Trust -2
+@add Team_Reputation -1
+His jaw goes tight. Maggie whistles low from the shot put ring.
+Diggy: They're my brother's old spikes. But go off.
+London feels about two inches tall and refuses to show it.
+@jump r_done
+*r_good
+@add Coach_Respect 2
+Holloway: Look at that. Sterling following directions. Somebody take a picture.
+*r_done
+@bg cafeteria
+@show maggie
+Maggie: So. You and the sprinter.
+London: There is no "me and the sprinter."
+Maggie: There's a whole team group chat about it. Cassie made a poll.
+London: What are the options?
+Maggie: "Hate," "secretly in love," and "fighting at Regionals."
+> [Bitchy] "Tell Cassie to get a hobby." -> m_bitchy
+> [Sweet] "...What's winning?" -> m_sweet
+> [Good] "Mute it. I'm here to run." -> m_good
+*m_bitchy
+@add Team_Reputation -1
+Maggie: She HAS a hobby. It's you.
+@jump m_done
+*m_sweet
+@add Team_Reputation 1
+Maggie: "Secretly in love," by like eleven votes. Shane voted twice.
+@jump m_done
+*m_good
+@add London_Confidence 1
+Maggie: Respect. I'm still checking it though.
+*m_done
+@load s1/ep04.mvs
