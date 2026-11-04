@@ -1,0 +1,63 @@
+@title STORY • ALANA: 10K PACE
+@bg dorm_room_morning
+You're Alana Brooks. 5:30 a.m. Your alarm, your backup alarm, and your backup-backup alarm all go off at once. Cassie throws a pillow at all three.
+Cassie: Some of us dream, Alana.
+Alana: Some of us PR.
+Your planner is open on the desk. Every hour color-coded. Blue for training. Green for class. There is no color for "fun." You never needed one.
+Your phone buzzes. Cam Hayes: "eastbrook's indoor track has better lights. just saying."
+> [Bold] "your splits don't." -> a1
+> [Sweet] Smile at your phone. Don't answer yet. -> a2
+> [Good] Mute him. You have intervals. -> a3
+*a1
+@add Alana_Cam 2
+Cam: "ouch. accurate. coffee after your meet saturday?"
+You stare at "coffee" for longer than it takes to run 400 meters.
+@jump a_done
+*a2
+@add Alana_Cam 1
+Cassie: (from under the blanket) You're SMILING. At your PHONE. Somebody call 911, Alana's possessed.
+@jump a_done
+*a3
+@add Discipline 2
+Intervals go perfectly. You think about the text on every recovery jog. That part was not in the planner.
+*a_done
+@bg track_stadium_day
+@show coachbrooks
+Coach Brooks: Alana. Everyone keeps asking if we're related.
+Alana: I know. I tell them we're not.
+Coach Brooks: I tell them we are. It's funnier. (she hands you a coffee) Can I say something, as your coach?
+Alana: Is it about my pacing?
+Coach Brooks: It's about your face. You race like you're scared to lose control. Sometimes the best races happen when you stop holding the rope so tight.
+> [Good] "Control is how I win." -> b1
+> [Sweet] "...I don't know how to let go." -> b2
+> [Bold] "Then watch me let go Saturday." -> b3
+*b1
+Coach Brooks: It is. Until it isn't. Think about it.
+@jump b_done
+*b2
+@add Growth 3
+Coach Brooks: (gently) Nobody does, at first. Start small. Say yes to one thing that isn't in the planner.
+@jump b_done
+*b3
+@add Growth 2
+@add Discipline 1
+Coach Brooks: (raising her coffee) That's the most un-Alana thing I've ever heard. I love it.
+*b_done
+@bg dorm_room_night
+That night you open your planner. You find a highlighter you've never used. Pink.
+> [Sweet] Write "coffee w/ Cam" on Saturday. In pink. -> c1
+> [Good] Write "rest day" in pink. Something just for you. -> c2
+> [Bold] Throw the planner across the room. Just once. -> c3
+*c1
+@add Alana_Cam 3
+It looks wrong on the page. Pink in a sea of blue. You leave it there anyway.
+@jump end
+*c2
+@add Growth 2
+Cassie: (peeking) Is that... a rest day? Voluntary? I'm calling your mom.
+@jump end
+*c3
+@add Growth 3
+It hits the wall. Cassie gasps. You both stare at it. Then you start laughing and can't stop. You pick it back up. You don't put it back in order.
+*end
+Alana Brooks has always run at 10K pace: steady, careful, perfect. This year she's learning that some things are worth a sprint.

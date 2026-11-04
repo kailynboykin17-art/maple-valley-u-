@@ -1,0 +1,54 @@
+@title STORY • MAGGIE: BIG SISTER ENERGY
+@bg dorm_kitchen_day
+You're Maggie O'Connor. Sunday. You're making a pot of your nana's stew big enough for sixteen people, because that's how many people showed up last week.
+Your phone: Nana. "Maggie Rose. Are you eating vegetables or just feeding everybody else?"
+Maggie: "both nana"
+Nana: "Liar. Love you."
+@show caleb
+Caleb: (sniffing) Is that the stew? I brought—
+Maggie: If you say ice, Caleb, I swear to God.
+Caleb: ...I brought bread.
+Maggie: (shocked) Caleb. Growth.
+@show shane
+Shane walks in carrying three loaves. Caleb's "bread" was the end of a bag.
+> [Sweet] Hug them both. Feed them first. -> a1
+> [Bold] Put them both to work chopping. -> a2
+> [Good] Set a place for every person, even the ones who haven't shown up yet. -> a3
+*a1
+@add Team_Family 2
+Shane: You're like a mom. But cool.
+Maggie: I'm nineteen, Shane.
+Shane: A cool nineteen-year-old mom.
+@jump a_done
+*a2
+@add Team_Family 1
+Caleb cuts himself on the second carrot. Shane faints a little at the blood. You handle both. Coach Vega would be proud.
+@jump a_done
+*a3
+@add Team_Family 3
+By seven, every seat is full. London, Diggy, Cassie, Suki, Jamal, even Holloway's son who's visiting. You stand in the doorway for a second and just look.
+*a_done
+@bg throws_ring_day
+@show coachvega
+Coach Vega: O'Connor. You know why you're not throwing as far as you could?
+Maggie: Because the wind's bad?
+Coach Vega: Because you spend all practice checking on everybody else. Caleb's shoelaces. Shane's hamstring. Some freshman's breakup. Who checks on you?
+You don't have an answer for that. That's the problem.
+> [Sweet] "...Nobody, I guess." -> b1
+> [Bold] "Nobody needs to. I'm fine." -> b2
+> [Good] "I'll try. Twenty minutes a practice. Just me." -> b3
+*b1
+@add Self 3
+Coach Vega: (gently, sounding exactly like a dad) Then let's change that. Starting now. I'll check on you. Dad joke every practice. Mandatory.
+Maggie: Oh no.
+Coach Vega: What do you call a shot putter who won't stop helping? A big-hearted thrower.
+Maggie: That's not even a joke.
+@jump end
+*b2
+Coach Vega: Mm-hm. Everybody who says "I'm fine" that fast is not fine. I've got three daughters, kid.
+@jump end
+*b3
+@add Self 2
+You throw a PR that afternoon. Nobody else even notices, because for once you didn't make it about anybody else. You noticed. That's enough.
+*end
+Maggie O'Connor is everybody's big sister. This year, she's learning she's allowed to be somebody's little one too.

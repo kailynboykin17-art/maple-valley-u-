@@ -1,0 +1,54 @@
+@title STORY • JAYDEN: SINCE WE WERE SIX
+@bg harris_house_day
+You're Jayden Harris. Thanksgiving break, freshman year, flashback. The Harris kitchen. Your mom Diana and Vega Sterling are laughing so hard they're crying over a pie.
+And Paris is at the table, six years old in your memory and nineteen in real life, both at once. She's been at every holiday you can remember.
+Diana: Jayden. Stop staring at that girl and carry these plates.
+Jayden: I'm not staring.
+Diana: You've been staring since kindergarten, baby.
+@bg track_stadium_day
+Present day. You're dating Suki. Suki is funny and loud and everybody loves her. You do too. Just not the way you're supposed to.
+@show suki
+Suki: You coming to the party Friday?
+Jayden: Yeah. Of course.
+She smiles. Then she looks past you, at the long jump pit. At Jamal. You notice. You don't say anything. Neither of you ever says anything.
+> [Good] Take Suki's hand. Try harder. -> a1
+> [Bold] "Suki... are we okay?" -> a2
+> [Bad] Look for Paris in the sprint group instead. -> a3
+*a1
+@add Suki_Effort 2
+You try. You really do. It feels like running the 100 in boots.
+@jump a_done
+*a2
+@add Honesty 2
+Suki: (too fast) We're fine! Why? Are you not fine?
+Jayden: I'm fine.
+Two people saying "fine" in a row. Both lying.
+@jump a_done
+*a3
+@add Paris_Heart 2
+@add Guilt 1
+She's laughing at something Alexa said. She doesn't see you looking. She never does. You've gotten good at it.
+*a_done
+@bg dorm_room_night
+@show jamal
+Jamal is your roommate and your relay partner and the best person you know. Tonight he can't look you in the eye.
+Jamal: Jay. Can I ask you something weird?
+Jayden: Always.
+Jamal: If you knew something that would hurt your boy... but it might be the best thing for him in the long run... would you want to know?
+> [Good] "Always tell me the truth, man." -> b1
+> [Sweet] "Is this about Suki?" -> b2
+> [Bitchy] "That's way too deep for 1 a.m., bro." -> b3
+*b1
+@add Honesty 3
+Jamal: (long breath) ...Not tonight. Soon. I promise.
+He means it. You trust him. That's going to matter later.
+@jump end
+*b2
+@add Honesty 2
+Jamal goes completely still. That's all the answer you need. You're surprised by how little it hurts. You're surprised it mostly feels like relief.
+@jump end
+*b3
+Jamal: (laughing, relieved) Yeah. Yeah, you're right. Goodnight, Jay.
+He doesn't sleep. You can hear him not sleeping.
+*end
+Jayden Harris is everybody's favorite. He's been trying for a year to be the right boyfriend for the wrong girl. The right girl has been at his kitchen table since they were six.

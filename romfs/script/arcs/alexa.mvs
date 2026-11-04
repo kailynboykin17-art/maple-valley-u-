@@ -1,0 +1,63 @@
+@title STORY • ALEXA: THE ONES WHO STAYED
+@bg art_studio_night
+You're Alexa Carter. The art building is empty after 10 p.m. That's the only reason you draw here.
+Your sketchbook is full of people who don't know they're in it. London mid-argument. Maggie laughing. Paris asleep on the bus. And Zane. A lot of Zane. Too much Zane.
+Your phone buzzes. Mom: "your dad and I are proud of you. call us sunday? <3"
+Your dad's from Oregon. Your mom's from Atlanta. Growing up, people always asked you "what are you." You learned early that being quiet meant fewer questions.
+> [Sweet] Call your mom right now. -> a1
+> [Good] Text back "sunday <3" and keep drawing. -> a2
+*a1
+@add Family 3
+Mom: Baby! Why are you up? Are you drawing? You sound like you're drawing.
+Alexa: How can I SOUND like I'm drawing?
+Mom: A mother knows.
+You talk for an hour. You draw her from memory while you do.
+@jump a_done
+*a2
+@add Art 2
+You draw until 1 a.m. Your hand cramps. It's the best you've felt all week.
+*a_done
+@bg track_stadium_day
+@show coachrhodes
+Coach Rhodes: CARTER! Let's GO! That was a PR! Why aren't you SCREAMING?
+Alexa: I'm... happy on the inside, Coach.
+Coach Rhodes: Inside? Girl, put it on the OUTSIDE! Zane! Show her how!
+@show zane
+Zane: (leaping off the mat, screaming) ALEXA CARTER, EVERYBODY! CLEARED IT LIKE IT OWED HER MONEY!
+The entire jumps group cheers. Your face is on fire.
+> [Bold] Scream back. Loud. For once. -> b1
+> [Sweet] Hide your face in your hands, smiling. -> b2
+> [Good] Nod. Say "thanks." Go back to the pit. -> b3
+*b1
+@add Confidence 3
+@add Alexa_Zane 2
+You scream. It comes out cracked and weird. Coach Rhodes nearly cries. Zane looks at you like you just cleared six meters.
+@jump b_done
+*b2
+@add Alexa_Zane 2
+Zane: (walking over, quieter) Too much? I can scream less.
+Alexa: (through your fingers) Don't scream less.
+@jump b_done
+*b3
+Coach Rhodes: (sighing) We'll get there, Carter. We'll get there.
+*b_done
+@bg campus_quad_night
+@show paris
+Paris: Lex. Who's the boy on page forty-two?
+She's holding your sketchbook. You left it on the bus.
+> [Sweet] "...You already know who." -> c1
+> [Bold] Snatch it back. "Nobody." -> c2
+> [Good] "Can you keep a secret?" -> c3
+*c1
+@add Paris_Friendship 3
+Paris: (hugging the sketchbook) I KNEW IT. Alexa. This is the most romantic thing I've ever seen. You drew his EYELASHES.
+@jump end
+*c2
+Paris: (grinning) Nobody has really nice eyelashes.
+@jump end
+*c3
+@add Paris_Friendship 2
+Paris: Better than anyone. I've kept one since I was six.
+You both know exactly who she means. You sit on the quad and keep each other's secrets until the sprinklers come on.
+*end
+Alexa Carter sees everything and says almost nothing. This year, she's learning that the people she draws might want to see themselves the way she sees them.

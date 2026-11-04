@@ -1,0 +1,47 @@
+@title STORY • ZANE: WAITING WELL
+@bg rahman_house_day
+You're Zane Rahman. Dearborn, Sunday dinner over video call. Your mom has propped the phone against the mansaf so you can "be at the table."
+Mom: Habibi, you look thin. Are they feeding you?
+Zane: Mama, I'm a triple jumper. I'm supposed to be light.
+Mom: You're supposed to be FED. And the girl? The artist? Did you talk to her yet?
+Your little brother leans into frame. "He hasn't. He just draws her name on stuff."
+Zane: I do NOT—
+> [Sweet] "...I'm working up to it." -> a1
+> [Bold] "I'm talking to her this week. Swear on the mansaf." -> a2
+> [Good] "Mama. She's shy. I'm not rushing her." -> a3
+*a1
+Mom: Work faster. I'm not getting younger.
+@jump a_done
+*a2
+@add Courage 2
+Mom: (gasping) You swore on the MANSAF. Now you have to.
+@jump a_done
+*a3
+@add Patience 3
+Mom goes quiet. Then she smiles the way she smiles at your dad.
+Mom: That's how your father waited for me. Two years. I made him earn it.
+*a_done
+@bg track_stadium_day
+@show coachrhodes
+Coach Rhodes: RAHMAN! Hop, step, JUMP! Not hop, step, look at Alexa, jump!
+The jumps group loses it. You land in the sand face-first.
+@show alexa
+Alexa: (from the pole vault runway, very quietly) Are you okay?
+Zane: (spitting sand) Never better. Thriving.
+> [Bold] "Coffee? Tomorrow? I'll have less sand on me." -> b1
+> [Sweet] Make her laugh. Do a dramatic sand angel. -> b2
+> [Good] Give her space. Just smile. -> b3
+*b1
+@add Courage 3
+Alexa: (after a long pause) ...Okay.
+She says it so quietly you almost miss it. You don't miss it. You run a lap you weren't assigned. Coach Rhodes lets you.
+@jump end
+*b2
+@add Alexa_Laugh 3
+She laughs. The real one. You've heard it maybe four times. You're keeping count.
+@jump end
+*b3
+@add Patience 2
+She smiles back. Small. You can work with small. Small is how everything starts.
+*end
+Zane Rahman jumps for a living. This year, he learns the hardest jump is the one where you wait, patiently, for someone to be ready to jump with you.

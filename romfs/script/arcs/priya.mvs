@@ -1,0 +1,69 @@
+@title STORY • PRIYA: NOT YOUR CHARITY PROJECT
+@bg library_night
+You're Priya Patel. Pre-med. Two labs. One stats class you're tutoring for. Three practices a day if you count the one in your head.
+Your phone: Mom. "Beta did you eat. Also your cousin Anjali got into Johns Hopkins early!!"
+> [Bitchy] "great. love that for her." -> a1
+> [Sweet] "tell her congrats!! also yes i ate" -> a2
+> [Good] Put your phone in your bag. Study. -> a3
+*a1
+@add Pressure 2
+Mom: "Beta that tone."
+Priya: "it was text. there is no tone."
+Mom: "I can HEAR the tone."
+@jump a_done
+*a2
+@add Family 2
+Mom: "You are my favorite daughter."
+Priya: "i'm your only daughter"
+Mom: "Still counts."
+@jump a_done
+*a3
+@add Pressure 1
+You read the same paragraph about the Krebs cycle six times. Anjali. Johns Hopkins. Early.
+*a_done
+@bg track_stadium_morning
+@show holloway
+Holloway: Patel. Sterling's going to help with your pacing this week.
+Priya: With respect, Coach, I don't need help. Especially not from someone with a forty-eight in stats.
+@show london
+London: Fifty-one. Diggy tutored me.
+Priya: (to Holloway) See? She's a project. Now I'm her project? This is a group project. I hate group projects.
+> [Bitchy] "Fine. But I'm not slowing down for her." -> b1
+> [Good] "Okay. One week. If it doesn't work, I'm out." -> b2
+> [Bold] "Race me, Sterling. Winner coaches the loser." -> b3
+*b1
+@add Rivalry 2
+London: Good. I wasn't planning to slow down for you either.
+You end up running the fastest workout of your life, mostly out of spite. Holloway writes something down and smiles.
+@jump b_done
+*b2
+@add London_Bond 2
+London: (surprisingly) That's fair. Honestly, I'd say the same thing.
+@jump b_done
+*b3
+@add Rivalry 2
+@add London_Bond 1
+She wins by a second. You're furious. She coaches you anyway. She's... actually good at it. You hate that most of all.
+*b_done
+@bg dorm_room_night
+At midnight you get a text. London: "your last lap today was 4 sec faster than the rest. you hold back on purpose. why"
+Nobody's ever noticed that.
+> [Sweet] "because if i go all out and still lose, then i'm just not good enough." -> c1
+> [Bitchy] "mind your business sterling" -> c2
+> [Bold] "because i'm scared." -> c3
+*c1
+@add London_Bond 3
+London: "you're good enough. go all out saturday. i'll be screaming at you the whole time"
+Priya: "is that supposed to be comforting"
+London: "yes"
+@jump end
+*c2
+London: "ok. but you know i'm right"
+She is right. You stare at the ceiling until 2 a.m.
+@jump end
+*c3
+@add London_Bond 3
+London: "me too. every race. go anyway"
+You screenshot it. You'll never admit that you did.
+*end
+Priya Patel has a plan for everything except what happens if she stops holding back. This year, she finds out.

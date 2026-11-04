@@ -1,0 +1,54 @@
+@title STORY • JAMAL: THE NICE GUY'S WORST NIGHT
+@bg grandma_kitchen_day
+You're Jamal Thompson. Memphis, summer. Your grandma's kitchen. Catfish frying. Al Green on the radio.
+Grandma: You're quiet, baby. You only get this quiet when you like a girl.
+Jamal: Grandma.
+Grandma: Who is she?
+Jamal: She has a boyfriend. He's my best friend.
+Grandma sets down the spatula. She looks at you for a very long time.
+Grandma: Then you be a gentleman. And you pray. In that order.
+@bg party_house_night
+The Kappa party. October. Suki is crying on the back steps because Jayden left early without her again. Everybody else is inside. It's just you two.
+@show suki
+Suki: Why are you always the one who finds me?
+Jamal: 'Cause I'm always looking.
+You didn't mean to say that out loud.
+> [Good] Walk her back inside. Be a gentleman. -> a1
+> [Bad] Sit down. Stay. -> a2
+*a1
+@add Gentleman 3
+You walk her inside. You don't kiss her. You go home and lie awake anyway. Grandma would be proud. You feel terrible.
+@jump a_done
+*a2
+@add Kiss 1
+She kisses you. Or you kiss her. You'll never be sure which. It lasts four seconds. It's the best and worst four seconds of your life.
+*a_done
+@bg dorm_room_night
+@show jayden
+Back at the dorm, Jayden's asleep. Your roommate. Your relay partner. Your boy since freshman orientation.
+You sit on your bed in the dark and look at him.
+> [Good] Wake him up. Tell him now. -> b1
+> [Sweet] Call your grandma. -> b2
+> [Bad] Say nothing. Hope it goes away. -> b3
+*b1
+@add Honesty 3
+Jayden: (groggy) Mal? It's 3 a.m...
+Jamal: I need to tell you something. And you can hit me after.
+He doesn't hit you. He listens. When you're done, he's quiet for a long time.
+Jayden: ...Does she like you?
+Jamal: I think so.
+Jayden: (laughing a little, tired) Then I'm not even mad. I'm just mad I didn't figure it out first.
+@jump end
+*b2
+@add Honesty 1
+Grandma: (half asleep) Baby?
+Jamal: I did something bad, Grandma.
+Grandma: (awake now) Did you lie?
+Jamal: Not yet.
+Grandma: Then don't start. Tell the truth tomorrow. In daylight. Truth does better in daylight.
+@jump end
+*b3
+@add Guilt 3
+It doesn't go away. It sits on your chest every day at practice when you hand Jayden the baton.
+*end
+Jamal Thompson has always been the nice guy. This year, he learns nice and good aren't the same thing, and that the bravest thing he can do is tell the truth anyway.
