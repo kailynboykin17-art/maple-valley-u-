@@ -1,0 +1,97 @@
+@title S2 EP 05 • FIGHTS THAT TURN INTO SILENCE
+@bg locker_room_day
+Saturday. Home opener vs Eastbrook. The locker room is dead silent. Nobody's speaking to anybody.
+@show nicole
+Nicole: Okay. I'm captain, so I'm saying it. This team is a disaster. Nicole and Valentina aren't talking. Chloe and Maya aren't talking. Jordan and Brooke are—
+@show jordan
+Jordan: Done. Officially. For real this time.
+@show brooke
+Brooke: You've said that nine times.
+Jordan: Then this is ten. Write it down, Maya.
+@show maya
+Maya: (already writing) Ten.
+@if Brooke_Has_Photo 1 photo
+@jump nophoto
+*photo
+@show brooke
+Brooke: (standing up) Actually, since we're all being HONEST today—
+She holds up her phone. The photo. Riley on the counter. Tyler.
+@show riley
+Riley: Brooke, don't—
+Brooke: Somebody on this team has been sneaking around with MY—
+@show jordan
+Jordan: YOUR? He's not yours! You were with ME four days before you were with him!
+The whole room explodes.
+> [Bold] Stand on the bench. "We have a GAME in twenty minutes!" -> f1
+> [Sweet] Stand next to Riley. Hold her hand. -> f2
+> [Bitchy] "Brooke, nobody wants Tyler. Including you." -> f3
+> [Good] Go get Coach. -> f4
+*f1
+@add Team_Respect 3
+@add Nicole_Friendship 2
+Everyone stops. Even Brooke. Nicole looks at you like she's seeing her replacement.
+Nicole: (quietly) ...She's right. Game faces. We'll kill each other after.
+@jump f_done
+*f2
+@add Riley_Friendship 4
+@add Nia_Friendship 2
+@show nia
+Nia walks over and stands on Riley's other side. Doesn't say anything. Doesn't have to. Riley looks at Nia like it's the first time.
+@jump f_done
+*f3
+@add Brooke_Friendship -3
+@add Jordan_Friendship 2
+@add Drama 2
+Brooke: (very calm) Okay. Okay, Sasha. You wanna play? Let's play.
+She is going to destroy you. Not today. But she is going to.
+@add Brooke_Grudge 3
+@jump f_done
+*f4
+@add Team_Respect -1
+Coach benches Brooke and Riley for the first half. Nobody's happy. Everybody blames you a little.
+*f_done
+@jump game
+*nophoto
+Nobody looks at anybody. You can feel it, though: one secret away from all of it blowing up.
+*game
+@bg soccer_pitch_day
+Game time. 1-1 in the 88th minute. Free kick, just outside the box. Nicole and Valentina both walk up to take it.
+@show nicole
+Nicole: Captain's kick.
+@show valentina
+Valentina: I'm the striker, Nicole. Scoring is literally my whole job.
+They both look at you. You're the center mid. You're supposed to decide.
+> [Good] Give it to Nicole. -> k1
+> [Bold] Give it to Valentina. -> k2
+> [Sweet] "Do it together. Nicole touches, Valentina shoots." -> k3
+> [Bitchy] "Neither. I'll take it." -> k4
+*k1
+@add Nicole_Friendship 3
+@add Valentina_Friendship -3
+Nicole hits the crossbar. The ball goes out. It ends 1-1. Valentina doesn't say a word to anyone on the bus.
+@jump k_done
+*k2
+@add Valentina_Friendship 3
+@add Nicole_Friendship -3
+Valentina curls it into the top corner. 2-1. She runs straight past Nicole to celebrate with you. Nicole's face is stone.
+@jump k_done
+*k3
+@add Nicole_Friendship 3
+@add Valentina_Friendship 3
+@add Team_Respect 3
+Nicole taps it sideways. Valentina blasts it. 2-1. And for one second, the two of them hug like the last six months never happened.
+@jump k_done
+*k4
+@add Team_Respect 2
+@add Nicole_Friendship -2
+@add Valentina_Friendship -2
+You step over the ball. Deep breath. Bottom corner. 2-1, MVU.
+The stands go crazy. Nicole and Valentina look at each other — and for once, they're on the same side: against you.
+*k_done
+@bg parking_lot_night
+After the game. Everyone's in the parking lot. You're about to get in your car when your phone buzzes. Unknown number.
+"I know why you really transferred, Sasha. Do the team a favor and don't make me tell them."
+@show maya
+You look up. Maya's across the lot, looking at her phone. Chloe's next to her. Brooke's by her car. Every single one of them is looking at their phone.
+End of Episode 5. To be continued...
+@load s2/ep06.mvs

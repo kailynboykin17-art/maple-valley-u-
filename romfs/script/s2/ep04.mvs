@@ -1,0 +1,74 @@
+@title S2 EP 04 • COVER STORY
+@bg dorm_room_night
+@show nia
+11:40 p.m. Nia's at your door.
+Nia: Riley said she's here studying.
+You look at your empty dorm room. Nia looks at your empty dorm room.
+Nia: ...She's at the basketball house, isn't she.
+> [Good] Tell Nia the truth. -> c1
+> [Bad] "She went to get food. She'll be right back." -> c2
+> [Sweet] "Nia... why do you care so much where she is?" -> c3
+> [Bitchy] "Not your business. You're not her girlfriend." -> c4
+*c1
+@add Nia_Friendship 3
+@add Riley_Friendship -2
+@add Riley_Trust -1
+Nia: (already walking) Thank you. Come with me.
+@jump c_done
+*c2
+@add Riley_Friendship 2
+@add Nia_Friendship -2
+@add Two_Faced 1
+Nia sits on your bed. "Okay. I'll wait." She waits for two hours. Riley never comes.
+@jump c_done
+*c3
+@add Nia_Friendship 3
+@add Nia_Secret 1
+Nia goes very still. Then she sits down on the edge of your bed like her legs gave out.
+Nia: Because I'm in love with her. And she's at a party trying to get some point guard to notice her. That's why.
+@jump c_done
+*c4
+@add Nia_Friendship -3
+@add Nia_Secret 1
+Nia: (flat) No. I'm not. Thanks for reminding me.
+The door closes softly. Somehow that's worse than slamming.
+*c_done
+@bg basketball_house_night
+@show riley
+The basketball house is loud and sticky. Riley is on the kitchen counter. Tyler from basketball is standing between her knees.
+Yes. THAT Tyler. Brooke's Tyler. Jacket Tyler.
+@show brooke
+And Brooke is walking up the driveway.
+> [Bold] Get Riley out the back door. Now. -> h1
+> [Bad] Let it happen. This is going to be incredible. -> h2
+> [Good] Intercept Brooke at the front door. -> h3
+> [Bitchy] Text the whole team "lmaooo come to the bball house rn" -> h4
+*h1
+@add Riley_Friendship 3
+@add Riley_Trust 2
+Riley: (shoving shoes on, laughing) You're like a getaway driver! I love you! I'm so stupid!
+You make it to the car. Brooke never sees her. Probably.
+@jump h_done
+*h2
+@add Drama 3
+@add Brooke_Friendship -2
+@add Riley_Friendship -2
+Brooke walks in. Sees. Doesn't yell. Takes a picture, then another, then leaves without a word.
+That's the scariest thing anyone's done all season.
+@add Brooke_Has_Photo 1
+@jump h_done
+*h3
+@add Brooke_Friendship 2
+@add Brooke_Grudge -1
+Sasha: Brooke! Hey! You look amazing. Wanna get tacos?
+Brooke: (eyes narrowing) ...Why are you being nice to me?
+Sasha: Growth.
+@jump h_done
+*h4
+@add Drama 5
+@add Maya_Friendship 3
+@add Team_Respect -3
+@add Brooke_Has_Photo 1
+Within eight minutes, there are eleven soccer players in the basketball house. Maya is livestreaming. It's a war zone. Somebody's mom calls the cops for noise.
+*h_done
+@load s2/ep05.mvs

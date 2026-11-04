@@ -1,32 +1,85 @@
-@title S2 EP 02 • GOSSIP HARDER
-@bg party_house_night
+@title S2 EP 02 • THE LAKE HOUSE
+@bg party_lakehouse_night
 @show riley
-Riley: First party of the season! House rules: no crying before midnight, no texting exes, no—
+Friday. The lake house belongs to somebody's uncle. Nobody is sure whose. Riley has the keys anyway.
+Riley: House rules! No crying before midnight, no texting exes, and no—
 @show nia
-Nia: Riley, you've broken every one of those rules already.
-Riley: I'm setting an example of what not to do. It's leadership.
-Across the room, Nicole and Valentina are talking to the same baseball player. Neither is smiling anymore.
-> [Bold] Walk over and pull Valentina away. -> p_bold
-> [Sweet] Get Nicole a drink and change the subject. -> p_sweet
-> [Bad] Record it. Maya will pay. -> p_bad
-> [Good] Text Simone: "Code red, kitchen." -> p_good
-*p_bold
-@add Valentina_Friendship 1
+Nia: (walking in) —no inviting the person you specifically didn't invite? Too late.
+Riley: Who let you in?
+Nia: Your mom. She thinks I'm a good influence.
+Riley: She thinks a lot of wrong things.
+Across the deck: Nicole and Valentina, both talking to the same baseball player. Neither is smiling anymore.
+@show valentina
+Valentina: Marco, tell Nicole how you DM'd me first.
+@show nicole
+Nicole: Tell Valentina how you asked ME to this party.
+> [Bold] Pull Valentina away. "Not worth it, babe." -> p1
+> [Sweet] Get Nicole a drink and change the subject. -> p2
+> [Bad] Record it. Maya will pay. -> p3
+> [Bitchy] "Marco, pick one or go home." -> p4
+*p1
+@add Valentina_Friendship 2
 @add Nicole_Friendship 1
-Valentina: Ugh, FINE. But only because your outfit is cute.
+Valentina: Ugh, FINE. But only because your outfit is cute and I'm not losing my lashes over a shortstop.
 @jump p_done
-*p_sweet
-@add Nicole_Friendship 2
+*p2
+@add Nicole_Friendship 3
+@add Valentina_Friendship -1
 Nicole: (exhaling) Thank you. I was about to say something I'd regret on a Monday.
+Valentina watches you two walk away together. She does not forget it.
 @jump p_done
-*p_bad
-@add Drama 2
-@add Maya_Friendship 2
+*p3
+@add Drama 3
+@add Maya_Friendship 3
 @add Nicole_Friendship -2
-By morning, three teams have seen it. Nicole knows exactly who filmed it.
+@add Valentina_Friendship -2
+By morning, three teams have seen it. The clip has a sound on it. The sound is going viral on campus.
 @jump p_done
-*p_good
-@add Simone_Friendship 2
-Simone arrives like a bouncer with a ponytail. Crisis averted. For now.
+*p4
+@add Drama 1
+@add Nicole_Friendship 1
+@add Valentina_Friendship 1
+Marco: (sweating) I mean... I kind of liked both...
+Nicole and Valentina look at each other. Then at him. For the first time all year they agree on something. Marco leaves in his socks.
 *p_done
+@show riley
+Midnight. Riley climbs onto the roof of the boathouse with a speaker.
+Riley: SASHA. Get up here. View's insane.
+@show nia
+Nia: Riley, get down. You're drunk and that roof is rotten.
+Riley: You're not my mom, Nia. You're barely my friend.
+> [Bold] Climb up with Riley. -> r1
+> [Good] Side with Nia. "Come down, Riley." -> r2
+> [Bad] Film it. This is content. -> r3
+> [Sweet] Get Riley down with a bribe: "I'll make you pancakes." -> r4
+*r1
+@add Riley_Friendship 3
+@add Nia_Friendship -2
+@add Reckless 1
+The view really is insane. The roof really is rotten. A board cracks under Riley's foot and she just laughs and grabs your hand. Down below, Nia doesn't laugh.
+@jump r_done
+*r2
+@add Nia_Friendship 3
+@add Riley_Friendship -1
+Riley: (climbing down, annoyed) Fine. FINE. Y'all are so boring.
+Nia: (quietly, to you) Thanks. She doesn't listen to me anymore.
+@jump r_done
+*r3
+@add Drama 2
+@add Reckless 1
+@add Riley_Friendship 1
+@add Nia_Friendship -3
+The clip gets four thousand views. Riley loves it. Coach does not.
+@jump r_done
+*r4
+@add Riley_Friendship 2
+@add Nia_Friendship 2
+Riley: (sliding down the drainpipe) Chocolate chip?
+Sasha: Obviously.
+Nia mouths "thank you." Riley hugs you so hard you both fall in the grass.
+*r_done
+@bg party_lakehouse_night
+At 2 a.m., somebody screams from the dock. Everybody runs. Riley's phone is in the lake. So is Brooke's car key. So is, somehow, the basketball jacket.
+@show jordan
+Jordan: (standing on the dock, dry, holding nothing, smiling) What? It slipped.
 @load s2/ep03.mvs

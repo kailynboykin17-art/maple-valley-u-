@@ -1,3 +1,76 @@
-@title S2 EP 03 • COMING SOON
-@bg soccer_pitch_night
-Season 2 continues soon. Your choices have been saved.
+@title S2 EP 03 • THE GROUP CHAT
+@bg dorm_room_day
+@show maya
+Monday. The team group chat has 412 unread messages. The top one is from Maya: a screenshot of Chloe's private story. Chloe calling Maya "a gossip with a jersey."
+@show chloe
+Chloe: (in your doorway) She screenshotted my CLOSE FRIENDS. I'm going to kill her. Hold my gloves.
+> [Good] "Chloe. Breathe. Don't do it in the chat." -> g1
+> [Bitchy] "Honestly? She IS a gossip with a jersey." -> g2
+> [Bold] "Then fight back. Post Maya's screenshots too." -> g3
+> [Bad] Text Maya: "Chloe's coming for you lol" -> g4
+*g1
+@add Chloe_Friendship 2
+Chloe: (sitting down hard) I hate how reasonable you are. Okay. In person. After practice.
+@jump g_done
+*g2
+@add Chloe_Friendship 3
+@add Maya_Friendship -2
+Chloe: (actually smiling) Okay, we're best friends now. Sorry, I don't make the rules.
+@jump g_done
+*g3
+@add Drama 3
+@add Chloe_Friendship 2
+@add Maya_Friendship -3
+Chloe posts the screenshots of the screenshots. Maya posts receipts of the receipts. By lunch, nobody remembers what started it. By dinner, three girls have left the chat.
+@jump g_done
+*g4
+@add Maya_Friendship 2
+@add Chloe_Friendship -3
+@add Two_Faced 1
+Maya: omg ty bestie 💕
+You have a sinking feeling Maya screenshots everything. Including this.
+*g_done
+@bg soccer_pitch_day
+@show amara
+At practice, Amara is crying behind the bench.
+Amara: Brooke's talking to Tyler. And Tyler's best friend is Drew. And Drew is the swimmer I like. And now Drew thinks I'm "part of Brooke's whole thing." I'm not part of anybody's whole thing.
+@show brooke
+Brooke: (jogging past, sweetly) Cheer up, Amara! He was never gonna like you anyway, babe. He likes girls who start.
+Amara's face crumples. Half the team heard it.
+> [Bitchy] "Brooke, you've been benched three games. Sit down." -> b1
+> [Sweet] Put your arm around Amara. Ignore Brooke completely. -> b2
+> [Bold] Tackle Brooke in the next drill. Clean. Hard. -> b3
+> [Good] Tell Coach. -> b4
+*b1
+@add Brooke_Friendship -3
+@add Amara_Friendship 3
+@add Drama 1
+@show simone
+Simone: (slow clap) Ohhh. Somebody get the girl a microphone.
+Brooke goes red to her ears. She'll remember this.
+@add Brooke_Grudge 2
+@jump b_done
+*b2
+@add Amara_Friendship 3
+@add Simone_Friendship 2
+Amara: (into your shoulder) Why is she like this?
+Simone: (from your other side) 'Cause she's scared Jordan won't come back this time.
+@jump b_done
+*b3
+@add Brooke_Friendship -2
+@add Jordan_Friendship 3
+@add Amara_Friendship 2
+@add Brooke_Grudge 1
+The tackle is perfectly legal. Brooke lands on her butt in a puddle. Coach blows the whistle and says, "Great hustle, Reed." Jordan high-fives you so hard your hand stings.
+@jump b_done
+*b4
+@add Amara_Friendship 1
+@add Team_Respect -2
+Coach makes Brooke apologize. It's the fakest apology in recorded history. The team decides you're a snitch.
+*b_done
+@show riley
+After practice, Riley grabs your arm.
+Riley: I need a favor. Cover for me tonight. If Nia asks, I'm at your place studying.
+Sasha: Where are you actually going?
+Riley: (grinning) Basketball house. Don't tell anybody. Especially don't tell Brooke.
+@load s2/ep04.mvs

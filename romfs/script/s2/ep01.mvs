@@ -1,65 +1,83 @@
 @title S2 EP 01 • PLAY HARD
 @bg soccer_pitch_night
-Season 2. Same campus. Different team. Night practice under the lights, and every girl on the MVU women's soccer team has an agenda.
+Season 2. Same campus. Different team. You're Sasha Reed, sophomore transfer, center mid. You've been at Maple Valley for nine hours and the soccer team already has a group chat about you.
 @show nicole
-Nicole: Captain's meeting in five. And before anyone asks: yes, I'm still captain.
+Nicole: Captain's meeting. Two rules. One: we don't lose. Two: whatever happens in this locker room—
 @show jordan
-Jordan: For now.
+Jordan: —ends up on Maya's phone by midnight. Let's be honest.
 Nicole: Say that louder, Ellis.
-You're the new transfer — and everyone wants you on their side by the end of the night.
-> [Sweet] "Hi! I'm just happy to be here." -> a_sweet
-> [Bitchy] "Do y'all always fight in front of guests?" -> a_bitchy
-> [Bold] "Who's actually running this team?" -> a_bold
-> [Good] Say nothing. Watch everybody. -> a_good
-*a_sweet
+Jordan: I said it at a normal volume. You just hate hearing it.
+@show brooke
+Brooke walks in late wearing a basketball jacket that is very clearly not hers. Jordan's whole face changes.
+Jordan: Whose jacket, Brooke?
+Brooke: Mine. Now.
+Jordan: We broke up FOUR DAYS AGO.
+Brooke: Four days is a long time, babe.
+Everyone turns to look at you, the new girl, like you're supposed to referee.
+> [Sweet] "Hi! I'm Sasha. I bring snacks and good vibes." -> a1
+> [Bitchy] "Do y'all always fight in front of guests or is this for me?" -> a2
+> [Bold] "That jacket is ugly anyway, Brooke." -> a3
+> [Good] Say nothing. Sit next to the goalie. -> a4
+*a1
 @add Amara_Friendship 2
+@add Nicole_Friendship 1
 @show amara
-Amara: Oh my God, you're adorable. Sit with us. Simone, she's sitting with us.
+Amara: Oh my God. Snacks AND vibes. Simone, she's sitting with us forever.
 @jump a_done
-*a_bitchy
+*a2
 @add Valentina_Friendship 2
 @add Nicole_Friendship -1
 @show valentina
-Valentina: (cackling) Okay, I like her. She's mine now.
+Valentina: (cackling) Okay, I'm obsessed. She's mine. Nobody touch her.
 @jump a_done
-*a_bold
-@add Jordan_Friendship 2
-@add Nicole_Friendship -1
-Jordan: Finally. Somebody asked the right question.
+*a3
+@add Jordan_Friendship 3
+@add Brooke_Friendship -3
+@add Drama 1
+Jordan laughs so hard she has to sit down. Brooke smiles at you like a shark smiles at a seal.
+Brooke: Noted, new girl. Noted.
 @jump a_done
-*a_good
+*a4
 @add Chloe_Friendship 2
 @show chloe
-Chloe: (from the goal, without looking up) Smart. You'll last longer than the last one.
+Chloe: (not looking up from her gloves) Smart. The last transfer picked a side on day one. She plays club in Ohio now.
 *a_done
-@show brooke
-Brooke walks in late with a basketball jacket that isn't hers. Jordan clocks it instantly.
-Jordan: Whose jacket, Brooke?
-Brooke: Mine. Now.
+@bg locker_room_night
 @show maya
-Maya: (whispering to you) That's Tyler from basketball's. I have screenshots. Want them?
-> [Bad] "Obviously send them." -> m_bad
-> [Good] "Keep me out of it." -> m_good
-> [Bitchy] "Screenshots? That's so sad, Maya." -> m_bitchy
-> [Bold] Hand Brooke a hair tie. "You'll need it. Jordan's coming." -> m_bold
-*m_bad
-@add Maya_Friendship 2
+Maya slides next to you while everyone's changing.
+Maya: Welcome gift. (shows her phone) That's Tyler from basketball's jacket. That's Tyler picking Brooke up Saturday. That's Tyler's ex, who is a SWIMMER, who Amara has a crush on. It's all connected. It's beautiful.
+> [Bad] "Airdrop me all of it." -> m1
+> [Good] "Keep me out of it." -> m2
+> [Bitchy] "You need a hobby, Maya." -> m3
+> [Bold] Walk over and show Jordan. -> m4
+*m1
+@add Maya_Friendship 3
 @add Drama 2
 Your phone buzzes eleven times. You are now officially part of this.
 @jump m_done
-*m_good
+*m2
 @add Maya_Friendship -1
 @add Simone_Friendship 2
 @show simone
-Simone: (nodding at you) Good answer. Stay out of that and you'll be fine.
+Simone: (from across the room) Good answer. Stay out of that and you'll survive the season.
 @jump m_done
-*m_bitchy
+*m3
 @add Maya_Friendship -2
-Maya: Wow. Okay. Noted. (she literally writes it in her Notes app)
+@add Chloe_Friendship 2
+Maya: Wow. Okay. (she writes your name in her Notes app under a heading that just says "LATER")
+Chloe: (quietly, to you) I like you.
 @jump m_done
-*m_bold
-@add Brooke_Friendship 2
-@add Drama 1
-Brooke looks at you for a long second, then smiles. "Oh, we're gonna be friends."
+*m4
+@add Jordan_Friendship 2
+@add Maya_Friendship -3
+@add Brooke_Friendship -2
+@add Drama 3
+Jordan reads the screenshots. Puts the phone down. Picks up her cleats. Walks straight into the showers where Brooke is.
+The screaming lasts eleven minutes. Coach hears it from the parking lot.
 *m_done
+@show riley
+Riley: (popping up behind you, smelling like a bonfire) Okay new girl. Party at the lake house Friday. Nobody tells Coach. Nobody tells Nia. Especially nobody tells Nia.
+@show nia
+Nia: I'm standing right here, Riley.
+Riley: And yet you're not invited. Isn't that crazy?
 @load s2/ep02.mvs
