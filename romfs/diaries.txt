@@ -1,0 +1,139 @@
+# id=<portrait id> / name= / entry=Date|Text (keep entries ~450 characters)
+id=london
+name=London Sterling
+entry=September 3rd|Dr. Ames says to write three true things a day. Fine. 1) Coach Holloway hates me. 2) I was NOT late, I was strategically on time. 3) There is a sprinter named Duncan Williams who called me "Daddy's donation" in front of the entire team and I will be thinking about how to destroy him for the rest of my natural life. That's it. That's the entry. Don't read into it, Diary.
+entry=October 30th|He fixed my bib at Halloween. He didn't even say anything. He just fixed it. Paris saw. Cassie saw. Maggie saw. Alexa saw and she SKETCHED it, I saw her. I'm not going to write what I'm feeling because if I write it down it's real. ...I ate pancakes with him after the 5K and it wasn't even hard. Three true things: I'm okay. I'm proud of me. I don't hate him.
+entry=February 14th|He paid my dad back. With his own tips. Double shifts at Casa Morales for two months. Who DOES that? Okay. Fine. Diary. Here it is. I like him. I have liked him since he called me Daddy's donation. Don't tell anyone. (Everyone already knows. Paris told me everyone already knows.)
+
+id=paris
+name=Paris Sterling
+entry=August 28th|First week of sophomore year. London already started a war with a sprinter. Mom already called four times. Jayden already texted "you looked good at practice." He has a girlfriend. Suki is my teammate and my friend. I have loved him since we were six years old at the debutante rehearsal when he gave me his cookie. Nobody gets to know that. Not even you, Diary. (Okay, you can know.)
+entry=January 1st|He asked me. On the roof. At midnight. In front of Mom and Diana and the whole Atlanta skyline. "Officially." Mom cried. Diana cried. London pretended not to cry. I didn't say yes right away. I made him wait three whole seconds. After thirteen years, he can wait three seconds.
+
+id=diggy
+name=Diggy Williams
+entry=September 4th|Mama says I should write stuff down so I don't hold it all in. So. Kiara lost a tooth. Light bill's paid. Ran a 47.3 in practice. And the rich girl from distance talked back to me in front of everybody and I laughed for like an hour. She's mean. Like actually mean. It's kind of my favorite thing about this whole school so far. Don't tell Mama I wrote that.
+entry=December 20th|Took the money for Mama's surgery. She's walking again. I'd do it again. But I didn't stay away from London like her dad wanted and I never told her, and now she knows. I keep picturing her face. I'm gonna pay him back. Every dollar. Ms. Morales gave me Friday doubles. Cassie's covering my Sundays. I don't care how long it takes.
+
+id=cassie
+name=Cassie Morales
+entry=September 15th|Things I know today: 1) Diggy has a crush on London. 2) London has a crush on Diggy. 3) Neither of them knows the other one knows. 4) I made a poll. 5) Shane voted twice. 6) Mom says I gossip too much. Mom ALSO asked me which customer at table six was cheating. So. Who's the real gossip, Mom.
+entry=October 15th|I saw Suki and Jamal at the Kappa party. I haven't told ANYONE. Do you know what this is doing to me, Diary? I almost told my dad. I almost told the dishwasher. I'm eating churros to cope. But Suki's my friend. She looked so scared. So I'm keeping it. Me. Cassie Morales. Keeping a secret. Somebody give me a medal. Or a churro. Both.
+
+id=suki
+name=Suki Bennett
+entry=October 14th|I kissed Jamal. I'm dating Jayden and I kissed Jamal on the back steps of the Kappa house and it was four seconds and I can't stop thinking about it. Jayden and I haven't been happy since summer. He looks at Paris the way I look at Jamal. Everybody knows it. Nobody says it. I'm so tired of being the loud one so nobody hears how quiet I feel.
+entry=January 22nd|Jamal knocked on the door. Cassie and London were on the stairs eating hot chips. He asked if I had a minute. I had a whole life. We talked for an hour. He held my hand. Not tight. Just held it. Like he wasn't scared I'd run. I'm not going to run this time.
+
+id=alana
+name=Alana Brooks
+entry=October 1st|Planner update: Training (blue), class (green), Cam Hayes (??? no color assigned). He asked me to be his fake date to his mom's gala. I said yes. Why did I say yes. Cassie says it's because I "like him." Cassie also thinks the moon landing was "a vibe," so.
+entry=February 2nd|He kissed me on the Eastbrook track. Actually I kissed him. The video has 40,000 views. My mom saw it. My GRANDMA saw it. I bought a pink highlighter. I used it. I'm a different woman.
+
+id=alexa
+name=Alexa Carter
+entry=September 22nd|Drew the team today. London glaring at Holloway. Maggie mid-laugh. Paris on the bus. Zane mid-jump. Zane mid-jump again. Zane stretching. Zane laughing at Caleb. ...Okay. That's a lot of Zane. Note to self: hide sketchbook.
+entry=February 5th|The painting got into the student show. I called it "The Ones Who Stayed." Zane saw it. Zane saw himself in it. He didn't say anything clever. He just took my hand. I didn't have to explain anything. I think that's what being seen feels like.
+
+id=maggie
+name=Maggie O'Connor
+entry=October 8th|Stew count: 16 people. Bread count: 3 loaves (Shane), 1 heel of a loaf (Caleb, growth). Breakups handled this week: 2. Hamstrings checked: 4. Times I checked on myself: 0. Coach Vega noticed. He told me a dad joke as "therapy." It was terrible. I laughed for ten minutes.
+entry=November 27th|Thanksgiving at the penthouse. Diggy said he was grateful someone made him run faster, looking right at London. London went the color of a cranberry. Shane cried. Caleb brought ice. Nana called and asked if I ate vegetables. I said yes. I did not. Best day of the year.
+
+id=priya
+name=Priya Patel
+entry=October 20th|Anjali got into Johns Hopkins early. Mom has mentioned it four times. I'm partnered with London Sterling for pacing. She texted me at midnight that I hold back on my last lap. Nobody's ever noticed that. I hate that she noticed. I hate that she's right.
+entry=December 5th|Second at conference. PR by fourteen seconds. London screamed my splits from the rail the whole time like a deranged parrot. I ran into her arms after. I'm deleting this entry. (I'm not deleting this entry.)
+
+id=jayden
+name=Jayden Harris
+entry=September 10th|Texted Paris "you looked good at practice." Why did I do that. I have a girlfriend. Suki's great. Suki's my friend. But every time Paris laughs my brain goes quiet. It's been like that since we were six. Mom says I've been staring since kindergarten. Mom is not helping.
+entry=January 1st|She said yes. She made me wait three seconds first. Longest three seconds of my life. Jason stared at me through the entire dinner and ate a steak. I'll take it.
+
+id=jamal
+name=Jamal Thompson
+entry=October 15th|Grandma said be a gentleman and pray, in that order. I did neither. I kissed my best friend's girlfriend on the back steps of a party. I can't look Jayden in the face at relay practice. I hand him the baton and feel sick.
+entry=October 16th|Told him. 3 a.m. He didn't hit me. He said "does she like you?" Then he said he was glad it was me. I don't deserve friends like that. Going to try to deserve them.
+
+id=zane
+name=Zane Rahman
+entry=September 30th|Fell face-first in the sand pit today because I was looking at Alexa. Coach Rhodes yelled "HOP STEP JUMP, NOT HOP STEP STARE." The whole jumps group heard. Alexa asked if I was okay. I said "thriving." I was not thriving. I had sand in my teeth.
+entry=February 6th|She said yes to coffee. She talked for two hours. Alexa Carter. Two hours. Mama asked how it went. I said "she drew me." Mama said "marry her." Calm down, Mama.
+
+id=noah
+name=Noah Miller
+entry=October 3rd|Nicole texted 47 times before 9 a.m. about a shortstop named Marco. I said "mm" eleven times on the phone. She said thanks for listening. I'd do it a thousand more times. Long run with Logan. He said four words. Best run of the week.
+
+id=logan
+name=Logan Kim
+entry=November 11th|Developed a new roll. Diggy laughing with his whole face. London pretending not to watch him laugh. Maggie hugging Shane. Halmeoni wants a picture of "a girl." Sent her one of Maggie holding a stew pot. She said "good, this one feeds people." Halmeoni is a lot.
+
+id=caleb
+name=Caleb Walker
+entry=November 20th|Told Coach King about Dad. First person I told. Told Maggie the ice thing was because it was all I could afford. Shane hugged me so hard I saw my ancestors. Now there's a Tupperware with my name on it every Sunday. Funny guy's allowed to be sad sometimes, I guess. Weird.
+
+id=shane
+name=Shane Fa'avae
+entry=October 25th|Sat with a freshman named Tyrell tonight. His mom's sick. He's far from home. I told him "you know me now." Dad always said protect whoever needs it. I think I did good, Dad. Also I threw a PR today. Coach Vega cried. I cried. Caleb wheezed.
+
+id=tiffany
+name=Tiffany
+entry=November 8th|Took myself to dinner. Alone. On purpose. Casa Morales. Cassie sat me by the window and said "table for one? iconic." Ate the most expensive thing on the menu. Didn't text Marcus. Didn't text anybody. Felt like me. Martin texted "proud of you." How did he know?
+
+id=destiny
+name=Destiny
+entry=October 19th|Told Cassie I cry in my car every week. Told the biggest gossip on the team my biggest secret. She hasn't told a soul. I knew she wouldn't. Coach Lewis cleared a hurdle in dress shoes today. Respect forever.
+
+id=holloway
+name=Coach Holloway
+entry=September 3rd|Sterling was four minutes late. Said she was "strategically early." Gave her three laps. She ran them faster than my seniors run their warmups. She's me. Detroit, 1996. Mouth and all. I won't let her get away with it. Somebody didn't let me.
+entry=March 8th|Williams broke the school 400 record. Sterling screamed louder than anybody. On crutches. Then they held hands in front of the entire conference. Coach M owes me twenty dollars. I called it in September.
+
+id=kayla
+name=Kayla
+entry=September 9th|Cried in the bathroom. London Sterling was in the next stall. She said she cried there her first week too. Then she said "don't tell anybody." I'm telling you, Diary. You don't count.
+
+id=martin
+name=Martin
+entry=October 18th|Got the guys to hug it out. Shane started it. It was awkward. It worked. Tiffany asked who holds me together. I didn't have an answer. She said "me, starting now." I've waited four years for that sentence.
+
+id=nicole
+name=Nicole Miller
+entry=September 20th|Valentina and I fought about Marco again. Who is Marco. A shortstop. Why do I care. I don't. I care that she's my best friend and I'm scared I'm not hers. Noah called. He always calls on bad nights. I never tell him which nights are bad.
+
+id=jordan
+name=Jordan Ellis
+entry=October 2nd|Breakup number ten with Brooke. Day six. She texted "u up" at 1:14 a.m. It's always 1:14. And now there's Isiah. Football. Tall. Says "goodnight jordan" with a smiley face like a grandpa. I use the baby voice with him. THE baby voice. The team does impressions. Brooke looked like she wanted to throw a car.
+entry=October 9th|Here's the thing nobody gets: I like Isiah. For real. He's sweet and steady and he laughs at my jokes. And I still like Brooke. For real. Both are true. I'm not confused. I'm just two-hearted. That's a thing. I'm making it a thing.
+
+id=valentina
+name=Valentina Reyes
+entry=September 21st|Talking to: Marco (shortstop), Diego (soccer, men's), Chris (unclear what sport). Abuela says options are for restaurants. Abuela has been married 52 years. Abuela wins. I miss Nicole. Don't tell Nicole.
+
+id=chloe
+name=Chloe Park
+entry=October 12th|Maya screenshotted my close friends story. The story that was about HER. I'm so mad I made fourteen saves in practice. Coach thinks I'm "locked in." I'm not locked in. I'm furious. Same thing for goalkeepers.
+
+id=amara
+name=Amara Johnson
+entry=October 26th|Gave Drew the painting. He wants to hang it in his room. He wants to take me to dinner. I cried. He gave me his towel. It smelled like chlorine and I cried more. Simone watched the whole thing from the bleachers eating popcorn. I love her.
+
+id=brooke
+name=Brooke Anderson
+entry=October 9th|Jordan used the baby voice. On a FOOTBALL player. Named Isiah. The baby voice is MINE. Freshman year, in the library, she used it to ask me if I wanted her fries. I said yes. I've been saying yes ever since. I smiled the whole practice. Mom would be proud. I wanted to scream.
+
+id=maya
+name=Maya Shah
+entry=October 13th|Deleted every screenshot of Chloe's story. Then Recently Deleted. Then Delete All. She said it was the most romantic thing I've ever done. It wasn't romantic. It was an apology. Anika (age 11) says I lie when I say I'm fine. Anika is too smart.
+
+id=simone
+name=Simone Carter
+entry=October 30th|Fights broken up: 4. Girls driven home: 3. Times I held Amara's hair: 2. It's October. Amara asked who I like. Told her about the quiet guy in bio lab. She screamed so loud a bird flew off the bleachers. It's nice when somebody worries about me for once.
+
+id=riley
+name=Riley Bennett
+entry=October 20th|Went to Tyler's. Knew Nia liked him first. Did it anyway. I don't even like him that much. I wanted somebody to want me first. That's the dumbest thing I've ever said. Nia said so. Then she said "pancakes?" She always says pancakes.
+
+id=nia
+name=Nia Washington
+entry=October 20th|Three bags of hot chips. Simone ate half. Riley knocked at midnight with pancake mix. I let her in. I always let her in. Nine years. That's not changing over a point guard.

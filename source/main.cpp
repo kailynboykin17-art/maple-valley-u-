@@ -85,7 +85,21 @@ static bool loadGame() {
 }
 
 // ---------- state ----------
-enum Mode { TITLE, PLAY, PROFILES, ARCS };
+enum Mode { TITLE, PLAY, PROFILES, ARCS, DIARY };
+struct Diary { std::string id, name; std::vector<std::pair<std::string, std::string>> entries; };
+static std::vector<Diary> diaries;
+static int diaSel = 0, diaEntry = 0;
+static void loadDiaries() {
+    std::ifstream f("romfs:/diaries.txt"); std::string s;
+    while (std::getline(f, s)) {
+        while (!s.empty() && s.back() == '\r') s.pop_back();
+        if (s.empty() || s[0] == '#') continue;
+        if (s.rfind("id=", 0) == 0) { diaries.push_back(Diary()); diaries.back().id = s.substr(3); continue; }
+        if (diaries.empty()) continue;
+        if (s.rfind("name=", 0) == 0) diaries.back().name = s.substr(5);
+        else if (s.rfind("entry=", 0) == 0) { size_t b = s.find('|'); diaries.back().entries.push_back({ s.substr(6, b - 6), s.substr(b + 1) }); }
+    }
+}
 struct Arc { std::string id, name, title; };
 static std::vector<Arc> arcs;
 static int arcSel = 0;
@@ -198,24 +212,33 @@ int main() {
     Img* logo = loadTex("romfs:/gfx/logo.tex", 64, 64, 64, 64);
     Img* poster = loadTex("romfs:/gfx/title.tex", 400, 225, 512, 256);
     std::ifstream probe("sdmc:/3ds/maple-valley-u.sav"); bool hasSave = probe.good(); probe.close();
-    const char* menu[] = { "Continue", "Season 1: One Pace at a Time", "Season 2: MVU Women's Soccer", "Character Profiles", "Character Stories" };
-    loadProfiles(); loadArcs();
+    const char* menu[] = { "Continue", "Season 1: One Pace at a Time", "Season 2: MVU Women's Soccer", "Character Profiles", "Character Stories", "Diaries" };
+    loadProfiles(); loadArcs(); loadDiaries();
 
     while (aptMainLoop()) {
         hidScanInput(); u32 k = hidKeysDown(); touchPosition tp; hidTouchRead(&tp);
         if (k & KEY_START) { if (mode == PLAY) saveGame(); break; }
 
         if (mode == TITLE) {
-            if (k & KEY_DOWN) titleSel = (titleSel + 1) % 5;
-            if (k & KEY_UP) titleSel = (titleSel + 4) % 5;
-            if (k & KEY_TOUCH) for (int i = 0; i < 5; i++) if (tp.py >= 44 + i * 38 && tp.py < 78 + i * 38) { titleSel = i; k |= KEY_A; }
+            if (k & KEY_DOWN) titleSel = (titleSel + 1) % 6;
+            if (k & KEY_UP) titleSel = (titleSel + 5) % 6;
+            if (k & KEY_TOUCH) for (int i = 0; i < 6; i++) if (tp.py >= 38 + i * 32 && tp.py < 66 + i * 32) { titleSel = i; k |= KEY_A; }
             if (k & KEY_A) {
                 if (titleSel == 0 && hasSave && loadGame()) { advance(); mode = PLAY; }
                 else if (titleSel == 1) startFile("s1/ep01.mvs");
                 else if (titleSel == 2) startFile("s2/ep01.mvs");
                 else if (titleSel == 3 && !profiles.empty()) { mode = PROFILES; profPage = 0; }
                 else if (titleSel == 4 && !arcs.empty()) mode = ARCS;
+                else if (titleSel == 5 && !diaries.empty()) { mode = DIARY; diaEntry = 0; }
             }
+        } else if (mode == DIARY) {
+            int n = diaries.size(); int m = diaries[diaSel].entries.size();
+            if (k & (KEY_RIGHT | KEY_R)) { diaSel = (diaSel + 1) % n; diaEntry = 0; }
+            if (k & (KEY_LEFT | KEY_L)) { diaSel = (diaSel + n - 1) % n; diaEntry = 0; }
+            if (m > 0 && (k & (KEY_DOWN | KEY_A))) diaEntry = (diaEntry + 1) % m;
+            if (m > 0 && (k & KEY_UP)) diaEntry = (diaEntry + m - 1) % m;
+            if (k & KEY_TOUCH) { if (tp.px < 60 && tp.py > 200) { diaSel = (diaSel + n - 1) % n; diaEntry = 0; } else if (tp.px > 260 && tp.py > 200) { diaSel = (diaSel + 1) % n; diaEntry = 0; } else if (m > 0) diaEntry = (diaEntry + 1) % m; }
+            if (k & KEY_B) mode = TITLE;
         } else if (mode == ARCS) {
             int n = arcs.size();
             if (k & KEY_DOWN) arcSel = (arcSel + 1) % n;
@@ -263,6 +286,26 @@ int main() {
             if (poster->ok) C2D_DrawImageAt(poster->img, 0, 8, 0.0f, nullptr, 1.0f, 1.0f);
             else if (logo->ok) C2D_DrawImageAt(logo->img, 168, 34, 0.0f, nullptr, 1.0f, 1.0f);
             txt("Touch or press A", 200, 205, 0.4f, C(255, 255, 255, 140), 0, true);
+        } else if (mode == DIARY) {
+            Diary& D = diaries[diaSel];
+            u32 ink = C(0x4A, 0x16, 0x34), hot = C(0xD8, 0x3A, 0x86);
+            C2D_DrawRectangle(0, 0, 0, 400, 240, C(0x3A, 0x0E, 0x2A), C(0x5A, 0x12, 0x40), C(0x1A, 0x06, 0x14), C(0x2A, 0x08, 0x20));
+            for (int i = 0; i < 14; i++) C2D_DrawCircleSolid((i * 53 + diaSel * 17) % 400, (i * 37) % 240, 0, 2 + i % 3, C(0xFF, 0x9C, 0xD0, 90));
+            frame(16, 18, 210, 204, C(0xFF, 0xF0, 0xF6), hot);
+            C2D_DrawRectSolid(16, 18, 0, 210, 40, hot);
+            txt("Dear Diary...", 26, 22, 0.42f, C(255, 230, 245));
+            txt(D.name, 26, 36, 0.55f, C(255, 255, 255), 196);
+            for (int y = 76; y < 214; y += 16) C2D_DrawRectSolid(24, y, 0, 194, 1, C(0xA8, 0xC8, 0xF0, 130));
+            if (!D.entries.empty()) {
+                txt(D.entries[diaEntry].first, 26, 64, 0.5f, hot, 190);
+                char c[32]; snprintf(c, sizeof c, "Entry %d of %d", diaEntry + 1, (int)D.entries.size());
+                txt(c, 26, 196, 0.4f, ink);
+            }
+            Img* p = loadTex("romfs:/gfx/char/" + D.id + ".tex", 192, 256, 256, 256);
+            C2D_DrawRectSolid(250, 30, 0, 130, 172, C(255, 255, 255));
+            if (p->ok) C2D_DrawImageAt(p->img, 255, 35, 0.0f, nullptr, 0.625f, 0.5f);
+            C2D_DrawRectSolid(290, 22, 0, 50, 14, C(0xFF, 0xC4, 0xE0, 200));
+            txt("<3", 315, 206, 0.6f, C(0xFF, 0x9C, 0xD0), 0, true);
         } else if (mode == ARCS) {
             Arc& A = arcs[arcSel];
             C2D_DrawRectangle(0, 0, 0, 400, 240, C(0x2A, 0x10, 0x18), C(0x2A, 0x10, 0x18), C(0x0C, 0x06, 0x08), C(0x0C, 0x06, 0x08));
@@ -317,12 +360,22 @@ int main() {
         // ---------- BOTTOM ----------
         C2D_TargetClear(bot, C(0x14, 0x0E, 0x0C)); C2D_SceneBegin(bot);
         if (mode == TITLE) {
-            txt("MAPLE VALLEY U", 160, 22, 0.7f, gold, 0, true);
-            for (int i = 0; i < 5; i++) {
+            txt("MAPLE VALLEY U", 160, 8, 0.6f, gold, 0, true);
+            for (int i = 0; i < 6; i++) {
                 bool off = (i == 0 && !hasSave);
-                frame(20, 44 + i * 38, 280, 34, i == titleSel ? C(0x3A, 0x2A, 0x20) : C(0x1E, 0x16, 0x12), gold);
-                txt(menu[i], 160, 53 + i * 38, 0.46f, off ? C(120, 110, 100) : cream, 0, true);
+                frame(20, 38 + i * 32, 280, 28, i == titleSel ? C(0x3A, 0x2A, 0x20) : C(0x1E, 0x16, 0x12), gold);
+                txt(menu[i], 160, 44 + i * 32, 0.44f, off ? C(120, 110, 100) : cream, 0, true);
             }
+        } else if (mode == DIARY) {
+            Diary& D = diaries[diaSel];
+            u32 ink = C(0x4A, 0x16, 0x34), hot = C(0xD8, 0x3A, 0x86);
+            C2D_DrawRectSolid(0, 0, 0, 320, 240, C(0xFF, 0xF0, 0xF6));
+            for (int y = 22; y < 200; y += 16) C2D_DrawRectSolid(10, y, 0, 300, 1, C(0xA8, 0xC8, 0xF0, 130));
+            C2D_DrawRectSolid(30, 0, 0, 1, 200, C(0xF0, 0x80, 0xA0, 170));
+            if (!D.entries.empty()) txt(D.entries[diaEntry].second, 36, 8, 0.42f, ink, 276);
+            frame(6, 204, 52, 30, C(0xFF, 0xC4, 0xE0), hot); txt("<", 32, 208, 0.6f, ink, 0, true);
+            frame(262, 204, 52, 30, C(0xFF, 0xC4, 0xE0), hot); txt(">", 288, 208, 0.6f, ink, 0, true);
+            txt("Tap/A: next entry   B: menu", 160, 214, 0.36f, ink, 0, true);
         } else if (mode == ARCS) {
             int n = arcs.size(), top = arcSel / 7 * 7;
             txt("Choose a story", 160, 6, 0.5f, gold, 0, true);
