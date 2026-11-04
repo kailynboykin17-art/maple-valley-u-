@@ -85,7 +85,20 @@ static bool loadGame() {
 }
 
 // ---------- state ----------
-enum Mode { TITLE, PLAY };
+enum Mode { TITLE, PLAY, PROFILES };
+struct Profile { std::map<std::string, std::string> f; };
+static std::vector<Profile> profiles;
+static int profSel = 0, profPage = 0;
+static void loadProfiles() {
+    std::ifstream f("romfs:/profiles.txt"); std::string s; Profile cur;
+    while (std::getline(f, s)) {
+        while (!s.empty() && s.back() == '\r') s.pop_back();
+        if (s.empty()) { if (!cur.f.empty()) profiles.push_back(cur); cur = Profile(); continue; }
+        if (s[0] == '#') continue;
+        size_t e = s.find('='); if (e != std::string::npos) cur.f[s.substr(0, e)] = s.substr(e + 1);
+    }
+    if (!cur.f.empty()) profiles.push_back(cur);
+}
 static Mode mode = TITLE;
 static std::string speaker, text;
 static std::vector<Choice> choices;
@@ -163,21 +176,30 @@ int main() {
     Img* logo = loadTex("romfs:/gfx/logo.tex", 64, 64, 64, 64);
     Img* poster = loadTex("romfs:/gfx/title.tex", 400, 225, 512, 256);
     std::ifstream probe("sdmc:/3ds/maple-valley-u.sav"); bool hasSave = probe.good(); probe.close();
-    const char* menu[] = { "Continue", "Season 1: One Pace at a Time", "Season 2: MVU Women's Soccer" };
+    const char* menu[] = { "Continue", "Season 1: One Pace at a Time", "Season 2: MVU Women's Soccer", "Character Profiles" };
+    loadProfiles();
 
     while (aptMainLoop()) {
         hidScanInput(); u32 k = hidKeysDown(); touchPosition tp; hidTouchRead(&tp);
         if (k & KEY_START) { if (mode == PLAY) saveGame(); break; }
 
         if (mode == TITLE) {
-            if (k & KEY_DOWN) titleSel = (titleSel + 1) % 3;
-            if (k & KEY_UP) titleSel = (titleSel + 2) % 3;
-            if (k & KEY_TOUCH) for (int i = 0; i < 3; i++) if (tp.py >= 70 + i * 50 && tp.py < 110 + i * 50) { titleSel = i; k |= KEY_A; }
+            if (k & KEY_DOWN) titleSel = (titleSel + 1) % 4;
+            if (k & KEY_UP) titleSel = (titleSel + 3) % 4;
+            if (k & KEY_TOUCH) for (int i = 0; i < 4; i++) if (tp.py >= 52 + i * 44 && tp.py < 90 + i * 44) { titleSel = i; k |= KEY_A; }
             if (k & KEY_A) {
                 if (titleSel == 0 && hasSave && loadGame()) { advance(); mode = PLAY; }
                 else if (titleSel == 1) startFile("s1/ep01.mvs");
                 else if (titleSel == 2) startFile("s2/ep01.mvs");
+                else if (titleSel == 3 && !profiles.empty()) { mode = PROFILES; profPage = 0; }
             }
+        } else if (mode == PROFILES) {
+            int n = profiles.size();
+            if (k & (KEY_RIGHT | KEY_R)) { profSel = (profSel + 1) % n; profPage = 0; }
+            if (k & (KEY_LEFT | KEY_L)) { profSel = (profSel + n - 1) % n; profPage = 0; }
+            if (k & (KEY_A | KEY_DOWN | KEY_UP)) profPage ^= 1;
+            if (k & KEY_TOUCH) { if (tp.px < 60 && tp.py > 200) { profSel = (profSel + n - 1) % n; profPage = 0; } else if (tp.px > 260 && tp.py > 200) { profSel = (profSel + 1) % n; profPage = 0; } else profPage ^= 1; }
+            if (k & KEY_B) mode = TITLE;
         } else {
             if (shown < text.size()) shown += 2;
             if (!choices.empty()) {
@@ -209,6 +231,28 @@ int main() {
             if (poster->ok) C2D_DrawImageAt(poster->img, 0, 8, 0.5f, nullptr, 1.0f, 1.0f);
             else if (logo->ok) C2D_DrawImageAt(logo->img, 168, 34, 0.5f, nullptr, 1.0f, 1.0f);
             txt("Touch or press A", 200, 205, 0.4f, C(255, 255, 255, 140), 0, true);
+        } else if (mode == PROFILES) {
+            Profile& P = profiles[profSel];
+            u32 paper = C(0xFB, 0xE3, 0xEC), ink = C(0x5A, 0x1E, 0x3A), hot = C(0xE0, 0x5A, 0x96);
+            C2D_DrawRectangle(0, 0, 0, 400, 240, C(0xF7, 0xC6, 0xD8), C(0xF7, 0xC6, 0xD8), C(0xE9, 0xA8, 0xC4), C(0xE9, 0xA8, 0xC4));
+            for (int y = 8; y < 240; y += 16) C2D_DrawRectSolid(0, y, 0, 400, 1, C(255, 255, 255, 90));
+            Img* p = loadTex("romfs:/gfx/char/" + P.f["id"] + ".tex", 192, 256, 256, 256);
+            frame(236, 10, 156, 206, C(255, 255, 255), C(255, 255, 255));
+            if (p->ok) C2D_DrawImageAt(p->img, 240, 14, 0.5f, nullptr, 0.77f, 0.77f);
+            frame(10, 10, 218, 46, paper, hot);
+            txt(P.f["name"], 18, 14, 0.62f, ink, 206);
+            txt("(" + P.f["pronouns"] + ")", 18, 36, 0.42f, hot);
+            frame(10, 62, 218, 96, C(0xFF, 0xF4, 0xF8, 0xE8), hot);
+            txt("Age: " + P.f["age"], 18, 68, 0.48f, ink);
+            txt("Height: " + P.f["height"], 120, 68, 0.48f, ink);
+            txt("Zodiac: " + P.f["sign"], 18, 90, 0.48f, ink);
+            txt("From: " + P.f["hometown"], 18, 112, 0.44f, ink, 204);
+            txt(P.f["team"], 18, 134, 0.44f, hot, 204);
+            frame(10, 164, 218, 52, C(0xFF, 0xF4, 0xF8, 0xE8), hot);
+            txt("Fav food: " + P.f["food"], 18, 170, 0.42f, ink, 204);
+            txt("Fav music: " + P.f["music"], 18, 192, 0.42f, ink, 204);
+            char cnt[32]; snprintf(cnt, sizeof cnt, "%d / %d", profSel + 1, (int)profiles.size());
+            txt(cnt, 314, 222, 0.4f, ink, 0, true);
         } else {
             drawBg();
             if (!portrait.empty()) {
@@ -230,11 +274,29 @@ int main() {
         C2D_TargetClear(bot, C(0x14, 0x0E, 0x0C)); C2D_SceneBegin(bot);
         if (mode == TITLE) {
             txt("MAPLE VALLEY U", 160, 22, 0.7f, gold, 0, true);
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 4; i++) {
                 bool off = (i == 0 && !hasSave);
-                frame(20, 70 + i * 50, 280, 40, i == titleSel ? C(0x3A, 0x2A, 0x20) : C(0x1E, 0x16, 0x12), gold);
-                txt(menu[i], 160, 82 + i * 50, 0.48f, off ? C(120, 110, 100) : cream, 0, true);
+                frame(20, 52 + i * 44, 280, 38, i == titleSel ? C(0x3A, 0x2A, 0x20) : C(0x1E, 0x16, 0x12), gold);
+                txt(menu[i], 160, 63 + i * 44, 0.48f, off ? C(120, 110, 100) : cream, 0, true);
             }
+        } else if (mode == PROFILES) {
+            Profile& P = profiles[profSel];
+            u32 ink = C(0x5A, 0x1E, 0x3A), hot = C(0xE0, 0x5A, 0x96);
+            C2D_DrawRectSolid(0, 0, 0, 320, 240, C(0xFB, 0xE3, 0xEC));
+            for (int y = 26; y < 200; y += 15) C2D_DrawRectSolid(10, y, 0, 300, 1, C(0xA8, 0xC8, 0xF0, 120));
+            C2D_DrawRectSolid(30, 0, 0, 1, 200, C(0xF0, 0x80, 0x90, 160));
+            if (profPage == 0) {
+                txt("About", 38, 4, 0.5f, hot);
+                txt(P.f["bio"], 38, 26, 0.42f, ink, 272);
+            } else {
+                txt("Likes:", 38, 4, 0.5f, hot);
+                txt(P.f["likes"], 38, 24, 0.42f, ink, 272);
+                txt("Dislikes:", 38, 104, 0.5f, hot);
+                txt(P.f["dislikes"], 38, 124, 0.42f, ink, 272);
+            }
+            frame(6, 204, 52, 30, C(0xF7, 0xC6, 0xD8), hot); txt("<", 32, 208, 0.6f, ink, 0, true);
+            frame(262, 204, 52, 30, C(0xF7, 0xC6, 0xD8), hot); txt(">", 288, 208, 0.6f, ink, 0, true);
+            txt(profPage == 0 ? "Tap/A: likes & dislikes   B: menu" : "Tap/A: about   B: menu", 160, 214, 0.36f, ink, 0, true);
         } else if (!choices.empty()) {
             txt("What does she do?", 160, 20, 0.5f, gold, 0, true);
             for (size_t i = 0; i < choices.size() && i < 4; i++) {
