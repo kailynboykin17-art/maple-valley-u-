@@ -1,0 +1,53 @@
+@title EPISODE 28 • TAPING TABLE
+@bg indoor_training_facility
+Mile repeats. Fifth rep. London's left ankle rolls on the bank and she goes down hard.
+@show mayaellis
+Maya Ellis: Don't move. Don't be a hero. Look at me. Scale of one to ten?
+London: Three.
+Maya Ellis: You're crying, London.
+London: It's a dramatic three.
+@show diggy
+Diggy is across the facility before anyone else moves. He picks her up like she weighs nothing.
+> [Bitchy] "Put me DOWN, I can walk." -> t1
+> [Sweet] Hold onto his neck. Say nothing. -> t2
+> [Bold] "If you drop me, Williams, I'm suing." -> t3
+*t1
+@add Diggy_Affection 1
+Diggy: You can't. So you're gonna be mad AND carried.
+@jump t_done
+*t2
+@add Diggy_Affection 3
+@add Diggy_Trust 2
+Her face is in his neck. He smells like cedar. Coach Holloway, watching, looks away like she's giving them privacy.
+@jump t_done
+*t3
+@add Diggy_Affection 2
+Diggy: (laughing) With your dad's lawyers? I'll be careful.
+*t_done
+@bg trainer_room
+@show mayaellis
+Maya Ellis: Sprain. Two weeks, maybe three. If you're smart.
+London: I'm never smart.
+Maya Ellis: I know. Half the secrets on this team get told on this table, you know. You can tell me one too. It's free.
+> [Sweet] "I think I'm in love with him and I'm scared." -> m1
+> [Bitchy] "I don't have secrets. I have strategy." -> m2
+> [Good] "I'm scared I'll never be as fast again." -> m3
+*m1
+@add London_Confidence 2
+@add Love_Admitted 1
+Maya Ellis: (wrapping the ankle) Being scared and being in love look exactly the same from the inside. Ask anyone married.
+@jump m_done
+*m2
+@add London_Confidence -1
+Maya Ellis: Mm-hm. That boy's been outside the door for forty minutes. Strategy that.
+@jump m_done
+*m3
+@add Coach_Respect 2
+Maya Ellis: You will. I've seen a hundred ankles. Yours is boring. That's a compliment.
+*m_done
+@show holloway
+Holloway: (in the doorway) Sterling. You're out for conference indoors.
+London: Coach—
+Holloway: Out. But you're traveling with us. Somebody has to yell at Priya. You're good at it now.
+That's the nicest thing Holloway has ever said to her.
+@load s1/ep29.mvs

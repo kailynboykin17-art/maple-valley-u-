@@ -1,0 +1,50 @@
+@title EPISODE 30 • OFFICIAL
+@bg meet_venue_indoor
+Indoor Conference Championships. London is on crutches in the stands with a clipboard and a whistle Coach Holloway definitely didn't give her.
+@show priya
+Priya runs the 5K. London screams splits at her from the rail every lap.
+London: SEVENTY-FOUR. You're SLOW. Go NOW, Priya!
+Priya wins by half a second. She runs straight to the rail and hugs London over it.
+Priya: You were SO mean. I loved it.
+@add Priya_Friendship 3
+@show diggy
+Then the men's 400. Diggy in lane four. Coach M is pacing so hard he's going to wear a hole in the floor.
+Diggy wins in 46.71. A new school record. Coach M picks him up. Then Shane picks up Coach M.
+Diggy breaks free of all of them and limps — he's sore, it's 400 sore — up the stands to London.
+@if Diggy_Trust 12 official
+Diggy: So. That date went okay, right?
+London: It was adequate.
+Diggy: Adequate enough to make it official?
+> [Sweet] "Yes. Obviously yes, you idiot." -> o1
+> [Bitchy] "...Fine. But I'm telling Cassie myself." -> o1
+> [Good] "Not yet. But soon. I promise." -> o2
+*o1
+@add Dating 1
+@add Official 1
+@jump win
+*o2
+@add Diggy_Trust 1
+Diggy: (grinning) Soon. I'm writing it in my phone.
+@jump end
+*official
+Diggy doesn't ask. He doesn't have to. He just holds out his hand. She takes it and stands up on one crutch in front of the entire conference.
+@add Dating 1
+@add Official 1
+*win
+@show cassie
+Cassie: (standing on a bench) ATTENTION EVERYONE. LONDON STERLING AND DIGGY WILLIAMS ARE OFFICIALLY DATING. I HAVE BEEN RIGHT SINCE SEPTEMBER.
+The whole MVU section cheers. Holloway shakes her head and smiles at her clipboard.
+@show paris
+Paris: (hugging her) Mom's going to cry. Dad's going to cry harder.
+*end
+@hide
+@bg parking_lot_night
+After the meet. London waits by the bus while Diggy talks to a man in a navy Eastbrook jacket. The man hands him a folder.
+@show diggy
+Diggy: (walking back, quiet) That was Eastbrook's head coach.
+London: What did he want?
+Diggy: Full scholarship. Room, board, everything. For my mama too — they'd help with her bills. Starting next fall.
+London: ...At Eastbrook.
+Diggy: At Eastbrook.
+End of Episode 30. To be continued...
+@load s1/ep31.mvs

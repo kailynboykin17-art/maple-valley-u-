@@ -1,0 +1,44 @@
+@title EPISODE 22 • WINTER BREAK
+@bg sterling_mansion_day
+Winter break. Atlanta. The Sterling house has a Christmas tree in every room and a silence in the kitchen.
+@show london
+Frank: Baby girl. You're home.
+London: Did you pay Diggy to stay away from me?
+Vega: (setting down her wine) Frank. What did you do.
+> [Bitchy] "Answer the question, Daddy." -> f1
+> [Sweet] "I just want the truth. Please." -> f2
+> [Bold] "You bussed tables. You KNOW what it's like. And you did that to him anyway?" -> f3
+*f1
+@add Parent_Trust -2
+Frank: (quietly) I paid for his mother's surgery. That part I'd do again tomorrow. The other part... the other part was me being scared.
+@jump f_done
+*f2
+@add Parent_Trust 2
+Frank: (sitting down slowly) I paid for his mother's surgery. And then I said something I shouldn't have. You two almost died, London. I watched you in those little incubators for nineteen days. I've been trying to control things ever since.
+@jump f_done
+*f3
+@add Parent_Trust 1
+@add London_Confidence 2
+Frank looks at her for a long time. Then he laughs — tired, wet.
+Frank: You sound just like your mother did in 1998.
+Vega: She sounds like ME because I'm RIGHT, Franklin.
+*f_done
+@show milan
+Milan: (walking in, 23, law-school tired) Oh good, I'm home for a family meeting. My favorite.
+@show jason
+Jason: (behind her, 22, eating a cookie) Who are we yelling at? Dad? Cool. Finally.
+Milan: London, for what it's worth? Daddy did this to my prom date too.
+Jason: And my girlfriend's dad. He called her DAD.
+Vega: (standing) Frank. Call that boy. Today. And apologize like a man.
+> [Good] "No. I'll handle it. My relationship, my call." -> v1
+> [Sweet] "...Thank you, Mama." -> v2
+*v1
+@add London_Confidence 3
+@add Parent_Trust 1
+Vega: (smiling despite herself) That's my daughter.
+@jump v_done
+*v2
+@add Parent_Trust 2
+Vega hugs both twins at once. Frank stands at the window and calls Diggy's mother himself.
+*v_done
+@load s1/ep23.mvs

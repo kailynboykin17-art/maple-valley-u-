@@ -89,6 +89,7 @@ enum Mode { TITLE, PLAY, PROFILES };
 struct CharProfile { std::map<std::string, std::string> f; };
 static std::vector<CharProfile> profiles;
 static int profSel = 0, profPage = 0;
+static std::string L(CharProfile& P, const char* k, const char* d) { auto it = P.f.find(std::string("l_") + k); return it != P.f.end() ? it->second : d; }
 static void loadProfiles() {
     std::ifstream f("romfs:/profiles.txt"); std::string s; CharProfile cur;
     while (std::getline(f, s)) {
@@ -109,7 +110,15 @@ static void advance() {
     choices.clear(); shown = 0;
     while (pc < script.size()) {
         Line l = script[pc++];
-        if (l.op == "say") { speaker = l.a; text = l.b; return; }
+        if (l.op == "say") {
+            speaker = l.a; text = l.b;
+            if (!speaker.empty()) {
+                std::string id; for (char ch : speaker) if (isalnum((unsigned char)ch)) id += tolower(ch);
+                FILE* t = fopen(("romfs:/gfx/char/" + id + ".tex").c_str(), "rb");
+                if (t) { fclose(t); portrait = id; }
+            }
+            return;
+        }
         if (l.op == "choice") {
             Choice c; c.label = l.b; c.text = l.a;
             if (!l.a.empty() && l.a[0] == '[') { size_t e = l.a.find(']'); c.tone = l.a.substr(1, e - 1); c.text = l.a.substr(e + 2); }
@@ -139,7 +148,7 @@ static u32 C(u8 r, u8 g, u8 b, u8 a = 255) { return C2D_Color32(r, g, b, a); }
 static void txt(const std::string& s, float x, float y, float sc, u32 col, float wrap = 0, bool center = false) {
     C2D_Text t; C2D_TextParse(&t, buf, s.c_str()); C2D_TextOptimize(&t);
     u32 fl = C2D_WithColor | (wrap > 0 ? C2D_WordWrap : 0) | (center ? C2D_AlignCenter : 0);
-    C2D_DrawText(&t, fl, x, y, 0.5f, sc, sc, col, wrap);
+    C2D_DrawText(&t, fl, x, y, 0.0f, sc, sc, col, wrap);
 }
 static void frame(float x, float y, float w, float h, u32 fill, u32 line) {
     C2D_DrawRectSolid(x, y, 0, w, h, line);
@@ -172,7 +181,7 @@ int main() {
     C3D_RenderTarget* bot = C2D_CreateScreenTarget(GFX_BOTTOM, GFX_LEFT);
     buf = C2D_TextBufNew(8192);
     const u32 gold = C(0xD8, 0xB8, 0x7A), cream = C(0xF6, 0xEC, 0xE1), pink = C(0xF0, 0x7E, 0xB0),
-              panel = C(0x14, 0x0E, 0x0C, 0xD8), green = C(0x0E, 0x3B, 0x26);
+              panel = C(0x14, 0x0E, 0x0C, 0xF0), green = C(0x0E, 0x3B, 0x26);
     Img* logo = loadTex("romfs:/gfx/logo.tex", 64, 64, 64, 64);
     Img* poster = loadTex("romfs:/gfx/title.tex", 400, 225, 512, 256);
     std::ifstream probe("sdmc:/3ds/maple-valley-u.sav"); bool hasSave = probe.good(); probe.close();
@@ -228,8 +237,8 @@ int main() {
         C2D_TargetClear(top, C(0, 0, 0)); C2D_SceneBegin(top);
         if (mode == TITLE) {
             C2D_DrawRectangle(0, 0, 0, 400, 240, green, green, C(0x06, 0x14, 0x0C), C(0x06, 0x14, 0x0C));
-            if (poster->ok) C2D_DrawImageAt(poster->img, 0, 8, 0.5f, nullptr, 1.0f, 1.0f);
-            else if (logo->ok) C2D_DrawImageAt(logo->img, 168, 34, 0.5f, nullptr, 1.0f, 1.0f);
+            if (poster->ok) C2D_DrawImageAt(poster->img, 0, 8, 0.0f, nullptr, 1.0f, 1.0f);
+            else if (logo->ok) C2D_DrawImageAt(logo->img, 168, 34, 0.0f, nullptr, 1.0f, 1.0f);
             txt("Touch or press A", 200, 205, 0.4f, C(255, 255, 255, 140), 0, true);
         } else if (mode == PROFILES) {
             CharProfile& P = profiles[profSel];
@@ -238,26 +247,27 @@ int main() {
             for (int y = 8; y < 240; y += 16) C2D_DrawRectSolid(0, y, 0, 400, 1, C(255, 255, 255, 90));
             Img* p = loadTex("romfs:/gfx/char/" + P.f["id"] + ".tex", 192, 256, 256, 256);
             frame(236, 10, 156, 206, C(255, 255, 255), C(255, 255, 255));
-            if (p->ok) C2D_DrawImageAt(p->img, 240, 14, 0.5f, nullptr, 0.77f, 0.77f);
+            if (p->ok) C2D_DrawImageAt(p->img, 240, 14, 0.0f, nullptr, 0.77f, 0.77f);
+            else if (logo->ok) C2D_DrawImageAt(logo->img, 270, 70, 0.0f, nullptr, 1.4f, 1.4f);
             frame(10, 10, 218, 46, paper, hot);
             txt(P.f["name"], 18, 14, 0.62f, ink, 206);
             txt("(" + P.f["pronouns"] + ")", 18, 36, 0.42f, hot);
             frame(10, 62, 218, 96, C(0xFF, 0xF4, 0xF8, 0xE8), hot);
-            txt("Age: " + P.f["age"], 18, 68, 0.48f, ink);
-            txt("Height: " + P.f["height"], 120, 68, 0.48f, ink);
-            txt("Zodiac: " + P.f["sign"], 18, 90, 0.48f, ink);
-            txt("From: " + P.f["hometown"], 18, 112, 0.44f, ink, 204);
+            txt(L(P, "age", "Age") + ": " + P.f["age"], 18, 68, 0.48f, ink);
+            txt(L(P, "height", "Height") + ": " + P.f["height"], 120, 68, 0.48f, ink);
+            txt(L(P, "sign", "Zodiac") + ": " + P.f["sign"], 18, 90, 0.48f, ink);
+            txt(L(P, "hometown", "From") + ": " + P.f["hometown"], 18, 112, 0.44f, ink, 204);
             txt(P.f["team"], 18, 134, 0.44f, hot, 204);
             frame(10, 164, 218, 52, C(0xFF, 0xF4, 0xF8, 0xE8), hot);
-            txt("Fav food: " + P.f["food"], 18, 170, 0.42f, ink, 204);
-            txt("Fav music: " + P.f["music"], 18, 192, 0.42f, ink, 204);
+            txt(L(P, "food", "Fav food") + ": " + P.f["food"], 18, 170, 0.42f, ink, 204);
+            txt(L(P, "music", "Fav music") + ": " + P.f["music"], 18, 192, 0.42f, ink, 204);
             char cnt[32]; snprintf(cnt, sizeof cnt, "%d / %d", profSel + 1, (int)profiles.size());
             txt(cnt, 314, 222, 0.4f, ink, 0, true);
         } else {
             drawBg();
             if (!portrait.empty()) {
                 Img* p = loadTex("romfs:/gfx/char/" + portrait + ".tex", 192, 256, 256, 256);
-                if (p->ok) C2D_DrawImageAt(p->img, 212, 22, 0.5f, nullptr, 0.82f, 0.82f);
+                if (p->ok) C2D_DrawImageAt(p->img, 196, 21, 0.0f, nullptr, 1.0f, 1.0f);
             }
             // header bar
             C2D_DrawRectSolid(0, 0, 0, 400, 20, C(0x0C, 0x08, 0x08, 0xC8));
@@ -286,12 +296,12 @@ int main() {
             for (int y = 26; y < 200; y += 15) C2D_DrawRectSolid(10, y, 0, 300, 1, C(0xA8, 0xC8, 0xF0, 120));
             C2D_DrawRectSolid(30, 0, 0, 1, 200, C(0xF0, 0x80, 0x90, 160));
             if (profPage == 0) {
-                txt("About", 38, 4, 0.5f, hot);
+                txt(L(P, "bio", "About"), 38, 4, 0.5f, hot);
                 txt(P.f["bio"], 38, 26, 0.42f, ink, 272);
             } else {
-                txt("Likes:", 38, 4, 0.5f, hot);
+                txt(L(P, "likes", "Likes") + ":", 38, 4, 0.5f, hot);
                 txt(P.f["likes"], 38, 24, 0.42f, ink, 272);
-                txt("Dislikes:", 38, 104, 0.5f, hot);
+                txt(L(P, "dislikes", "Dislikes") + ":", 38, 104, 0.5f, hot);
                 txt(P.f["dislikes"], 38, 124, 0.42f, ink, 272);
             }
             frame(6, 204, 52, 30, C(0xF7, 0xC6, 0xD8), hot); txt("<", 32, 208, 0.6f, ink, 0, true);

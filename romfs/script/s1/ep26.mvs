@@ -1,0 +1,40 @@
+@title EPISODE 26 • FAKE, ACTUALLY
+@bg eastbrook_campus_day
+@show alana
+Alana: Cam's ex posted a video. "Fake couple exposed." Somebody overheard us at the gala planning our fake fight.
+London: So? End it. It was fake.
+Alana: That's the problem. I don't want it to be fake anymore. And I can't tell if he does.
+> [Bold] "Then ask him. Today." -> a1
+> [Bitchy] "Alana. He drove four hours to bring you soup when you had the flu. It's not fake for him." -> a2
+> [Sweet] "Want me to come with you?" -> a3
+*a1
+@add Alana_Friendship 2
+@add Alana_Cam 2
+Alana: (gripping her keys) Okay. Okay. If I die, delete my search history.
+@jump a_done
+*a2
+@add Alana_Friendship 3
+@add Alana_Cam 2
+Alana: (stopping dead) ...He did do that. Oh my God. He DID do that.
+@jump a_done
+*a3
+@add Alana_Friendship 2
+@add Alana_Cam 1
+Alana: Yes. But wait in the car. If I wave, come get me.
+*a_done
+@bg eastbrook_track_day
+Cam is on the Eastbrook track alone, doing 400 repeats like he's punishing himself.
+Alana: Cam. The video. I need to know if—
+Cam: It wasn't fake for me after the first dance. I just didn't know how to say "real" to the scariest girl in the conference.
+Alana: (very quietly) You think I'm scary?
+Cam: Terrifying. I'm obsessed with you.
+London, watching from the car, honks the horn twice. She can't help it.
+@if Alana_Cam 5 real
+Alana: ...Can we take it slow? Like, 10K pace. Not 400.
+Cam: I'll take whatever pace you set.
+@jump end
+*real
+Alana kisses him. Right there on the rival school's track. Somebody's phone records it. This time the video is captioned "okay it's real."
+@add Alana_Cam_Official 1
+*end
+@load s1/ep27.mvs

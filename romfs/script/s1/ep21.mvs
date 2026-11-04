@@ -1,3 +1,64 @@
-@title EPISODE 21 • COMING SOON
-@bg penthouse_window_night
-Episode 21 is being written. Your choices have been saved.
+@title EPISODE 21 • WHAT HE DIDN'T SAY
+@bg campus_quad_morning
+Diggy is waiting outside London's 8 a.m. Two coffees. He looks like he hasn't slept either.
+Diggy: Before you say anything — let me say it. All of it. Then you can hate me.
+London: Talk.
+Diggy: After Family Weekend, my mama's surgery got scheduled. Insurance said no. Your dad heard about it from Coach M. He paid it. The whole thing.
+London: And the catch?
+Diggy: (long breath) He said, "Focus on your season, son. Let my girls focus on theirs."
+London: So you took money to stay away from me.
+Diggy: I took money so my mama could walk again. Then I didn't stay away from you. I couldn't.
+> [Bitchy] "So I was the price tag. Cute." -> a1
+> [Sweet] "...Is your mom okay?" -> a2
+> [Bold] "Why didn't you TELL me?" -> a3
+> [Bad] Throw the coffee at his feet and walk away. -> a4
+*a1
+@add Diggy_Trust -2
+@add Diggy_Hurt 2
+Diggy: That's not fair and you know it.
+London: Nothing about this is fair, Duncan.
+His real name. He flinches like she hit him.
+@jump a_done
+*a2
+@add Diggy_Trust 3
+@add Diggy_Affection 1
+Diggy: (voice breaking) She's walking. Slow. But she's walking.
+London: Good. I'm still mad.
+Diggy: I know.
+London: I'm really, really mad.
+Diggy: I know.
+@jump a_done
+*a3
+@add Diggy_Trust 1
+Diggy: 'Cause every time I opened my mouth, I pictured your face doing exactly what it's doing right now.
+@jump a_done
+*a4
+@add Diggy_Trust -3
+@add Diggy_Hurt 3
+@add Team_Reputation -1
+Half the quad sees it. By lunch there's a video. Cassie, for once, doesn't post it.
+*a_done
+@hide
+@bg penthouse_night
+@show paris
+Paris: Are you two over?
+London: There's nothing to be over. We were barely a thing.
+Paris: London. He held your hair back at Halloween. That's a thing.
+> [Sweet] Cry. Finally. Let her hold you. -> b1
+> [Bitchy] "Don't psychoanalyze me, Paris." -> b2
+> [Good] "I need to talk to Daddy first." -> b3
+*b1
+@add Paris_Friendship 3
+@add London_Confidence -1
+Same face, same arms. For once London is the one being held.
+@jump b_done
+*b2
+@add Paris_Friendship -1
+Paris: Okay. But I'm sleeping in your room anyway.
+She does. London pretends to hate it.
+@jump b_done
+*b3
+@add Parent_Showdown 1
+Paris: Then I'm coming with you. He did this to both of us.
+*b_done
+@load s1/ep22.mvs

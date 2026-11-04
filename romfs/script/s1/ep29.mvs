@@ -1,0 +1,41 @@
+@title EPISODE 29 • VALENTINE'S DAY
+@bg penthouse_day
+February 14th. London is on the couch with an ice pack and a terrible attitude.
+@show paris
+Paris: Jayden's taking me to dinner. Are you going to be okay?
+London: I'm going to be extremely okay. Alone. Eating truffle fries. As planned.
+Doorbell. Paris answers it and gasps.
+@show diggy
+Diggy is standing there in the too-short blazer, holding an envelope.
+Diggy: Before anything else. This is for your dad. Every dollar. Took me since December. Double shifts at the rec center.
+London: Diggy, he doesn't want it back. He told you that.
+Diggy: I know. I don't want it to be the reason. If we're doing this, I want it to be clean. Just you and me. Nobody's money.
+> [Sweet] "...You did all that for me?" -> v1
+> [Bitchy] "You're so dramatic. Come inside." -> v2
+> [Bold] "Then ask me properly." -> v3
+> [Good] "I'll give it to him. Together. At spring break." -> v4
+*v1
+@add Diggy_Trust 4
+@add Diggy_Affection 3
+Diggy: Did it for me too. I needed to look your dad in the eye one day.
+@jump v_done
+*v2
+@add Diggy_Affection 3
+Diggy: (stepping in, grinning) I learned from the best.
+@jump v_done
+*v3
+@add Diggy_Affection 4
+@add London_Confidence 2
+Diggy: (dropping to one knee — Paris SCREAMS — "Not like THAT, Paris!") London Sterling. Will you go on one real date with me? No relays, no Cassie, no money.
+@jump v_done
+*v4
+@add Diggy_Trust 4
+@add Parent_Trust 2
+Diggy: Together. Yeah. I like that.
+*v_done
+@bg diner_night
+He takes her to the same 24-hour diner from the fundraiser. He carries her in from the car because of the ankle. The waitress remembers them.
+Diggy: Pancakes. Two. And whatever she says about it, she wants extra syrup.
+London: I do not.
+London: (thirty seconds later) ...Extra syrup.
+@load s1/ep30.mvs

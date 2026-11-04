@@ -1,0 +1,45 @@
+@title EPISODE 23 • NEW YEAR'S EVE
+@bg rooftop_party_night
+The Sterlings' New Year's party. Atlanta skyline. Jayden is here because Diana Harris is here. Paris is here because Jayden is here.
+@show jayden
+Jayden: London. Can I talk to you? About Paris. And about... the Kappa thing.
+> [Bitchy] "You get one minute. Clock's running." -> j1
+> [Good] "Talk to her, not me." -> j2
+> [Bold] "If you hurt her again, I'll end you. Now talk." -> j3
+*j1
+@add Jayden_Trust 1
+Jayden: (fast) I messed up. I told Paris everything. I told Jamal too. I'm not asking you to like me. I'm asking you to not stand in the way.
+@jump j_done
+*j2
+@add Paris_Friendship 2
+Jayden: (nodding) You're right. You're actually right.
+He walks to Paris. You watch them talk for an hour on the balcony. She laughs once.
+@jump j_done
+*j3
+@add Jayden_Trust 2
+Jayden: That's fair. Honestly, that's the least scary threat I've gotten. Jamal's was worse.
+*j_done
+@show paris
+At 11:58, Paris pulls you aside, glowing.
+Paris: He asked me to be his girlfriend. Officially. Mom already knows. She cried.
+London: Of course she cried.
+11:59. London's phone buzzes. "D: happy new year sterling. no matter what. i mean it."
+> [Sweet] Call him. Right now. At midnight. -> n1
+> [Bitchy] "it's not new year yet, williams" -> n2
+> [Good] Don't answer. Not yet. Let it sit. -> n3
+*n1
+@add Diggy_Affection 4
+@add Diggy_Trust 2
+He picks up on the first ring. In the background: his mom, his little sister, a TV countdown. "Ten! Nine!" London doesn't say anything. Neither does he. They just breathe through midnight together.
+@jump n_done
+*n2
+@add Diggy_Affection 2
+D: it is in my heart
+London: corny
+D: 12:00. happy new year london.
+@jump n_done
+*n3
+@add London_Confidence 1
+She watches the fireworks with her twin and her family and leaves it on read. In the morning she reads it nine more times.
+*n_done
+@load s1/ep24.mvs

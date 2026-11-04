@@ -1,0 +1,44 @@
+@title EPISODE 24 • INDOOR SEASON
+@bg indoor_training_facility
+January. Indoor season. The banked track smells like rubber and new beginnings.
+@show holloway
+Holloway: Welcome back. Some of you trained over break. Some of you ate. Coach King will be finding out which.
+@show coachking
+Coach King: Leaderboard's up. If your name's at the bottom, you live in my weight room now.
+Caleb's name is at the bottom. Shane pats his back.
+@show holloway
+Holloway: Distance and sprints are cross-training again. Sterling. Williams. You're partners.
+London: Coach. You're doing this on purpose.
+Holloway: I do everything on purpose. That's why I'm the head coach.
+@show diggy
+Diggy: (awkward) Hey.
+London: Hey.
+@show coachm
+Coach M: (from across the track) Okay, Romeo and Juliet, you can be sad AND fast! Drop and give me strides!
+> [Bold] "Race me. 300. Like old times." -> r1
+> [Sweet] "My dad called your mom. I know. Thank you for telling me first." -> r2
+> [Bitchy] "Just do the drill, Williams." -> r3
+> [Good] Run the strides in silence, side by side. -> r4
+*r1
+@add Diggy_Affection 3
+Diggy: (grinning for the first time in weeks) Oh, it's ON.
+You lose by a step again. You both laugh so hard Coach M has to sit down.
+@jump r_done
+*r2
+@add Diggy_Trust 3
+Diggy: She said he apologized for twenty minutes. She made him a plate over the phone. Like, verbally.
+@jump r_done
+*r3
+@add Diggy_Hurt 1
+@add Coach_Respect 1
+Diggy: (quiet) Okay. Drill.
+@jump r_done
+*r4
+@add Diggy_Trust 2
+Eight strides. Step for step. By the last one your arms are swinging in time without either of you trying.
+*r_done
+@show coachbrooks
+Coach Brooks: (handing London a coffee she didn't ask for) For the record, your recovery runs were perfect over break. Don't tell Holloway I noticed. She'll get emotional.
+@show holloway
+Holloway: I heard that.
+@load s1/ep25.mvs

@@ -1,0 +1,45 @@
+@title EPISODE 27 • ALEXA'S SHOW
+@bg art_gallery_night
+@show alexa
+Alexa has a piece in the student art show. She didn't tell anyone. Paris found out from the flyer.
+Paris: You drew the TEAM. All of us. Alexa, this is gorgeous.
+Alexa: (staring at the floor) It's not finished. Nothing's ever finished.
+In the corner of the painting there's a boy mid-jump. Triple jump. Unmistakably Zane.
+@show zane
+Zane: (arriving with flowers, nervous) Paris said I should come. Is that... me?
+Alexa wants to disappear into the wall.
+> [Bold] "Yes, that's you. She stares at you at practice." -> x1
+> [Good] Drag Paris away. Give them space. -> x2
+> [Bitchy] "Zane, just ask her out. Painful to watch." -> x3
+> [Sweet] "Alexa, tell him what the painting's called." -> x4
+*x1
+@add Alexa_Friendship -1
+@add Alexa_Zane 2
+Alexa: LONDON.
+Zane: (grinning) I stare at her too. Like, a lot. Coach Rhodes yells at me.
+@jump x_done
+*x2
+@add Alexa_Friendship 2
+@add Alexa_Zane 2
+From the snack table you watch Zane say something that makes Alexa laugh — the real laugh, the one only Paris usually gets.
+@jump x_done
+*x3
+@add Alexa_Zane 1
+@add Alexa_Friendship -1
+Zane: Okay! Alexa — coffee? Tomorrow? Please say yes. London's watching.
+Alexa: (tiny smile) ...Yes. Mostly to make her leave.
+@jump x_done
+*x4
+@add Alexa_Friendship 3
+@add Alexa_Zane 3
+Alexa: (barely a whisper) It's called "The Ones Who Stayed."
+Zane looks at the painting. Then at her. He doesn't say anything clever. He just takes her hand.
+*x_done
+@hide
+@bg art_gallery_night
+@show diggy
+Across the gallery, London spots him. Diggy. Standing in front of the painting. In the corner, behind the boy mid-jump: a girl in a white headband and a boy in a grey hoodie, running side by side.
+Diggy: (not looking at her) She got your arm swing right.
+London: She got yours wrong.
+Diggy: (smiling) Yeah, she made it look good.
+@load s1/ep28.mvs

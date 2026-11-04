@@ -1,7 +1,7 @@
 # Maple Valley U — Series Bible
 
 **Format:** episodic visual novel, ~15 min/episode, 36 episodes per season.
-**Setting:** Maple Valley University, 2026. Mascot: the Hawks (est. 1972). Colors: maroon & cream (logo icon: green & gold).
+**Setting:** Maple Valley University, 2026. Mascot: the Hawks (est. 1972). Colors: maroon & cream. Coaches: Simone Holloway (head), Marcus "Coach M" Bennett (sprints), Elena Brooks (distance), Andre Lewis (hurdles), Tiana Rhodes (jumps), Dominic Vega (throws), Xavier King (S&C), Maya Ellis (trainer).
 **Look:** 2000s CW teen-drama promo (The O.C., One Tree Hill, Gossip Girl), Y2K fashion, Tuscan college architecture. UI palette: dusty rose, mauve, cream, cocoa, champagne gold. Character art: detailed comic-book style.
 **Screens:** top = scene + sprites + dialogue box; bottom = choices, relationship meters, phone/texts.
 
