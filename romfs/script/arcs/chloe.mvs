@@ -1,0 +1,34 @@
+@title STORY • CHLOE: BETWEEN THE POSTS
+@bg soccer_pitch_night
+You're Chloe Park. Goalkeeper. Irvine, California. You stand alone between two posts for ninety minutes. You like it that way. Nobody can sneak up on you.
+@show maya
+Maya used to stand next to you at every party. You were the gossip duo. Then she screenshotted your close friends story.
+Maya: (walking past) Nice save today.
+> [Bitchy] "Gonna screenshot it?" -> a1
+> [Sweet] "...Thanks." -> a2
+*a1
+@add Maya_Beef 2
+Maya flinches. Just a little. You see it. Goalkeepers see everything.
+@jump a_done
+*a2
+@add Maya_Bond 2
+Maya stops walking. She turns around. She almost says something. She doesn't.
+*a_done
+@bg dorm_room_night
+At 1 a.m., Maya texts: "i'm sorry. i shouldn't have posted it. i was jealous you had a close friends list i wasn't on."
+You read it ten times. She wasn't on it because you made it about her.
+> [Sweet] "you weren't on it because the whole story was about you, dummy." -> b1
+> [Good] "thank you for saying sorry. i need a little time." -> b2
+*b1
+@add Maya_Bond 3
+Maya: "WHAT"
+Maya: "chloe"
+Maya: "CHLOE"
+You turn your phone face-down, smiling. Let her stew for one night. She deserves that much.
+@jump end
+*b2
+@add Self 2
+Maya: "ok. i'll wait."
+And she does. That's how you know she meant it.
+*end
+Chloe Park keeps everything out of the net. This year, she's learning which things are worth letting in.

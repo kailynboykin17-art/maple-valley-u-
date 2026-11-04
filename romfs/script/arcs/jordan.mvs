@@ -1,0 +1,38 @@
+@title STORY • JORDAN: TEN BREAKUPS
+@bg dorm_room_night
+You're Jordan Ellis. Midfielder. Philly. Bi, out since you were fifteen, and currently on breakup number ten with Brooke Anderson.
+Your phone: Brooke. "u up"
+It's 1:14 a.m. It's always 1:14 a.m.
+> [Bold] "no. go to sleep brooke." -> a1
+> [Sweet] "yeah. what's wrong?" -> a2
+> [Good] Turn your phone off. -> a3
+*a1
+@add Self 2
+Brooke: "ok."
+Brooke: "goodnight jordy"
+She hasn't called you Jordy since breakup number four. You stare at it for an hour.
+@jump a_done
+*a2
+@add Brooke 2
+She calls. She's crying. Her parents called again. Scottsdale. "Disappointed." You talk till 3 a.m. Like nothing ever broke.
+@jump a_done
+*a3
+@add Self 3
+You sleep. For real. Eight hours. You wake up feeling like a person.
+*a_done
+@bg soccer_pitch_day
+@show nicole
+Nicole: Ellis. Your passes are sloppy. Is this about Brooke again?
+> [Bitchy] "Is everything about Brooke to you, Nicole?" -> b1
+> [Good] "...Yeah. It is. I'll fix it." -> b2
+*b1
+@add Nicole_Beef 2
+Nicole: When you play like this? Yeah.
+She's not wrong. You hate when she's not wrong.
+@jump end
+*b2
+@add Nicole_Bond 3
+Nicole: (surprised) Okay. Thanks for being honest. That's... actually really captain-y of you.
+Jordan: Don't make it weird.
+*end
+Jordan Ellis loves hard and fights harder. This year, she's figuring out the difference between loving someone and not being able to let go.

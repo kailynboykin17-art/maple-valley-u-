@@ -1,0 +1,32 @@
+@title STORY • VALENTINA: ALWAYS SOMETHING
+@bg dorm_room_night
+You're Valentina Reyes. Striker. San Antonio. Currently texting three guys, ignoring two others, and FaceTiming your abuela.
+Abuela: Mija. Which one is the good one?
+Valentina: Abuela, none of them are the ONE. They're just... options.
+Abuela: Options are for restaurants. Boys should be a decision.
+> [Sweet] "...I don't know how to pick, Abuela." -> a1
+> [Bitchy] "Abuela, you married the first guy you met." -> a2
+*a1
+@add Self 2
+Abuela: Then stop picking. Wait till one picks you so hard you don't have to think.
+@jump a_done
+*a2
+Abuela: And we've been married fifty-two years. Who's winning, mija?
+You have no comeback. Nobody beats Abuela.
+*a_done
+@bg party_house_night
+@show nicole
+At a party, you see Nicole across the room talking to Marco. Your Marco. Well. One of your Marcos.
+> [Bold] Walk over and stand between them. -> b1
+> [Good] Text Nicole: "can we talk? not about marco." -> b2
+*b1
+@add Nicole_Beef 2
+It's a whole scene. Maya films it. You win. You feel terrible.
+@jump end
+*b2
+@add Nicole_Bond 3
+Nicole meets you on the porch. You both sit there. No Marco. No team. Just you and her, like freshman year.
+Valentina: I miss you.
+Nicole: (instantly) I miss you too. So much.
+*end
+Valentina Reyes is always something: loud, late, dramatic. Underneath it all, she's scared of losing the one person who knows her best.

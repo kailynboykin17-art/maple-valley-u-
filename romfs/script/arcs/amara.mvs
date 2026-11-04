@@ -1,0 +1,32 @@
+@title STORY • AMARA: TOO SENSITIVE
+@bg art_studio_day
+You're Amara Johnson. Winger. Detroit. Everyone says you're "too sensitive." You cry at commercials, at sunsets, at goals. Yours and the other team's.
+@show simone
+Simone: You're painting again. What's this one?
+Amara: It's Drew. From swim. Is that weird?
+Simone: You painted him underwater. With fish. That's very weird. It's also beautiful.
+> [Sweet] "Should I give it to him?" -> a1
+> [Good] "I'm keeping it. He doesn't even know my name." -> a2
+*a1
+@add Courage 2
+Simone: Only if I can watch.
+@jump a_done
+*a2
+Simone: He knows your name, Amara. Tyler told Brooke and Brooke told Maya and Maya told everybody.
+*a_done
+@bg campus_pool_day
+You find Drew at the pool. You're holding the painting. Your hands are shaking.
+> [Bold] Give it to him. Say "I made this." -> b1
+> [Sweet] Leave it on his bag with a note. -> b2
+*b1
+@add Courage 3
+Drew: (staring at it) ...You made this? Of me?
+Amara: Is it weird?
+Drew: It's the nicest thing anyone's ever done for me. Can I hang it in my room? Can I... take you to dinner?
+You cry. Of course you cry. He laughs, but in a nice way, and hands you his towel.
+@jump end
+*b2
+@add Courage 1
+That night he DMs you a picture of it on his wall. "who made this?? i need to thank them." You reply "me." Your phone rings in under a minute.
+*end
+Amara Johnson feels everything. This year, she finds out that's not too much. It's exactly enough.

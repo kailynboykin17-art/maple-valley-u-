@@ -1,0 +1,26 @@
+@title STORY • SIMONE: THE BOUNCER
+@bg dorm_room_morning
+You're Simone Carter. Center back. Raleigh. Every crisis on this team, you're the one who shows up. You've broken up four fights, driven three girls home, and held Amara's hair twice. It's October.
+Your mom: "you taking care of you, or just everybody else?"
+> [Good] "both mama" -> a1
+> [Sweet] "...mostly everybody else." -> a2
+*a1
+Mom: "Simone Denise. Liar."
+@jump a_done
+*a2
+@add Self 2
+Mom: "That's my baby. Strong like your grandma. But even Grandma took Sundays."
+*a_done
+@bg campus_quad_day
+@show amara
+Amara: Simone. You've been helping me with Drew for a month. Who do YOU like?
+> [Bold] "...Nobody. I don't have time." -> b1
+> [Sweet] "There's a guy in my bio lab. He's quiet. He laughs at my jokes." -> b2
+*b1
+Amara: (squinting) That's what people say when they like somebody.
+@jump end
+*b2
+@add Self 3
+Amara SCREAMS. Then she starts planning. You let her. It's nice, for once, to be the one somebody else is taking care of.
+*end
+Simone Carter holds everybody up. This year, her best friend finally holds her up back.

@@ -1,0 +1,35 @@
+@title STORY • NIA: THE ONE WHO STAYS
+@bg skate_park_day
+You're Nia Washington. Defensive mid. Oakland. Skater. Sneakerhead. Professionally unbothered. Unofficially, deeply bothered.
+You liked Tyler since August. You told one person. Riley. Your best friend since you were nine.
+Now Riley's at his house. And you're at the skate park, eating a whole bag of hot chips about it.
+@show simone
+Simone: (sitting down) I heard.
+Nia: I'm fine.
+Simone: You're eating hot chips at 9 a.m.
+> [Sweet] "...I'm not fine." -> a1
+> [Bitchy] "Hot chips are a breakfast food, Simone." -> a2
+*a1
+@add Self 3
+Simone doesn't say anything. She just takes a chip. Then another. You finish the bag together.
+@jump a_done
+*a2
+Simone: Mm-hm. And that's your third bag.
+*a_done
+@bg dorm_hallway_night
+@show riley
+Riley's outside your door. She looks like she's been crying.
+Riley: Can I come in?
+> [Good] Let her in. -> b1
+> [Bold] "Say it from the hallway first." -> b2
+*b1
+@add Riley_Bond 2
+She sits on your bed and doesn't say anything for a long time. Then: "I'm sorry." You let her sleep over anyway. You always do.
+@jump end
+*b2
+@add Self 2
+@add Riley_Bond 2
+Riley: (through the door) I'm sorry. I knew. I'm an idiot. I'll never do it again. Can I please come in? I brought pancake mix.
+You open the door. Of course you open the door.
+*end
+Nia Washington acts like nothing gets to her. The truth is, she's the one who always stays, even when it hurts.

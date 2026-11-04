@@ -1,0 +1,32 @@
+@title STORY • MAYA: RECEIPTS
+@bg dorm_room_night
+You're Maya Shah. Midfielder. Chicago. Your Notes app has 412 entries. Your camera roll has 9,000 screenshots. Your best friend Chloe isn't speaking to you.
+Your little sister, on FaceTime: Why do you screenshot everything?
+> [Sweet] "...So I don't miss anything." -> a1
+> [Bitchy] "Because people lie, Anika." -> a2
+*a1
+@add Honest 2
+Anika: You never miss anything. You're the one who always knows.
+Maya: Yeah. But nobody ever tells me stuff. I have to find it.
+@jump a_done
+*a2
+Anika: (very seriously, age eleven) You lie too, Maya. You lie when you say you're fine.
+Out of the mouths of babes.
+*a_done
+@bg soccer_pitch_night
+@show chloe
+Chloe makes a ridiculous save in the 89th minute. The whole team mobs her. You hang back.
+> [Bold] Run in and hug her anyway. -> b1
+> [Good] Delete the screenshots of her story. All of them. In front of her. -> b2
+*b1
+@add Chloe_Bond 2
+She stiffens. Then, slowly, she hugs you back. Just for a second. It's enough.
+@jump end
+*b2
+@add Chloe_Bond 3
+Chloe watches you hit "Delete." Then "Recently Deleted." Then "Delete All."
+Chloe: (quietly) ...That's kind of the most romantic thing you've ever done.
+Maya: It's not romantic. It's an apology.
+Chloe: For you? Same thing.
+*end
+Maya Shah collects receipts because she's scared of being left out of the story. This year, she learns she doesn't need proof that people love her.

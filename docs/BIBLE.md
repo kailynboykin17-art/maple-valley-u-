@@ -24,7 +24,7 @@ Coach: **Holloway** — immune to Frank Sterling's donations.
 | Zane Rahman | TJ/HJ | Arab American, emotionally mature | Alexa |
 | Noah Miller · Logan Kim · Caleb Walker · Shane Fa'avae | distance/distance/throws/throws | the guys | — |
 | Tiffany · Destiny | upperclassmen, sprints / hurdles | confident, flirty / competitive, disciplined | — |
-| Kayla · Martin | — | from moodboard, roles TBD | — |
+| Kayla · Martin | 800m freshman / 400H senior captain | homesick freshman London mentors / captain who loves Tiffany | — |
 
 Sterling family: parents Frank (self-made) & Vega (old money), older sibs Milan (23) & Jason (22). Twins born two weeks early, nearly lost — why the parents are protective. Off-campus penthouse + allowance.
 
@@ -56,4 +56,4 @@ Secret crush: London has a huge crush on Diggy she will never admit. Paris, Alan
 Romance canon: Jayden dates Suki but he and Paris (childhood friends) have mutual crushes — Paris/Jayden are ENDGAME. Soccer: everyone straight except Jordan & Brooke (both bi). Nia liked Tyler first; Riley went after him anyway.
 London: in recovery from an eating disorder since age 14 (with the twins' early birth, it's why Frank & Vega are so protective). Handle with care: recovery-focused, no numbers/behaviors, never played for drama. Support: weekly therapist (Dr. Ames), Maya Ellis check-ins.
 Tone rule: nobody on either team is evil. Cassie is a sweet gossip, not a villain. Messy, not mean.
-Character Stories: play as anyone (romfs/arcs.txt, scripts in romfs/script/arcs/). All 18 arcs written.
+Character Stories: play as anyone (romfs/arcs.txt, scripts in romfs/script/arcs/). 31 arcs written (everyone but the assistant coaches).

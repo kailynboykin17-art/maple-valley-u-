@@ -1,0 +1,33 @@
+@title STORY • NICOLE: CAPTAIN
+@bg soccer_pitch_night
+You're Nicole Miller. Captain. Forward. Denver. You've been captain since you were a sophomore, and you've been scared every day of it.
+@show valentina
+Valentina: You're doing the captain voice again.
+Nicole: I don't have a captain voice.
+Valentina: (deepening her voice) "Everybody, LINE UP." That's the captain voice.
+> [Bitchy] "At least I don't have a talking-to-three-guys voice." -> a1
+> [Sweet] Laugh. She's your best friend, even when she's not. -> a2
+*a1
+@add Valentina_Beef 2
+Valentina: Okay. Wow. Okay.
+And there it is. The fight again. You started it this time. You know you did.
+@jump a_done
+*a2
+@add Valentina_Bond 3
+Valentina: (bumping your shoulder) See? You're fun when you let yourself be.
+*a_done
+@bg dorm_room_night
+Your brother Noah calls. He always calls on bad nights. You've never told him which nights are bad. He just knows.
+Noah: Talk.
+> [Sweet] "I'm scared I'm a bad captain." -> b1
+> [Good] "Valentina and I keep fighting over stupid guys." -> b2
+*b1
+@add Self 3
+Noah: (quiet) Nic. You care so much it makes you crazy. That's not a bad captain. That's just a tired one.
+@jump end
+*b2
+@add Valentina_Bond 2
+Noah: Is it about the guys? Or is it that you're scared she'll find a best friend who isn't you?
+You don't answer. He's right. He's always annoyingly right.
+*end
+Nicole Miller holds the whole team on her shoulders. This year, she's learning it's okay to put some of it down.

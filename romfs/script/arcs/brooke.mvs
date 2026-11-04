@@ -1,0 +1,30 @@
+@title STORY • BROOKE: PERFECT
+@bg scottsdale_house_day
+You're Brooke Anderson. Center back. Scottsdale. Bi, which your parents call "a phase" at every holiday.
+Your mom on FaceTime: Brooke, honey, are you starting yet? Your father wants to know if you're starting.
+Brooke: Not this week, Mom.
+Mom: Hm. Well. Smile more, maybe the coach will notice.
+You smile. You always smile. It's what you do instead of screaming.
+@bg dorm_room_night
+@show jordan
+Jordan shows up at your door at midnight. Breakup number ten, day six.
+Jordan: You called me Jordy.
+Brooke: It slipped.
+Jordan: Nothing slips with you, Brooke. Everything's on purpose.
+> [Sweet] "...I miss you. That's on purpose." -> a1
+> [Bitchy] "Tyler's jacket is warmer than you ever were." -> a2
+> [Good] "Can you just sit with me? No fighting. Just tonight." -> a3
+*a1
+@add Jordan_Bond 3
+Jordan: (finally, softly) I miss you too. I hate that I miss you.
+@jump end
+*a2
+@add Jordan_Beef 3
+Jordan leaves. You sit on the floor. You don't even want Tyler. You just wanted her to hurt as much as you do.
+@jump end
+*a3
+@add Jordan_Bond 2
+@add Self 2
+She sits. She doesn't fight. You tell her about your mom. About "smile more." She holds your hand for the first time in six days, and you finally stop smiling and cry.
+*end
+Brooke Anderson is perfect on the outside. On the inside, she's just a girl trying to be loved by people who keep asking her to smile.

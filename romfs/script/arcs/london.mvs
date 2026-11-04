@@ -1,0 +1,59 @@
+@title STORY • LONDON: THE MEAN TWIN
+@bg penthouse_morning
+You're London Sterling. You wake up at 5:15 so you can be "four minutes early." You've been late every day this season on purpose. Showing up early would mean admitting you care.
+Your phone: Dr. Ames. "Reminder: Thursday 4pm."
+Your phone: Mama. "Proud of you baby. Every single day."
+You've been in recovery since fourteen. Some mornings it's background noise. Some mornings it's the loudest thing in the room. Today it's quiet. You'll take quiet.
+> [Good] Text Mama back: "love you. going to my appointment thursday." -> a1
+> [Sweet] Wake Paris up and make her eat breakfast with you. -> a2
+*a1
+@add Recovery 2
+Mama: "❤️❤️❤️ that's my girl"
+@jump a_done
+*a2
+@add Paris_Bond 3
+Paris: (half asleep, at the counter) You're being weird. Nice-weird.
+London: Eat your eggs, Paris.
+It's the best part of your morning. You'll never tell her that.
+*a_done
+@bg track_stadium_morning
+@show diggy
+Diggy is already on the track. He's always already on the track. You've checked. Every day. You'd rather die than let anyone know you've checked.
+@show cassie
+Cassie: (sliding up) You're staring.
+London: I'm surveying.
+Cassie: You're surveying Diggy's calves.
+> [Bitchy] "I'm surveying the TRACK, Cassie." -> b1
+> [Bold] "And? They're objectively good calves." -> b2
+> [Sweet] Walk away before your face gives you up. -> b3
+*b1
+Cassie: The track is behind you.
+London turns around. The track is, in fact, behind her.
+@jump b_done
+*b2
+@add Honest 2
+Cassie: (screaming into her own hands) I'm TELLING MAGGIE.
+London: Maggie already knows.
+Cassie: EVERYONE already knows.
+@jump b_done
+*b3
+@add Diggy_Crush 1
+You walk away fast. Too fast. Diggy calls "morning, Sterling!" and you trip on absolutely nothing.
+*b_done
+@bg penthouse_night
+That night, alone on the balcony, you write in the journal Dr. Ames made you start. "Three true things."
+> [Sweet] 1. I like him. 2. I'm scared. 3. I'm okay. -> c1
+> [Bitchy] 1. He's annoying. 2. He's annoying. 3. ...He's annoying. -> c2
+> [Good] 1. I ate breakfast with my sister. 2. I ran well. 3. I'm proud of me. -> c3
+*c1
+@add Honest 3
+You stare at number one. You don't cross it out. That's new.
+@jump end
+*c2
+You close the journal. You open it again. Under number three, very small, you write "(I like him.)"
+@jump end
+*c3
+@add Recovery 3
+Dr. Ames would say that's the most important page you've written. You think she'd be right.
+*end
+London Sterling is mean, sharp and impossible to impress. She's also the girl who checks every morning if he's on the track, and who's getting better, one quiet morning at a time.

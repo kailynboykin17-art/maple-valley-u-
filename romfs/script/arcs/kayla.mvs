@@ -1,0 +1,38 @@
+@title STORY • KAYLA: FRESHMAN YEAR
+@bg dorm_room_night
+You're Kayla. Freshman. 800 meters. Small town, Mississippi. Your roommate went home for the weekend. The dorm is so quiet you can hear the vending machine down the hall.
+Your mom: "how's my college girl!!"
+You type "i want to come home." You delete it. You type "great!!" You send that instead.
+@bg track_stadium_day
+@show london
+At practice, the scary sophomore, London Sterling, the rich one, the one who talks back to Holloway, stops next to you.
+London: You're the freshman who cried in the bathroom yesterday.
+Kayla: I— how do you—
+London: I was in the next stall. I cried there my first week too. Don't tell anybody.
+> [Sweet] "...Really?" -> a1
+> [Bold] "You don't seem like you've ever cried in your life." -> a2
+*a1
+@add London_Bond 3
+London: Really. Paris found me. Now I'm finding you. That's the rule.
+@jump a_done
+*a2
+@add London_Bond 2
+London: (smirking) That's the point. Come run with the distance group. I'll show you how to look like that too.
+*a_done
+@bg penthouse_night
+@show paris
+London invites you to the penthouse for "girls' night." You've never seen a place like it. Paris hands you a face mask and a blanket and asks about your mom.
+Paris: What's her name?
+Kayla: Denise.
+Paris: Okay. Call Denise. Right now. Put her on speaker. We'll all say hi.
+> [Sweet] Call your mom. -> b1
+> [Good] "I'm okay. Really." -> b2
+*b1
+@add Home 3
+Your mom picks up and suddenly there are five college girls screaming "HI DENISE!" Your mom laughs so hard she cries. Then you cry. Then Maggie cries. Then everyone's crying and it's the best night of your whole first semester.
+@jump end
+*b2
+Paris: (gently) Okay. But you're sleeping over. London's rule.
+London: It's my rule.
+*end
+Kayla came to Maple Valley alone. She found out the scariest girl on the team was the one who'd been waiting for her in the next stall.

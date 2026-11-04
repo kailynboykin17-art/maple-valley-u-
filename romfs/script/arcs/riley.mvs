@@ -1,0 +1,36 @@
+@title STORY • RILEY: NO RULES
+@bg lake_dock_night
+You're Riley Bennett. Winger. Nashville. You're on a dock at 2 a.m., barefoot, because you can be.
+@show nia
+Nia: (walking up) You're gonna fall in.
+Riley: Then I'll swim.
+Nia: It's October. You'll freeze.
+Riley: Then I'll be a cool ghost.
+You've been best friends since you were nine. She's always the one telling you to get down.
+> [Bitchy] "Why do you always have to ruin everything, Nia?" -> a1
+> [Sweet] Grab her hand. Pull her onto the dock with you. -> a2
+*a1
+Nia: (quiet) I'm not trying to ruin it. I'm trying to make sure you're still around to have fun tomorrow.
+You don't have anything to say to that.
+@jump a_done
+*a2
+@add Nia_Bond 3
+She almost says no. Then she sits. Two girls on a dock, feet in freezing water, laughing at nothing until the sun comes up.
+*a_done
+@bg dorm_room_day
+You know something you're not supposed to know. Nia told you in August that she liked Tyler. And you went to his house anyway.
+> [Good] Tell Nia you're sorry. Today. -> b1
+> [Bad] Pretend it's fine. Maybe she forgot. -> b2
+*b1
+@add Nia_Bond 3
+Riley: I knew you liked him. I did it anyway. I don't even like him that much. I just... I wanted somebody to want me first, for once.
+Nia: (long pause) That's the dumbest thing you've ever said.
+Riley: I know.
+Nia: I'm still mad.
+Riley: I know.
+Nia: ...Pancakes?
+@jump end
+*b2
+She didn't forget. She never forgets anything about you. That's what makes it worse.
+*end
+Riley Bennett lives with no rules. This year, she learns that the one person who keeps telling her to get down is the one who'd jump in after her.

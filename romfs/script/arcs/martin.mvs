@@ -1,0 +1,39 @@
+@title STORY • MARTIN: SENIOR CAPTAIN
+@bg track_stadium_morning
+You're Martin. Senior. 400m hurdles. Men's team captain. Last year at Maple Valley. Last season to win a conference title.
+@show holloway
+Holloway: Martin. Team's a mess. Sophomores fighting, juniors breaking up, Sterling yelling at everybody. Fix it.
+Martin: Coach, that's... your job?
+Holloway: I delegate. That's why I'm head coach.
+@bg locker_room
+@show diggy
+Diggy and Jayden aren't talking. Jamal's sitting alone. Caleb's making jokes nobody laughs at. Shane looks like he's going to cry.
+> [Bold] Call a team meeting. Right now. Locker room. -> a1
+> [Good] Talk to each of them alone. One by one. -> a2
+*a1
+@add Leadership 2
+Martin: Everybody sit down. Phones away. I don't care what happened at whatever party. In five months I'm gone. I'm not leaving y'all like this.
+It's quiet for a long time. Then Shane raises his hand. "Can we hug it out?" They hug it out. It's awkward. It works.
+@jump a_done
+*a2
+@add Leadership 3
+It takes all week. Jamal tells you he messed up. Jayden tells you he's not even mad. Caleb tells you about his parents. You just listen. By Friday, they're running relays together again.
+*a_done
+@bg campus_quad_night
+@show tiffany
+Tiffany sits down next to you on the bench. You were best friends freshman year, before Marcus.
+Tiffany: You're good at this, you know. Holding everybody together.
+Martin: Somebody's gotta.
+Tiffany: Who holds you together?
+> [Sweet] "...Nobody, really." -> b1
+> [Bold] "Maybe you could." -> b2
+*b1
+@add Self 2
+Tiffany: (leaning on your shoulder) Okay. Then me. Starting now.
+@jump end
+*b2
+@add Tiffany_Bond 3
+Tiffany looks at you for a long time. Like she's seeing you for the first time in two years.
+Tiffany: ...Maybe I could.
+*end
+Martin spent four years holding the team together. In his last season, someone finally offers to hold him.
