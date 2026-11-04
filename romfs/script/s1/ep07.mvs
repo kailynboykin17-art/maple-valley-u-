@@ -1,12 +1,12 @@
 @title EPISODE 07 • THE RELAY CARD
 @bg track_stadium_day
 @show suki
-Relay cards go up at noon. Suki's name is on the 4x400. So is a sticky note on her locker: "Tick tock. — C"
-Suki: She's gonna tell. She's gonna tell Jayden and Paris and the whole team and I'm gonna be "the girl who."
+Relay cards go up at noon. Suki's name is on the 4x400. So is a sticky note on her locker in Cassie's bubbly handwriting: "not saying ANYTHING 🤐 but u should tell him before somebody else does. love u — C"
+Suki: Cassie KNOWS. She swears she won't tell, but she's Cassie. It's gonna slip. She's gonna sneeze and it's gonna come out. Jayden and Paris and the whole team and I'm gonna be "the girl who."
 > [Bold] "Then we tell them first. On our terms." -> a1
-> [Bad] "Give Cassie the spot. It's one race." -> a2
+> [Bad] "Skip the relay. Lay low till it blows over." -> a2
 > [Sweet] "Whatever happens, you have me." -> a3
-> [Bitchy] "I'll handle Cassie. Personally." -> a4
+> [Bitchy] "I'll make sure Cassie keeps her mouth shut." -> a4
 *a1
 @add Suki_Friendship 2
 @add Suki_Truth 1
@@ -15,7 +15,7 @@ Suki: (shaking) Okay. Okay. After practice. You stand next to me.
 *a2
 @add Suki_Friendship -1
 @add Cassie_Threat 2
-Suki fakes a limp at warmups. Cassie runs her leg. Nobody believes the limp, least of all Holloway.
+Suki fakes a limp at warmups. Cassie runs her leg and keeps looking back at Suki, worried. Nobody believes the limp, least of all Holloway.
 @jump a_done
 *a3
 @add Suki_Friendship 3
@@ -26,9 +26,10 @@ Suki hugs you so hard your sunglasses fall off. You let them.
 @add Team_Reputation -1
 @show cassie
 London: Cassie. A word.
-Cassie: Ooh, a word. Is it "please"?
-London: It's "receipts." I know about you and Destiny's group-chat screenshots. Back off Suki, and they stay in my phone.
-Cassie goes pale under her bronzer.
+Cassie: I KNOW. I haven't said anything! I've been eating my feelings. I had four churros at my mom's restaurant last night.
+London: Just... keep holding it. A little longer.
+Cassie: For Suki. Not for you. You're mean.
+London: Correct.
 *a_done
 @if Suki_Truth 1 told
 @bg locker_room

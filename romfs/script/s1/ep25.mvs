@@ -25,13 +25,13 @@ She hands it over. You burn it in the fire pit behind the dorm. Cassie watches a
 *c_done
 @show suki
 Suki: (coming up the stairs) Is that Cassie? Crying? Somebody pinch me.
-Cassie: Suki. I'm sorry. For the note. For the relay. For all of it.
+Cassie: Suki. I'm sorry I knew. I'm sorry I wrote that note. I just didn't want you carrying it alone.
 Suki looks at Cassie for a long time.
 > [Good] "Suki, your call." -> s1
 > [Sweet] "Everybody here's done something messy this year. Everybody." -> s2
 *s1
 @add Suki_Friendship 2
-Suki: (finally) ...You can run the relay. For real. You're faster than me in the third leg anyway.
+Suki: (finally) ...You held a secret for two whole months. For ME. Cassie. That's the most romantic thing anyone's done for me all year.
 @jump s_done
 *s2
 @add Suki_Friendship 1

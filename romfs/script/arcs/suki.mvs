@@ -1,0 +1,54 @@
+@title STORY • SUKI: HELD TOGETHER WITH TAPE
+@bg dorm_room_morning
+You're Suki Bennett. You wake up to three texts from Jayden: "morning." "you good?" "we should talk." You've been dating him for a year. It's felt like a group project for six months.
+And one from Jamal: "you left your water bottle in the long jump pit. i'll bring it." Nothing else. He never says anything else. That's the problem. You read it eleven times.
+> [Good] Text Jayden back first. He's your boyfriend. -> a1
+> [Bad] Text Jamal back first. -> a2
+> [Sweet] Text neither. Call your mom. -> a3
+*a1
+@add Suki_Truth 1
+Suki: "morning ❤️ ya we should"
+You add the heart out of habit. You notice you're adding it out of habit. That's the part that scares you.
+@jump a_done
+*a2
+@add Suki_Jamal 2
+Suki: "my hero lol"
+Jamal: "lol"
+You know exactly what you're doing. You do it anyway.
+@jump a_done
+*a3
+@add Self 3
+Your mom picks up on the first ring. Houston accent, TV in the background.
+Mom: Baby! You sound sad. You sound sad, Suki. Who do I need to fight?
+You laugh for the first time in a week. You don't tell her. But you feel lighter.
+*a_done
+@bg track_stadium_day
+@show jayden
+Jayden: Suki. Real talk. I don't think either of us is happy.
+You've been waiting six months for him to say it. Now it's here and you want to scream.
+Suki: Is this about Paris?
+Jayden: (long pause) ...It's about us.
+Suki: That's a yes.
+> [Bitchy] "You've been in love with her since you were six. Everybody knows it, Jayden." -> b1
+> [Sweet] "...I know. I'm not happy either." -> b2
+> [Bold] Tell him about Jamal. All of it. Right now. -> b3
+*b1
+@add Self 1
+Jayden: (quiet) That's fair.
+Suki: Of course it's fair. I'm not mad you love her. I'm mad you made me feel crazy for noticing.
+@jump end
+*b2
+@add Self 2
+@add Jayden_Peace 2
+Jayden takes your hand. Not like a boyfriend. Like a friend. It's the most honest he's been all year.
+Jayden: We were good friends first.
+Suki: We were great friends first.
+@jump end
+*b3
+@add Suki_Truth 3
+@add Self 2
+You tell him. Kappa party. Jamal. The guilt. He doesn't yell. He just nods, like the last piece of a puzzle clicked.
+Jayden: I'm glad it was Jamal. He's the best person I know.
+Suki: (crying) That's so annoying of you.
+*end
+Suki Bennett is loud because quiet is where all her feelings live. This year, she's learning to turn the volume down long enough to hear them.

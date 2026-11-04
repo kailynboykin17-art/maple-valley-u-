@@ -85,7 +85,20 @@ static bool loadGame() {
 }
 
 // ---------- state ----------
-enum Mode { TITLE, PLAY, PROFILES };
+enum Mode { TITLE, PLAY, PROFILES, ARCS };
+struct Arc { std::string id, name, title; };
+static std::vector<Arc> arcs;
+static int arcSel = 0;
+static void loadArcs() {
+    std::ifstream f("romfs:/arcs.txt"); std::string s;
+    while (std::getline(f, s)) {
+        while (!s.empty() && s.back() == '\r') s.pop_back();
+        if (s.empty() || s[0] == '#') continue;
+        size_t a = s.find('|'), b = s.find('|', a + 1);
+        if (a == std::string::npos || b == std::string::npos) continue;
+        arcs.push_back({ s.substr(0, a), s.substr(a + 1, b - a - 1), s.substr(b + 1) });
+    }
+}
 struct CharProfile { std::map<std::string, std::string> f; };
 static std::vector<CharProfile> profiles;
 static int profSel = 0, profPage = 0;
@@ -136,7 +149,7 @@ static void advance() {
         else if (l.op == "ifnot") { std::istringstream ss(l.b); int v; std::string t; ss >> v >> t; if (vars[l.a] < v) pc = labels[t]; }
         else if (l.op == "load") { load(l.a); saveGame(); }
     }
-    speaker = ""; text = "To be continued...";
+    speaker = ""; text = script.empty() ? "This story is coming soon." : "To be continued...";
 }
 
 static void startFile(const std::string& f) { vars.clear(); load(f); advance(); mode = PLAY; }
@@ -185,23 +198,33 @@ int main() {
     Img* logo = loadTex("romfs:/gfx/logo.tex", 64, 64, 64, 64);
     Img* poster = loadTex("romfs:/gfx/title.tex", 400, 225, 512, 256);
     std::ifstream probe("sdmc:/3ds/maple-valley-u.sav"); bool hasSave = probe.good(); probe.close();
-    const char* menu[] = { "Continue", "Season 1: One Pace at a Time", "Season 2: MVU Women's Soccer", "Character Profiles" };
-    loadProfiles();
+    const char* menu[] = { "Continue", "Season 1: One Pace at a Time", "Season 2: MVU Women's Soccer", "Character Profiles", "Character Stories" };
+    loadProfiles(); loadArcs();
 
     while (aptMainLoop()) {
         hidScanInput(); u32 k = hidKeysDown(); touchPosition tp; hidTouchRead(&tp);
         if (k & KEY_START) { if (mode == PLAY) saveGame(); break; }
 
         if (mode == TITLE) {
-            if (k & KEY_DOWN) titleSel = (titleSel + 1) % 4;
-            if (k & KEY_UP) titleSel = (titleSel + 3) % 4;
-            if (k & KEY_TOUCH) for (int i = 0; i < 4; i++) if (tp.py >= 52 + i * 44 && tp.py < 90 + i * 44) { titleSel = i; k |= KEY_A; }
+            if (k & KEY_DOWN) titleSel = (titleSel + 1) % 5;
+            if (k & KEY_UP) titleSel = (titleSel + 4) % 5;
+            if (k & KEY_TOUCH) for (int i = 0; i < 5; i++) if (tp.py >= 44 + i * 38 && tp.py < 78 + i * 38) { titleSel = i; k |= KEY_A; }
             if (k & KEY_A) {
                 if (titleSel == 0 && hasSave && loadGame()) { advance(); mode = PLAY; }
                 else if (titleSel == 1) startFile("s1/ep01.mvs");
                 else if (titleSel == 2) startFile("s2/ep01.mvs");
                 else if (titleSel == 3 && !profiles.empty()) { mode = PROFILES; profPage = 0; }
+                else if (titleSel == 4 && !arcs.empty()) mode = ARCS;
             }
+        } else if (mode == ARCS) {
+            int n = arcs.size();
+            if (k & KEY_DOWN) arcSel = (arcSel + 1) % n;
+            if (k & KEY_UP) arcSel = (arcSel + n - 1) % n;
+            if (k & KEY_RIGHT) arcSel = (arcSel + 7) % n;
+            if (k & KEY_LEFT) arcSel = (arcSel + n - 7 % n) % n;
+            if (k & KEY_TOUCH) { int top = arcSel / 7 * 7; for (int i = 0; i < 7 && top + i < n; i++) if (tp.py >= 30 + i * 26 && tp.py < 56 + i * 26) { if (arcSel == top + i) k |= KEY_A; arcSel = top + i; } }
+            if (k & KEY_A) startFile("arcs/" + arcs[arcSel].id + ".mvs");
+            if (k & KEY_B) mode = TITLE;
         } else if (mode == PROFILES) {
             int n = profiles.size();
             if (k & (KEY_RIGHT | KEY_R)) { profSel = (profSel + 1) % n; profPage = 0; }
@@ -240,6 +263,17 @@ int main() {
             if (poster->ok) C2D_DrawImageAt(poster->img, 0, 8, 0.0f, nullptr, 1.0f, 1.0f);
             else if (logo->ok) C2D_DrawImageAt(logo->img, 168, 34, 0.0f, nullptr, 1.0f, 1.0f);
             txt("Touch or press A", 200, 205, 0.4f, C(255, 255, 255, 140), 0, true);
+        } else if (mode == ARCS) {
+            Arc& A = arcs[arcSel];
+            C2D_DrawRectangle(0, 0, 0, 400, 240, C(0x2A, 0x10, 0x18), C(0x2A, 0x10, 0x18), C(0x0C, 0x06, 0x08), C(0x0C, 0x06, 0x08));
+            txt("CHARACTER STORIES", 16, 14, 0.5f, gold);
+            txt("Play as them. Learn who they really are.", 16, 34, 0.4f, cream);
+            Img* p = loadTex("romfs:/gfx/char/" + A.id + ".tex", 192, 256, 256, 256);
+            frame(244, 30, 140, 182, gold, gold);
+            if (p->ok) C2D_DrawImageAt(p->img, 247, 33, 0.0f, nullptr, 0.6979f, 0.6979f);
+            txt(A.name, 16, 90, 0.7f, pink, 220);
+            txt(A.title, 16, 130, 0.5f, cream, 220);
+            txt("A: play   B: back", 16, 214, 0.4f, C(200, 190, 170));
         } else if (mode == PROFILES) {
             CharProfile& P = profiles[profSel];
             u32 paper = C(0xFB, 0xE3, 0xEC), ink = C(0x5A, 0x1E, 0x3A), hot = C(0xE0, 0x5A, 0x96);
@@ -284,11 +318,21 @@ int main() {
         C2D_TargetClear(bot, C(0x14, 0x0E, 0x0C)); C2D_SceneBegin(bot);
         if (mode == TITLE) {
             txt("MAPLE VALLEY U", 160, 22, 0.7f, gold, 0, true);
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 5; i++) {
                 bool off = (i == 0 && !hasSave);
-                frame(20, 52 + i * 44, 280, 38, i == titleSel ? C(0x3A, 0x2A, 0x20) : C(0x1E, 0x16, 0x12), gold);
-                txt(menu[i], 160, 63 + i * 44, 0.48f, off ? C(120, 110, 100) : cream, 0, true);
+                frame(20, 44 + i * 38, 280, 34, i == titleSel ? C(0x3A, 0x2A, 0x20) : C(0x1E, 0x16, 0x12), gold);
+                txt(menu[i], 160, 53 + i * 38, 0.46f, off ? C(120, 110, 100) : cream, 0, true);
             }
+        } else if (mode == ARCS) {
+            int n = arcs.size(), top = arcSel / 7 * 7;
+            txt("Choose a story", 160, 6, 0.5f, gold, 0, true);
+            for (int i = 0; i < 7 && top + i < n; i++) {
+                bool on = top + i == arcSel;
+                frame(16, 30 + i * 26, 288, 23, on ? C(0x3A, 0x2A, 0x20) : C(0x1E, 0x16, 0x12), on ? gold : C(0x6A, 0x58, 0x40));
+                txt(arcs[top + i].name, 24, 33 + i * 26, 0.45f, on ? pink : cream);
+            }
+            char pg[24]; snprintf(pg, sizeof pg, "Page %d/%d  (L/R arrows)", top / 7 + 1, (n + 6) / 7);
+            txt(pg, 160, 218, 0.38f, C(200, 190, 170), 0, true);
         } else if (mode == PROFILES) {
             CharProfile& P = profiles[profSel];
             u32 ink = C(0x5A, 0x1E, 0x3A), hot = C(0xE0, 0x5A, 0x96);

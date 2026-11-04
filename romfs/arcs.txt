@@ -1,0 +1,19 @@
+# id|Name|Story title  (script: romfs/script/arcs/<id>.mvs)
+paris|Paris Sterling|The Nice Twin
+diggy|Diggy Williams|Double Shifts
+cassie|Cassie Morales|Everybody Tells Me Last
+suki|Suki Bennett|Held Together With Tape
+alana|Alana Brooks|10K Pace
+alexa|Alexa Carter|The Ones Who Stayed
+maggie|Maggie O'Connor|Big Sister Energy
+priya|Priya Patel|Not Your Charity Project
+jayden|Jayden Harris|Since We Were Six
+jamal|Jamal Thompson|The Nice Guy's Worst Night
+zane|Zane Rahman|Waiting Well
+noah|Noah Miller|Nicole's Big Brother
+logan|Logan Kim|Through the Viewfinder
+caleb|Caleb Walker|Ice Is a Side Dish
+shane|Shane Fa'avae|Gentle Giant
+tiffany|Tiffany|Exploring
+destiny|Destiny|Say What You Want
+holloway|Coach Holloway|Under the Lights

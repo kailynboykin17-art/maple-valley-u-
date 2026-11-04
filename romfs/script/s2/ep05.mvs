@@ -43,7 +43,7 @@ Nia walks over and stands on Riley's other side. Doesn't say anything. Doesn't h
 @add Jordan_Friendship 2
 @add Drama 2
 Brooke: (very calm) Okay. Okay, Sasha. You wanna play? Let's play.
-She is going to destroy you. Not today. But she is going to.
+She's going to get you back. Probably with a group-chat roast so good it gets pinned.
 @add Brooke_Grudge 3
 @jump f_done
 *f4
@@ -90,7 +90,7 @@ The stands go crazy. Nicole and Valentina look at each other — and for once, t
 *k_done
 @bg parking_lot_night
 After the game. Everyone's in the parking lot. You're about to get in your car when your phone buzzes. Unknown number.
-"I know why you really transferred, Sasha. Do the team a favor and don't make me tell them."
+"I know why you really transferred, Sasha. We should talk before the rest of the team figures it out."
 @show maya
 You look up. Maya's across the lot, looking at her phone. Chloe's next to her. Brooke's by her car. Every single one of them is looking at their phone.
 End of Episode 5. To be continued...

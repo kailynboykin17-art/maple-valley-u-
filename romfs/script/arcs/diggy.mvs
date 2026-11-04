@@ -1,0 +1,71 @@
+@title STORY • DIGGY: DOUBLE SHIFTS
+@bg diggy_kitchen_morning
+You're Duncan Williams. It's 5:10 a.m. Kiara's asleep on the couch in her school clothes because she wanted to be "ready early." Your mama's already at her first job.
+Diggy: (whispering) Kiara. Kiara. Bed. Real bed.
+Kiara: (half asleep) Is the mean lady coming to my recital again?
+Diggy: She's not mean.
+Kiara: You said she was mean.
+Diggy: I said it nice.
+You leave a note on the fridge, take the 5:40 bus to campus, and get to the track before the sun. Before London. Every day. She doesn't know that part.
+@bg track_stadium_morning
+@show coachm
+Coach M: Williams! Why are you always here before me? It's disrespectful.
+> [Good] "Bus schedule, Coach." -> a1
+> [Bold] "'Cause I want your 200 record." -> a2
+> [Sweet] "Honestly? It's the only quiet part of my day." -> a3
+*a1
+Coach M: Respect. Bus life builds legs.
+@jump a_done
+*a2
+@add Diggy_Fire 2
+Coach M: (grinning) Oh, you WANT it want it? Strides. Now. Let's see.
+@jump a_done
+*a3
+@add Coach_Bond 2
+Coach M stops joking. He sits on the bleacher next to you for a minute, the two of you watching the sun come up over the field.
+Coach M: I used to come early too. My pops worked nights. Track was the only place nobody needed nothing from me.
+*a_done
+@bg restaurant_night
+@show cassie
+Friday night at Casa Morales. Twelve tables. A birthday party of twenty. Cassie seating people like air traffic control.
+Cassie: Table nine. The Sterlings' friends. Rich people tip bad, by the way. Watch.
+Ms. Morales: (from the kitchen) DUNCAN. Your plates are dying.
+You carry four plates up each arm. You've done this since sixteen.
+> [Bold] Charm the whole birthday party. Sing with them. -> b1
+> [Good] Head down. Fast. Perfect. -> b2
+> [Sweet] Help Cassie when the host stand gets slammed. -> b3
+*b1
+@add Tips 3
+You lead "Las Mañanitas" at full volume. Ms. Morales comes out of the kitchen to watch. The table leaves you a hundred dollars and a phone number you throw away on the way to the back.
+@jump b_done
+*b2
+@add Tips 2
+@add Ms_Morales 2
+Ms. Morales: (passing you) That's why you're my favorite. Don't tell Cassie.
+@jump b_done
+*b3
+@add Cassie_Friendship 3
+Cassie: (when it's over) You didn't have to do that.
+Diggy: You'd have done it for me.
+Cassie: ...I'd have charged you a smoothie.
+*b_done
+@bg bus_stop_night
+Midnight bus home. Your feet hurt. You count your tips under a streetlight. You put most of it in the envelope for the light bill.
+Your phone buzzes. London: "did u eat tonight"
+She asks that a lot lately. Like it matters to her.
+> [Sweet] "yeah. did you?" -> c1
+> [Bold] "why u worried about me sterling" -> c2
+> [Good] Send her a picture of the staff meal. -> c3
+*c1
+London: "yes. pancakes. dont make it weird"
+You don't make it weird. You smile at your phone the whole ride home.
+@jump end
+*c2
+London: "im not. go to sleep williams"
+Five minutes later: "but did you"
+@jump end
+*c3
+London: "that looks better than my chef's food"
+London: "dont tell him i said that"
+*end
+Diggy Williams carries a lot. He's never once let anybody see him put it down.

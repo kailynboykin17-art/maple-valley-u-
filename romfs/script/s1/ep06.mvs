@@ -1,31 +1,33 @@
 @title EPISODE 06 • CASSIE KNOWS
 @bg locker_room
 @show cassie
-Cassie: London. Quick question. Totally random.
-London: Nothing you've ever said has been random.
-Cassie: What would you do for, hypothetically, somebody to NOT say something about Suki and a certain long jumper?
-> [Bitchy] "Say one word and I'll end you, Cassie." -> x_bitchy
-> [Bold] "What do you want?" -> x_bold
-> [Good] "Go tell Coach. Then explain how you know." -> x_good
-> [Sweet] "Cass. Why would you do this to her?" -> x_sweet
+Cassie: London. I need to tell you something and you can't be mad.
+London: I'm already mad. Go.
+Cassie: (whispering, vibrating) I know. About Suki. And the long jumper. I was dropping off her lip gloss at Kappa and I SAW. And I haven't told anybody. Not one person. Do you know what that's doing to me? I'm gonna explode.
+> [Bitchy] "Cassie. If this gets out, I'm blaming you first." -> x_bitchy
+> [Bold] "Why are you telling ME?" -> x_bold
+> [Good] "Then keep not telling. For Suki." -> x_good
+> [Sweet] "Cass... that's actually really sweet of you." -> x_sweet
 *x_bitchy
-@add Team_Reputation -2
-@add Cassie_Threat 2
-Cassie: Ooh. Scary. Love that for you. Clock's ticking, though.
+@add Cassie_Threat 1
+Cassie: (hurt) Wow. I'm literally being the most loyal I've ever been in my LIFE right now.
+London feels a little bad. Only a little.
 @jump x_done
 *x_bold
-@add Cassie_Threat 1
-Cassie: Relay spot. Suki's 4x400 leg. She "pulls a hamstring," I run instead. Easy.
+@add Cassie_Friendship 1
+Cassie: Because you're the only one who'd know what to do. And because... nobody ever tells me stuff first. Just once I wanted to be the one people trusted with it.
 @jump x_done
 *x_good
 @add Cassie_Threat -2
-@add Coach_Respect 1
-Cassie's smile twitches. Listening at doors doesn't look great in front of Holloway either.
+@add Cassie_Friendship 1
+Cassie: (zipping her lips, throwing away the key, then picking the key back up just in case) For Suki. Okay. Pinky swear.
 @jump x_done
 *x_sweet
-@add Cassie_Threat -1
-Cassie: (finally, quiet) Because nobody ever picks me for anything. Not the relay. Not anybody.
-That's real. London hates that it's real.
+@add Cassie_Threat -2
+@add Cassie_Friendship 3
+Cassie: (eyes watering) Nobody's ever called me sweet. They call me "a lot."
+London: You're both.
+Cassie hugs her. London lets it happen. Barely.
 *x_done
 @hide
 @if Secret_Kept 1 kept

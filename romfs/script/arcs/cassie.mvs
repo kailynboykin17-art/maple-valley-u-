@@ -1,0 +1,64 @@
+@title STORY • CASSIE: EVERYBODY TELLS ME LAST
+@bg restaurant_day
+You're Cassie Morales. Saturday morning at Casa Morales, before open. Your mom is singing in the kitchen. Your dad is fixing the jukebox again. It never gets fixed.
+Ms. Morales: Mija. Menus. And stop reading the group chat while you wipe them.
+Cassie: I'm multitasking. It's a skill. It's on my resume.
+Your phone has 300 unread messages. You read every single one. You always do. Because if you read everything, nothing happens without you.
+> [Good] Put the phone down. Help your mom. -> a1
+> [Bad] Keep reading. Somebody just typed "omg wait" and deleted it. -> a2
+> [Sweet] Ask your dad about the jukebox, for real this time. -> a3
+*a1
+@add Family 2
+Ms. Morales: (kissing your head) Look at that. A miracle. Call the newspaper.
+@jump a_done
+*a2
+@add Gossip 2
+You spend fifteen minutes trying to figure out who typed "omg wait." It was Shane. He saw a dog.
+@jump a_done
+*a3
+@add Family 3
+Your dad tells you about the day he met your mom. In this restaurant. When it was a taco truck. You've heard it a hundred times. You let him tell it again.
+*a_done
+@bg dorm_room_night
+@show alana
+Alana: Cass. You know you don't have to know everything, right?
+Cassie: Says the girl who color-codes her socks.
+Alana: I'm serious. Why do you need it so bad?
+> [Sweet] Tell her the truth. -> b1
+> [Bitchy] "Because I'm good at it, Alana." -> b2
+> [Bold] "Because I'm always the last to find out." -> b3
+*b1
+@add Alana_Friendship 3
+Cassie: In high school, my best friends had a whole group chat without me. For a year. I found out at graduation. They put it in the yearbook as a joke.
+Alana is quiet for a long time. Then she climbs into your bed, shoes and all, and doesn't say anything. It's the nicest thing anybody's done for you in college.
+@jump b_done
+*b2
+@add Gossip 1
+Alana: (gently) You're good at a lot of things. That's just the loudest one.
+@jump b_done
+*b3
+@add Alana_Friendship 2
+Alana: Not in this room. In this room you find out first. That's a roommate rule now.
+*b_done
+@bg locker_room
+The next day, you overhear Suki crying on the phone. You hear "Jamal." You hear "Jayden can't know."
+Every gossip bone in your body is screaming.
+> [Good] Walk away. Pretend you heard nothing. -> c1
+> [Sweet] Leave Suki a churro from the restaurant and a note: "here if u need me" -> c2
+> [Bad] Text Maggie: "SOS something is happening" -> c3
+*c1
+@add Loyal 2
+You walk away. It's the hardest thing you've ever done. You hum the whole way so you don't think about it.
+@jump end
+*c2
+@add Loyal 3
+@add Suki_Friendship 2
+Suki finds it. She doesn't know who it's from. You'll never tell her. That's kind of the point.
+@jump end
+*c3
+@add Gossip 1
+Maggie: "cassie what is happening"
+You stare at the screen. You type it out. You delete it. You type "nvm lol." For the first time in your life, you keep it.
+@add Loyal 1
+*end
+Cassie Morales knows everybody's business. What nobody knows is how many secrets she's kept.

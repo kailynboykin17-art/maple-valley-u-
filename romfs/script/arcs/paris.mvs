@@ -1,0 +1,78 @@
+@title STORY • PARIS: THE NICE TWIN
+@bg penthouse_morning
+You're Paris Sterling. You wake up first. You always wake up first. London's alarm has gone off four times.
+London: (from under a pillow) If you open those curtains I'm moving out.
+Paris: It's your penthouse too. You'd be moving out of your own house.
+London: Worth it.
+Your phone buzzes. Jayden: "practice later? save me a spot on the bus."
+He has a girlfriend. You remind yourself every morning, like brushing your teeth.
+> [Sweet] Reply: "always 🙂" -> a1
+> [Good] Don't reply. He has a girlfriend. -> a2
+> [Bold] Reply: "ask suki to save you one." -> a3
+*a1
+@add Jayden_Heart 2
+@add Paris_Guilt 1
+Jayden: "best part of my day"
+You put the phone face-down and stare at the ceiling for a full minute.
+@jump a_done
+*a2
+@add Paris_Strength 2
+It sits there unanswered all morning. It's the hardest thing you'll do all day, and nobody will ever know you did it.
+@jump a_done
+*a3
+@add Paris_Strength 1
+@add Jayden_Heart 1
+Jayden: "...fair."
+Then, two minutes later: "i'd still rather sit with you."
+*a_done
+@bg track_stadium_day
+@show coachm
+Coach M: Sterling! The OTHER Sterling! The nice one!
+Paris: I have a name, Coach.
+Coach M: Paris! Right. My bad. You're up. 200, lane five.
+Everyone calls you the nice one. Like it's your whole personality. Like you didn't also nearly die in an incubator for nineteen days. Like you're not fast.
+> [Bold] Run the 200 like you're angry. Because you are. -> b1
+> [Sweet] Smile and say "no worries, Coach." -> b2
+> [Bitchy] "London's the mean one. I'm the FAST one." -> b3
+*b1
+@add Paris_Strength 3
+You run a PR by four tenths. Coach M drops his clipboard.
+Coach M: Okay. OKAY. Paris. Got it. Never forgetting it again.
+@jump b_done
+*b2
+@add Paris_Guilt 1
+You run fine. Coach M says "nice." You smile. On the bus you write the word "nice" in your journal and cross it out until the page tears.
+@jump b_done
+*b3
+@add Paris_Strength 2
+The whole sprint group goes "OHHHH." Jayden laughs so hard he has to sit on the track. Even London, from the distance group, gives you a thumbs up.
+*b_done
+@bg dorm_room_night
+@show alexa
+You end the night where you always do. Alexa's dorm, painting her toenails while she sketches.
+Alexa: You're quiet.
+Paris: I'm always quiet.
+Alexa: No. You're always nice. That's different. Right now you're quiet.
+> [Sweet] "I love him, Lex. I've loved him since we were six." -> c1
+> [Good] "I'm fine. Really." -> c2
+> [Bold] "I'm tired of being the one who waits." -> c3
+*c1
+@add Alexa_Friendship 3
+Alexa doesn't say "I know." She knows. She just puts her sketchbook down and turns it around. It's you and Jayden at six years old, holding hands at a debutante rehearsal. She drew it from the photo on your fridge.
+Alexa: You're allowed to want things, Paris.
+@jump c_done
+*c2
+Alexa: (going back to her sketch) Okay. When you're ready.
+She means it. That's why she's your best friend.
+@jump c_done
+*c3
+@add Paris_Strength 3
+Alexa: (grinning) There she is. Took nineteen years.
+*c_done
+Paris Sterling is not the nice twin. She's the one who stayed patient long enough to know exactly what she wants.
+@if Paris_Strength 4 strong
+And someday soon, she's going to ask for it.
+@jump end
+*strong
+And she's done waiting for permission.
+*end

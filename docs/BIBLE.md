@@ -13,7 +13,7 @@ Coach: **Holloway** — immune to Frank Sterling's donations.
 | Character | Event | Notes | Route |
 |---|---|---|---|
 | Paris Sterling | 100/200 | London's identical twin; sweet; loves childhood friend Jayden (mutual) | Jayden Harris (ENDGAME) |
-| Suki Bennett | 800/1500 | dating Jayden; kisses Jamal at Kappa; blackmailed by Cassie | Jamal Thompson |
+| Suki Bennett | 800/1500 | dating Jayden; kisses Jamal at Kappa; Cassie knows and (barely) keeps it secret | Jamal Thompson |
 | Alana Brooks | 5K/10K | calm, disciplined; Cassie's roommate | Cam Hayes (rival school, fake dating) |
 | Alexa Carter | pole vault | biracial, quiet, observant; Paris's best friend | Zane Rahman |
 | Cassie Morales | 100H/200 | Afro-Latina (Black dad, Mexican mom); hosts & serves at her mom's restaurant Casa Morales; nosy team gossip | — |
@@ -55,3 +55,5 @@ Housing: everyone lives in the dorms except London & Paris (penthouse their pare
 Secret crush: London has a huge crush on Diggy she will never admit. Paris, Alana, Cassie, Alexa and Maggie all know.
 Romance canon: Jayden dates Suki but he and Paris (childhood friends) have mutual crushes — Paris/Jayden are ENDGAME. Soccer: everyone straight except Jordan & Brooke (both bi). Nia liked Tyler first; Riley went after him anyway.
 London: in recovery from an eating disorder since age 14 (with the twins' early birth, it's why Frank & Vega are so protective). Handle with care: recovery-focused, no numbers/behaviors, never played for drama. Support: weekly therapist (Dr. Ames), Maya Ellis check-ins.
+Tone rule: nobody on either team is evil. Cassie is a sweet gossip, not a villain. Messy, not mean.
+Character Stories: play as anyone (romfs/arcs.txt, scripts in romfs/script/arcs/). Written: Paris, Diggy, Cassie, Suki.

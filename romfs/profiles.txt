@@ -209,10 +209,10 @@ height=5'5
 sign=Sagittarius
 hometown=Houston, TX
 likes=Karaoke, borrowing lip gloss, road trips, Jamal (secretly)
-dislikes=Being alone, early curfews, Cassie
+dislikes=Being alone, early curfews, Cassie's big mouth (she loves her though)
 food=Hot Cheetos with cheese
 music=Megan Thee Stallion
-bio=The loudest laugh in every room. Suki is dating Jayden, but they've been falling apart since summer. Then she kissed Jamal at the Kappa party, and Cassie saw. Jamal is the one she really wants. She's terrified of falling.
+bio=The loudest laugh in every room. Suki is dating Jayden, but they've been falling apart since summer. Then she kissed Jamal at the Kappa party, and Cassie saw (and, shockingly, kept it to herself). Jamal is the one she really wants. She's terrified of falling.
 
 id=cassie
 name=Cassie Morales
