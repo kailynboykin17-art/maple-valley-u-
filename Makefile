@@ -25,7 +25,8 @@ export LD := $(CXX)
 export OFILES := $(CPPFILES:.cpp=.o)
 export INCLUDE := $(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) $(foreach dir,$(LIBDIRS),-I$(dir)/include) -I$(CURDIR)/$(BUILD)
 export LIBPATHS := $(foreach dir,$(LIBDIRS),-L$(dir)/lib)
-export _3DSXFLAGS += --romfs=$(CURDIR)/$(ROMFS)
+export APP_ICON := $(TOPDIR)/$(ICON)
+export _3DSXFLAGS += --romfs=$(CURDIR)/$(ROMFS) --smdh=$(CURDIR)/$(TARGET).smdh
 .PHONY: all clean
 all:
 	@mkdir -p $(BUILD)
