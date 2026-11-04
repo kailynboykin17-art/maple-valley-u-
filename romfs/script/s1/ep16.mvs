@@ -1,0 +1,49 @@
+@title EPISODE 16 • FAKE DATE, REAL FEELINGS
+@bg gala_ballroom_night
+@show alana
+Cam's mother's gala. Alana in borrowed Sterling diamonds, because you insisted.
+Alana: This is a mistake. I can't do small talk. I can only do intervals.
+London: Pretend small talk is a 400. Fast, painful, over.
+Cam walks up in a navy suit and actually stops walking when he sees her.
+Cam: ...Hi.
+Alana: Hi.
+Neither of them says anything else for an embarrassingly long time.
+> [Bold] Push them toward the dance floor. -> g1
+> [Good] Leave them alone. Find the dessert table. -> g2
+> [Bitchy] "Okay, this is painful. Somebody say a word." -> g3
+*g1
+@add Alana_Cam 2
+@add Alana_Friendship 1
+They dance like two people who've only ever moved at race pace. It's terrible. They're laughing by the end.
+@jump g_done
+*g2
+@add Alana_Cam 3
+From across the room you watch Cam say something that makes Alana throw her head back laughing. That is not fake.
+@jump g_done
+*g3
+@add Alana_Friendship -1
+@add Alana_Cam 1
+Cam: (laughing) She's right. Hi, Alana. You look... wow.
+*g_done
+@show diggy
+You didn't know Diggy was coming. Cam invited half both teams to make the ex jealous. Diggy's in the same too-short blazer, now with a tie.
+Diggy: You look—
+London: I know.
+Diggy: I was gonna say "cold." You want my jacket?
+> [Sweet] Take it. Keep it the whole night. -> j1
+> [Bitchy] "It wouldn't match." -> j2
+> [Bold] "I want you to ask me to dance." -> j3
+*j1
+@add Diggy_Affection 3
+It smells like cedar and cheap cologne. You will never give it back.
+@jump j_done
+*j2
+@add Diggy_Affection 1
+Diggy: (draping it on you anyway) Fashion is temporary. Hypothermia is forever.
+@jump j_done
+*j3
+@add Diggy_Affection 4
+@add Diggy_Trust 1
+He holds out his hand. Slow song. He counts the steps under his breath like it's a block start. It's the most romantic thing that has ever happened to you.
+*j_done
+@load s1/ep17.mvs

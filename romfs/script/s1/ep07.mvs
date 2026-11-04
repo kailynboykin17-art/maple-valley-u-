@@ -1,3 +1,45 @@
-@title EPISODE 07 • COMING SOON
-@bg track_stadium_night
-Episode 7 is being written. Your choices so far have been saved.
+@title EPISODE 07 • THE RELAY CARD
+@bg track_stadium_day
+@show suki
+Relay cards go up at noon. Suki's name is on the 4x400. So is a sticky note on her locker: "Tick tock. — C"
+Suki: She's gonna tell. She's gonna tell Jamal and Paris and the whole team and I'm gonna be "the girl who."
+> [Bold] "Then we tell them first. On our terms." -> a1
+> [Bad] "Give Cassie the spot. It's one race." -> a2
+> [Sweet] "Whatever happens, you have me." -> a3
+> [Bitchy] "I'll handle Cassie. Personally." -> a4
+*a1
+@add Suki_Friendship 2
+@add Suki_Truth 1
+Suki: (shaking) Okay. Okay. After practice. You stand next to me.
+@jump a_done
+*a2
+@add Suki_Friendship -1
+@add Cassie_Threat 2
+Suki fakes a limp at warmups. Cassie runs her leg. Nobody believes the limp, least of all Holloway.
+@jump a_done
+*a3
+@add Suki_Friendship 3
+Suki hugs you so hard your sunglasses fall off. You let them.
+@jump a_done
+*a4
+@add Cassie_Threat -1
+@add Team_Reputation -1
+@show cassie
+London: Cassie. A word.
+Cassie: Ooh, a word. Is it "please"?
+London: It's "receipts." I know about you and Destiny's group-chat screenshots. Back off Suki, and they stay in my phone.
+Cassie goes pale under her bronzer.
+*a_done
+@if Suki_Truth 1 told
+@bg locker_room
+@show jamal
+Jamal: Suki's been dodging me all week. Is she okay? You'd tell me.
+London looks at the kindest guy on the team and lies straight to his face. "She's fine. Midterms."
+@jump end
+*told
+@bg bleachers_evening
+@show jamal
+Suki tells him. All of it. Jamal doesn't yell. He just walks to the end of the bleachers and sits alone in the cold.
+Jamal: (much later, to London) Thank you for not letting her hide it. I mean that.
+*end
+@load s1/ep08.mvs

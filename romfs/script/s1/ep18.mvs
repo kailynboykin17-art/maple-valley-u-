@@ -1,0 +1,48 @@
+@title EPISODE 18 • RAIN DELAY
+@bg track_stadium_rain
+Practice gets rained out. Everyone runs for the field house. London's keys are in the locker room. So is Diggy.
+@show diggy
+Diggy: You're soaked.
+London: You're observant.
+Diggy: You're shaking.
+London: It's called being cold, Williams, it happens to people.
+He takes a step closer. Then another. Thunder rolls across the empty stadium.
+@if Diggy_Affection 18 kiss
+@if Diggy_Affection 12 almost
+Diggy: (stepping back) We should go. Coach'll lock the gates.
+London watches him leave and has no idea why it hurts.
+@jump end
+*almost
+Diggy: London.
+London: Don't.
+Diggy: Don't what?
+London: Don't say my first name like that unless you mean it.
+Diggy: (very close now) And if I mean it?
+The lights in the locker room cut out. Somebody yells their names from the hallway. The moment breaks like glass.
+@jump end
+*kiss
+> [Bold] Kiss him first. -> k1
+> [Sweet] "Diggy... I think I like you. And I hate it." -> k2
+> [Bitchy] "If you're gonna do it, do it." -> k3
+> [Good] Step back. "Not like this. Not yet." -> k4
+*k1
+@add Diggy_Affection 5
+@add First_Kiss 1
+For a girl who's always ahead of everyone, it's the first time she's ever not been afraid of what comes next.
+@jump end
+*k2
+@add Diggy_Trust 4
+@add First_Kiss 1
+Diggy: (laughing softly) Yeah. Me too. Hate it so much.
+He kisses her like the rain isn't happening.
+@jump end
+*k3
+@add Diggy_Affection 4
+@add First_Kiss 1
+He does it. Outside, the thunder sounds a lot like applause.
+@jump end
+*k4
+@add Diggy_Trust 5
+He nods. He doesn't push. He just tucks a wet strand of hair behind your ear and says, "Then I'll wait." You believe him.
+*end
+@load s1/ep19.mvs

@@ -1,0 +1,43 @@
+@title EPISODE 13 • HOLLOWAY'S LINE
+@bg track_stadium_morning
+Monday. Holloway posts the conference lineup. London's 10K is gone. Alana's in it. So is Priya.
+@show london
+London: Coach. My name isn't on the 10K.
+Holloway: I'm aware. I wrote it.
+London: I'm faster than Priya.
+Holloway: You're faster than everybody. You also skipped two recovery runs and talked back in front of freshmen. Speed isn't the only thing I coach.
+> [Bitchy] "My dad paid for this track, you know." -> h1
+> [Sweet] "...What do I have to do to earn it back?" -> h2
+> [Bold] "Then put me in the 5K and watch." -> h3
+> [Bad] Storm off and skip practice. -> h4
+*h1
+@add Coach_Respect -4
+@add Team_Reputation -3
+The whole track goes silent. Holloway doesn't blink.
+Holloway: He paid for the lights, Sterling. I decide who runs under them. Go home.
+@jump h_done
+*h2
+@add Coach_Respect 4
+Holloway: (surprised, then not) Two weeks of perfect practice. No lip. And you help Priya with her pacing.
+London: Priya?
+Holloway: Priya.
+@jump h_done
+*h3
+@add Coach_Respect 2
+@add London_Confidence 2
+Holloway: (half a smile) Now THAT'S the right kind of mouthy. 5K's yours. Don't make me regret it.
+@jump h_done
+*h4
+@add Coach_Respect -3
+@add Diggy_Trust -1
+Diggy finds you at the coffee shop two hours later.
+Diggy: You can't run from stuff that's on a track, Sterling. It goes in a circle.
+*h_done
+@show priya
+Priya: (stretching next to you) So. Coach says you're supposed to help me.
+London: Apparently.
+Priya: For the record, I'd rather lose than be your charity project.
+London: For the record, I'd rather be anywhere than here. Let's both be miserable and fast.
+Priya laughs. It's the start of something.
+@add Priya_Friendship 1
+@load s1/ep14.mvs

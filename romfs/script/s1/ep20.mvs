@@ -1,0 +1,40 @@
+@title EPISODE 20 • THE ENVELOPE
+@bg penthouse_night
+@show paris
+Everything is good. That's what scares London.
+Paris and Jayden are trying again, slowly. Suki and Jamal are talking. Alana keeps "accidentally" texting Cam. Priya calls London her "training partner" now, like it's a title.
+@show cassie
+Then Cassie shows up at the penthouse door at midnight, not smiling for once.
+Cassie: I'm not here to start anything. I swear on my edges.
+London: Then why are you here?
+Cassie: Because my mom works in your dad's office. And I saw this.
+She holds up a photo on her phone. An envelope on Frank Sterling's desk. "D. Williams" written on it. And a check.
+Cassie: Your dad's been paying him, London. Since Family Weekend.
+> [Bitchy] "Get out, Cassie. You're lying. Again." -> e1
+> [Bold] Call Diggy. Right now. -> e2
+> [Good] Call your father first. -> e3
+> [Sweet] "...Why are you telling me this?" -> e4
+*e1
+@add Cassie_Threat 1
+Cassie: (at the elevator) Ask him. If I'm lying, I'll leave the team. That's how sure I am.
+The doors close. London doesn't sleep.
+@jump end
+*e2
+@add Diggy_Trust -1
+It rings. And rings. Voicemail. "Yo, it's Diggy, leave it at the beep." London hangs up before the beep.
+@jump end
+*e3
+@add Parent_Trust 1
+Frank: (after a long silence) Baby... it's not what you think. Come home this weekend. We'll talk in person.
+That is the least comforting sentence London has ever heard.
+@jump end
+*e4
+@add Cassie_Friendship 2
+Cassie: (quiet) 'Cause I know what it's like to find out last. Everybody always tells me last.
+*end
+@hide
+@bg penthouse_window_night
+London stands at the window. The whole valley glittering. Somewhere out there, Diggy's asleep — or isn't.
+Her phone buzzes. "D: can we talk tomorrow? there's something i should've told you."
+End of Episode 20. To be continued...
+@load s1/ep21.mvs

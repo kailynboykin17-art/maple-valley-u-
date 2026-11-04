@@ -1,0 +1,51 @@
+@title EPISODE 10 • HALLOWEEN AT KAPPA
+@bg party_house_night
+@show paris
+Halloween. You and Paris go as twin angels because Mom will see the pictures. Paris's wings keep hitting people.
+@show cassie
+Cassie is dressed as a detective. Nobody laughs because it isn't a joke.
+@show diggy
+Diggy is dressed as... a sprinter. His actual uniform.
+London: That's not a costume.
+Diggy: I'm going as a guy who's gonna beat you in the 300 rematch.
+> [Bold] "Then show me. Dance-off. Right now." -> h1
+> [Sweet] Fix his crooked bib without saying anything. -> h2
+> [Bitchy] "Lazy. Like your arm swing." -> h3
+*h1
+@add Diggy_Affection 3
+@add Team_Reputation 2
+The whole party circles you. He can actually dance. You can actually dance better. Nobody is going to let either of you forget it.
+@jump h_done
+*h2
+@add Diggy_Affection 2
+@add Diggy_Trust 1
+His breath catches. Yours too. Someone yells "KISS" and you both step back like you got shocked.
+@jump h_done
+*h3
+@add Diggy_Affection -1
+Diggy: My arm swing is beautiful and you know it.
+*h_done
+@show jayden
+Then you see it. Jayden in the hallway, a little too close to Suki. Suki shaking her head, trying to leave. Paris coming around the corner in three... two...
+> [Good] Intercept Paris and pull her to the dance floor. -> j1
+> [Bold] Walk up and tell Jayden to back off Suki. Loud. -> j2
+> [Bad] Let Paris see. She deserves to know. -> j3
+*j1
+@add Paris_Friendship 1
+@add Suki_Friendship 2
+Paris spins, laughing, wings everywhere. She never sees it. You're not sure that was kind.
+@jump j_done
+*j2
+@add Suki_Friendship 2
+@add Team_Reputation 1
+@add Paris_Suspicious 2
+Jayden: Whoa, London, chill—
+London: I am extremely chill. Go find your angel.
+Paris, from behind you: "...What's going on?"
+@jump j_done
+*j3
+@add Paris_Suspicious 3
+@add Suki_Friendship -2
+Paris stops. Sees. Her face doesn't break; it just closes, like a door.
+*j_done
+@load s1/ep11.mvs

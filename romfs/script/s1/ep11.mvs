@@ -1,0 +1,38 @@
+@title EPISODE 11 • SAME FACE
+@bg penthouse_night
+@show paris
+Paris: How long have you known?
+London: Known what?
+Paris: London. We have the same face. I know when you're lying with it.
+> [Good] Tell her everything. Now. -> p1
+> [Bad] "Know WHAT, Paris?" Keep lying. -> p2
+> [Sweet] "I wanted to protect you." -> p3
+> [Bitchy] "Maybe ask your boyfriend." -> p4
+*p1
+@add Paris_Friendship 2
+@add Paris_Truth 1
+You tell her. Kappa party. Suki. Jayden. Cassie. All of it. Paris listens without crying until the very end.
+Paris: You should've told me the first night.
+London: I know.
+@jump p_done
+*p2
+@add Paris_Friendship -3
+Paris: (quietly) Okay. Then I'll find out from someone who respects me.
+She leaves for Alexa's dorm. She doesn't take her phone charger, which means she isn't coming back tonight.
+@jump p_done
+*p3
+@add Paris_Friendship 1
+@add Paris_Truth 1
+Paris: I'm not glass, London. You always treat me like I'm the one who almost died. We BOTH almost died.
+That one is going to stay with you.
+@jump p_done
+*p4
+@add Paris_Friendship -2
+@add Paris_Truth 1
+Paris doesn't yell. She calls Jayden on speaker, right there, and asks. He tells the truth. It's worse than yelling.
+*p_done
+@show alexa
+@bg dorm_room_night
+Alexa: (to Paris, later) You can stay as long as you want. I'll tell London you're fine. Even if you're not.
+Alexa: (texting London) she's ok. she's not ok. give her a day.
+@load s1/ep12.mvs

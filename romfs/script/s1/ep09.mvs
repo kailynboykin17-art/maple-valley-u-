@@ -1,0 +1,52 @@
+@title EPISODE 09 • STUDY SESSION
+@bg library_night
+@show priya
+Priya: Stats midterm is in thirty-one hours. You have a forty-eight. I'm not judging. I'm calculating.
+London: You're definitely judging.
+Priya: Both. I'm a multitasker. Also I invited Diggy. He has a ninety-four.
+London: You did WHAT.
+@show diggy
+Diggy: Relax, Sterling. I don't bite. I just tutor.
+> [Bitchy] "I'll fail on my own, thanks." -> s1
+> [Good] Swallow your pride and open the textbook. -> s2
+> [Sweet] "...Okay. Teach me. Slowly." -> s3
+*s1
+@add Diggy_Affection -1
+@add Grades -1
+You last eleven minutes alone before you text him "where is the formula for standard deviation."
+Diggy: (reading it out loud from across the table) Oh, she DOES need me.
+@jump s_done
+*s2
+@add Grades 2
+@add Coach_Respect 1
+Three hours. Two Red Bulls. One breakthrough. Priya pretends not to notice your hands touching over the calculator.
+@jump s_done
+*s3
+@add Grades 2
+@add Diggy_Affection 2
+He explains it like a race. "Mean is your average split. Deviation is how far you be wildin' from it." It's stupid. It works.
+*s_done
+@hide
+@bg campus_quad_night
+@show diggy
+He walks you to your car at 1 a.m. even though it's forty feet away.
+Diggy: Can I say something without you getting mad?
+London: No promises.
+Diggy: You're smart. Like actually. You just act like it's embarrassing to try.
+> [Sweet] "Nobody's ever said that to me." -> w1
+> [Bitchy] "Did you rehearse that?" -> w2
+> [Bold] "And you act like it's embarrassing to want things." -> w3
+*w1
+@add Diggy_Trust 2
+@add London_Confidence 2
+He holds your car door open. You sit there for a full minute before you can drive.
+@jump w_done
+*w2
+@add Diggy_Affection 1
+Diggy: (laughing) A little. In the elevator.
+@jump w_done
+*w3
+@add Diggy_Trust 3
+That stops him. He looks at you like you just read his diary out loud.
+*w_done
+@load s1/ep10.mvs

@@ -1,0 +1,55 @@
+@title EPISODE 08 • THE RIVAL
+@bg rival_university_track
+Away meet at Eastbrook University. Their track is nicer. Their uniforms are nicer. Their 800 runner is unbelievably calm.
+@show alana
+Alana: That's Cam Hayes. Don't look.
+London: You told me not to look, so now I'm looking.
+Alana: He beat me in the indoor mixed relay last year and then said "good race." Like he MEANT it.
+London: Disgusting. Sincerity.
+After the race, Cam walks straight up to Alana.
+Cam: My mom's having a gala. My ex is coming with her new boyfriend. I need a date who can make me look like I'm doing amazing.
+Alana: ...Why me?
+Cam: Because you're the only person here who scares me.
+> [Bold] "She'll do it. For a price." -> c1
+> [Good] "Alana, it's your call." -> c2
+> [Bitchy] "Pass. Find somebody desperate." -> c3
+*c1
+@add Alana_Friendship 1
+@add Alana_Cam 2
+London: She wants your 800 splits. All of them.
+Cam: (grinning) Deal.
+Alana: I did NOT agree to this.
+@jump c_done
+*c2
+@add Alana_Friendship 2
+@add Alana_Cam 1
+Alana: (long pause) ...One gala. Fake. Totally fake.
+@jump c_done
+*c3
+@add Alana_Friendship -1
+Alana: (quietly) I can answer for myself, London.
+She tells Cam yes anyway, mostly to spite you.
+@add Alana_Cam 1
+*c_done
+@show diggy
+On the bus home, the only open seat is next to Diggy. Of course it is.
+Diggy: You ran a PR.
+London: I know.
+Diggy: I'm saying I saw it.
+> [Sweet] "...Thanks. That actually means something." -> d1
+> [Bitchy] "Were you watching me, Williams?" -> d2
+> [Bold] Steal one of his earbuds. "What are we listening to?" -> d3
+*d1
+@add Diggy_Affection 2
+@add Diggy_Trust 1
+He nods once and looks out the window, and you're pretty sure he's smiling at his own reflection.
+@jump d_done
+*d2
+@add Diggy_Affection 1
+Diggy: Whole team was watching. I'm just the only one who said something.
+@jump d_done
+*d3
+@add Diggy_Affection 3
+Old Usher. Two hours in the dark with one earbud each. You fall asleep on his shoulder. Cassie takes a picture. Of course she does.
+*d_done
+@load s1/ep09.mvs

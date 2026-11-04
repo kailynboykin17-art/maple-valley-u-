@@ -1,0 +1,31 @@
+@title EPISODE 15 • HIS NEIGHBORHOOD
+@bg city_street_evening
+@show diggy
+Diggy's little sister has a recital and his mom can't get off work. He asks you to drive him. Just a ride. Obviously.
+The neighborhood is twenty minutes from campus and a whole world away from the penthouse.
+Diggy: You can wait in the car. It's fine.
+> [Sweet] "No. I want to see her dance." -> n1
+> [Bad] Stay in the car on your phone. -> n2
+> [Bold] "I took eight years of ballet. I'm coming to judge." -> n3
+*n1
+@add Diggy_Trust 3
+@add Diggy_Affection 2
+His sister Kiara is seven, all tulle and missing teeth. She points at you from the stage and yells "IS THAT YOUR GIRLFRIEND." The whole room laughs. Diggy doesn't correct her.
+@jump n_done
+*n2
+@add Diggy_Trust -2
+He comes back an hour later carrying a sleeping seven-year-old and doesn't say much the whole drive. You think he expected more of you. You did too.
+@jump n_done
+*n3
+@add Diggy_Trust 2
+@add Diggy_Affection 3
+You give Kiara notes after. Real ones. She takes them like gospel. Diggy watches you kneel on a dirty gym floor in a $900 coat, and something in his face changes for good.
+*n_done
+@bg diggy_kitchen_night
+His mom gets home at eleven and hugs you like she's known you forever.
+Ms. Williams: So you're London. He talks about you.
+Diggy: Ma.
+Ms. Williams: He says you're mean.
+Diggy: MA.
+Ms. Williams: Says it like it's a compliment, though.
+@load s1/ep16.mvs

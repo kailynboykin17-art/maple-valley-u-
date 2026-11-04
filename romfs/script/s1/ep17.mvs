@@ -1,0 +1,49 @@
+@title EPISODE 17 • THANKSGIVING
+@bg penthouse_day
+@show paris
+Thanksgiving. The twins stay at school for practice. Paris and London still aren't fully okay.
+Paris: Jayden texted. He wants to "talk." Like a real talk.
+> [Good] "Do what feels right for YOU. I'll back you either way." -> t1
+> [Bitchy] "He kissed your friend. What's to talk about?" -> t2
+> [Sweet] "Want me to come with you?" -> t3
+*t1
+@add Paris_Friendship 3
+Paris: (eyes wet) That's all I wanted you to say. Since October.
+She hugs you. Same face, same arms, same heartbeat.
+@jump t_done
+*t2
+@add Paris_Friendship -1
+Paris: People are more than their worst night, London. You of all people should know that.
+Ouch. Fair, though.
+@jump t_done
+*t3
+@add Paris_Friendship 2
+Paris: No. But wait in the lobby? Just in case.
+*t_done
+@hide
+@bg penthouse_night
+That night, you host "Orphans' Thanksgiving" for everyone stuck on campus. Maggie brings a turkey. Shane brings three. Caleb brings a bag of ice and calls it a side dish.
+@show maggie
+Maggie: Okay! Gratitude circle. Everyone says one thing. No jokes, Caleb.
+@show caleb
+Caleb: I'm grateful for ice.
+@show diggy
+When it's Diggy's turn, he looks right at you.
+Diggy: I'm grateful somebody made me run faster this year. Even if she's mean about it.
+> [Sweet] "I'm grateful for you too." Out loud. In front of everyone. -> g1
+> [Bitchy] "I'm grateful for my own talent." -> g2
+> [Bold] Raise your glass to him. Say nothing. Let it speak. -> g3
+*g1
+@add Diggy_Affection 4
+@add Team_Reputation 2
+The room explodes. Cassie actually screams. Shane cries a little. You want to die. You don't regret it.
+@jump g_done
+*g2
+@add Diggy_Affection 1
+Everybody laughs, including him. But under the table his knee bumps yours, and stays there.
+@jump g_done
+*g3
+@add Diggy_Affection 3
+He raises his back. Everyone pretends not to notice. Everyone notices.
+*g_done
+@load s1/ep18.mvs

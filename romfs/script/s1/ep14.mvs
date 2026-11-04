@@ -1,0 +1,42 @@
+@title EPISODE 14 • TIFFANY
+@bg track_stadium_day
+@show tiffany
+Tiffany is a junior, gorgeous, funny, and currently laughing at something Diggy said with her hand on his arm.
+@show cassie
+Cassie: (appearing out of nowhere) She and Marcus broke up. Again. She's "exploring."
+London: Why are you telling me this?
+Cassie: Charity. And chaos. Mostly chaos.
+> [Bitchy] Walk over. "Tiffany, your ex is looking for you." -> t1
+> [Bold] Walk over. "Diggy. Rematch. Now." -> t2
+> [Good] Do nothing. You have no claim on him. -> t3
+> [Sweet] Text Diggy: "you good?" -> t4
+*t1
+@add Diggy_Affection -1
+@add Team_Reputation -2
+Tiffany: (sweetly) He's not, but thanks, little Sterling. Cute jealousy.
+Diggy looks between you two like he just found a twenty in his pocket.
+@jump t_done
+*t2
+@add Diggy_Affection 2
+@add Jealous_Diggy 1
+Tiffany: Ooh. Okay. I'll let y'all handle that.
+Diggy: (walking over, grinning) You're so obvious.
+London: I'm so fast.
+@jump t_done
+*t3
+@add London_Confidence 1
+@add Diggy_Trust 1
+You stretch. You run. You don't look. When you finally do, he's already looking at you. Tiffany is long gone.
+@jump t_done
+*t4
+@add Diggy_Affection 2
+D: lol yeah why
+London: no reason
+D: she asked me to a party. i said i got plans
+London: what plans
+D: idk yet. depends on you
+*t_done
+@hide
+@show destiny
+Destiny: (passing by, to London) Tiff does this every semester. Don't play games, sophomore. Just say what you want.
+@load s1/ep15.mvs

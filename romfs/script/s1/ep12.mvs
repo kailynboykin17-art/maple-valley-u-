@@ -1,0 +1,41 @@
+@title EPISODE 12 • FAMILY WEEKEND
+@bg penthouse_day
+Family Weekend. Frank and Vega Sterling arrive with flowers, a chef, and a list of questions.
+Vega: My girls! Let me look at you. London, is that a bruise? Paris, why are your eyes puffy?
+Frank: And who is "D" and why is he in the family Find My Friends screenshot Cassie's cousin sent your mother?
+> [Bold] "He's my study partner. And a friend." -> f1
+> [Bitchy] "Since when do we let Cassie's COUSIN run this family?" -> f2
+> [Sweet] "Daddy, you'd actually like him." -> f3
+> [Bad] "No idea. Probably spam." -> f4
+*f1
+@add Parent_Trust 1
+@add Diggy_Trust 1
+Frank: A friend. Mm. Friends come to dinner. Saturday. Seven.
+London: Daddy—
+Vega: Seven, baby.
+@jump f_done
+*f2
+@add Parent_Trust -2
+Vega: Watch your tone, London Elise.
+The middle name. It's over. You've lost.
+@jump f_done
+*f3
+@add Parent_Trust 1
+@add Diggy_Affection 1
+Frank: (softening) Then I'd like to meet him. And see if you're right.
+@jump f_done
+*f4
+@add Parent_Trust -1
+@add Diggy_Trust -2
+Paris looks at you across the table. She knows. In three hours, so does Diggy, because nothing on this team stays secret.
+*f_done
+@bg restaurant_night
+@show diggy
+Saturday. Seven. Diggy shows up in a borrowed blazer that's too short in the sleeves.
+Frank: So, Duncan. What does your father do?
+Diggy: Not around, sir. My mama works two jobs. I work one. Rec center, Thursdays.
+Frank sets his fork down. Something passes over his face. Not disapproval. Memory.
+Frank: I bussed tables through college. Hated every minute of it.
+Diggy: Yes sir. Floors are worse.
+Frank laughs. A real one. Vega looks at London and raises one perfect eyebrow.
+@load s1/ep13.mvs

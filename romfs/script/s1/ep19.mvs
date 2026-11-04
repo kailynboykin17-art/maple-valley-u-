@@ -1,0 +1,55 @@
+@title EPISODE 19 • CONFERENCE CHAMPIONSHIPS
+@bg meet_venue_day
+Conference Championships. Everything the season's been building to.
+@show london
+@if Coach_Respect 4 earned
+Holloway: You're in the 5K. Your only job is to run your race. Not anyone else's.
+@jump race
+*earned
+Holloway: (handing her a bib) 10K AND 5K. You earned both back. Don't make me sentimental, Sterling, I'll throw up.
+*race
+@show priya
+Lap twenty. Priya's on your shoulder. Alana's a stride behind. The leader is from Eastbrook and she's fading.
+> [Bold] Go now. All of it. Leave everyone. -> r1
+> [Good] Pull Priya with you, like Coach asked. -> r2
+> [Sweet] Look for Diggy in the stands. -> r3
+*r1
+@add London_Confidence 3
+@add Gold_Medal 1
+You don't remember the last two laps. You remember the tape against your chest and the noise, and Diggy over the fence screaming like he won something.
+@jump r_done
+*r2
+@add Priya_Friendship 3
+@add Coach_Respect 3
+@add Team_Reputation 3
+Second and third. Priya PRs by fourteen seconds and falls into your arms crying. Holloway turns away to "check her clipboard."
+@jump r_done
+*r3
+@add Diggy_Affection 2
+He's there. Of course he's there. He mouths "GO." You go. You finish fourth, and somehow it's still the best race of your life.
+*r_done
+@bg meet_venue_evening
+@show diggy
+Diggy runs a 46.9 in the 400. A school record. Everyone mobs him. He pushes through all of them to get to you.
+@if First_Kiss 1 together
+Diggy: Okay so I've been thinking. About the rain. About Thanksgiving. About everything.
+London: Diggy—
+Diggy: Go out with me. Real date. No studying, no relays, no Cassie.
+> [Sweet] "Yes. Obviously yes." -> y1
+> [Bitchy] "...Fine. But you're paying." -> y1
+> [Good] "Ask me again after the season." -> y2
+*y1
+@add Dating 1
+@add Diggy_Affection 3
+@jump end
+*y2
+@add Diggy_Trust 2
+Diggy: (grinning) Bet. I'm writing it in my phone.
+@jump end
+*together
+Diggy kisses you in front of the entire conference, both teams, and three local news cameras.
+@add Dating 1
+@show cassie
+Cassie: (already typing) I KNEW IT. I won the poll. I'm a prophet.
+*end
+@load s1/ep20.mvs
