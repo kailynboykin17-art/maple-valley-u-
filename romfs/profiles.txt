@@ -19,7 +19,7 @@ likes=SPRINTS: Diggy, Jayden, Jamal, Paris, Cassie, Tiffany. DISTANCE: London, A
 l_likes=Event groups
 dislikes=London vs. Diggy (and Coach). Suki's secret. Cassie knows everything. Alana fake-dating a rival. Frank Sterling's donations. Conference title pressure.
 l_dislikes=Team drama
-bio=Competitive. Close. Messy. MVU Track is coming off a third-place conference finish and Coach Holloway is done accepting third. Practice is at 6 a.m., the track lights were paid for by Frank Sterling, and the group chat is run by Cassie Morales. Rival school: the Eastbrook Eagles.
+bio=Competitive. Close. Messy. MVU Track is coming off a third-place conference finish and Coach Holloway is done accepting third. Practice is at 6 a.m., the track lights were paid for by Frank Sterling, and the group chat is run by Cassie Morales. Everyone lives in the Hawk Hall dorms except the Sterling twins, who live in a penthouse their parents bought. Team hangout: Casa Morales, Cassie's mom's restaurant, where Cassie and Diggy both work. Rival school: the Eastbrook Eagles.
 l_bio=The Team
 
 id=team_soccer
@@ -170,7 +170,7 @@ likes=Designer bags, early runs, winning, Paris (don't tell her)
 dislikes=Being told no, Coach's whistle, losing, cheap perfume
 food=Truffle fries
 music=Beyonce, Aaliyah
-bio=Rich, gorgeous and impossible to impress. London talks back to everyone, especially Coach Holloway, and fights for the people she loves like it's a final. Under the attitude is a girl who's scared that if she lets anyone in, they'll leave.
+bio=Rich, gorgeous and impossible to impress. While the whole team lives in the dorms, London and Paris live in an off-campus penthouse their parents bought them. London talks back to everyone, especially Coach Holloway, and fights for the people she loves like it's a final. Under the attitude is a girl who's scared that if she lets anyone in, they'll leave.
 
 id=paris
 name=Paris Sterling
@@ -184,7 +184,7 @@ likes=Journaling, Sunday brunch, slow songs, sunsets
 dislikes=Yelling, being called "the nice twin," secrets
 food=Peach cobbler
 music=Brandy, SZA
-bio=London's identical twin and the heart of the team. Paris is patient and kind, but she's not glass. Being underestimated is the thing that makes her angriest.
+bio=London's identical twin and the heart of the team. Shares the off-campus penthouse their parents bought them. Paris is patient and kind, but she's not glass. Being underestimated is the thing that makes her angriest.
 
 id=diggy
 name=Duncan "Diggy" Williams
@@ -194,11 +194,11 @@ age=19
 height=6'1
 sign=Taurus
 hometown=Southside, Maple Valley
-likes=Old Usher, pancakes after races, his little sister Kiara
+likes=Old Usher, pancakes after races, his little sister Kiara, good tippers
 dislikes=People who think money makes them better, bad starts
 food=His mama's oxtails
 music=Usher, Frank Ocean
-bio=Works at the rec center Thursdays, works harder than everyone the rest of the week. Diggy is the only person on the team who isn't scared of London, and he thinks that's the funniest thing in the world.
+bio=Lives in the dorms and waits tables at Casa Morales (Cassie's mom's restaurant) to help his mama with bills, and works harder than everyone the rest of the week. Diggy is the only person on the team who isn't scared of London, and he thinks that's the funniest thing in the world.
 
 id=suki
 name=Suki Bennett
@@ -221,12 +221,12 @@ team=Track - 100m Hurdles/200m
 age=19
 height=5'4
 sign=Gemini
-hometown=Miami, FL
-likes=Tea (the gossip kind), polls, true crime podcasts
+hometown=Maple Valley (local girl)
+likes=Tea (the gossip kind), polls, true crime podcasts, hosting at Casa Morales
 dislikes=Being left out, finding out last
-food=Pastelitos
+food=Her mom's mole poblano
 music=Bad Bunny, Cardi B
-bio=Team gossip and Alana's roommate. Cassie knows everything about everyone, mostly because nobody ever tells her anything first.
+bio=Afro-Latina: her dad is Black and her mom is Mexican. Her mom owns Casa Morales, the most successful Mexican restaurant in Maple Valley, where Cassie works as a host and server. Team gossip and Alana's dorm roommate. Cassie knows everything about everyone, mostly because nobody ever tells her anything first, and a restaurant hears everything.
 
 id=alana
 name=Alana Brooks

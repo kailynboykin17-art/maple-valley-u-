@@ -16,7 +16,7 @@ Coach: **Holloway** — immune to Frank Sterling's donations.
 | Suki Bennett | 800/1500 | impulsive, charismatic; cheating arc, blackmailed by Cassie | Jamal Thompson |
 | Alana Brooks | 5K/10K | calm, disciplined; Cassie's roommate | Cam Hayes (rival school, fake dating) |
 | Alexa Carter | pole vault | biracial, quiet, observant; Paris's best friend | Zane Rahman |
-| Cassie Morales | 100H/200 | Afro-Latina, funny, nosy team gossip | — |
+| Cassie Morales | 100H/200 | Afro-Latina (Black dad, Mexican mom); hosts & serves at her mom's restaurant Casa Morales; nosy team gossip | — |
 | Maggie O'Connor | shot/discus | Irish American, big-sister energy | — |
 | Priya Patel | distance | organized, sarcastic | — |
 | Jamal Thompson | 400/LJ | patient, kind | Suki |
@@ -51,3 +51,4 @@ Beef: Nicole vs Valentina (attention/guys), Jordan vs Nicole (leadership), Chloe
 Couple: **Brooke & Jordan** — on/off, jealous, "toxic but can't let go."
 Threads: Brooke + basketball guy, Valentina juggling guys, Riley + basketball, Amara + a swimmer, Nicole + a baseball player, Nia… maybe. A party that went wrong. A secret someone. Fights that turn into silence.
 Crossovers with S1 cast (Noah ↔ Nicole) planned.
+Housing: everyone lives in the dorms except London & Paris (penthouse their parents bought). Diggy waits tables at Casa Morales.
