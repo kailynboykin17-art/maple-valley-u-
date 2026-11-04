@@ -86,14 +86,14 @@ static bool loadGame() {
 
 // ---------- state ----------
 enum Mode { TITLE, PLAY, PROFILES };
-struct Profile { std::map<std::string, std::string> f; };
-static std::vector<Profile> profiles;
+struct CharProfile { std::map<std::string, std::string> f; };
+static std::vector<CharProfile> profiles;
 static int profSel = 0, profPage = 0;
 static void loadProfiles() {
-    std::ifstream f("romfs:/profiles.txt"); std::string s; Profile cur;
+    std::ifstream f("romfs:/profiles.txt"); std::string s; CharProfile cur;
     while (std::getline(f, s)) {
         while (!s.empty() && s.back() == '\r') s.pop_back();
-        if (s.empty()) { if (!cur.f.empty()) profiles.push_back(cur); cur = Profile(); continue; }
+        if (s.empty()) { if (!cur.f.empty()) profiles.push_back(cur); cur = CharProfile(); continue; }
         if (s[0] == '#') continue;
         size_t e = s.find('='); if (e != std::string::npos) cur.f[s.substr(0, e)] = s.substr(e + 1);
     }
@@ -232,7 +232,7 @@ int main() {
             else if (logo->ok) C2D_DrawImageAt(logo->img, 168, 34, 0.5f, nullptr, 1.0f, 1.0f);
             txt("Touch or press A", 200, 205, 0.4f, C(255, 255, 255, 140), 0, true);
         } else if (mode == PROFILES) {
-            Profile& P = profiles[profSel];
+            CharProfile& P = profiles[profSel];
             u32 paper = C(0xFB, 0xE3, 0xEC), ink = C(0x5A, 0x1E, 0x3A), hot = C(0xE0, 0x5A, 0x96);
             C2D_DrawRectangle(0, 0, 0, 400, 240, C(0xF7, 0xC6, 0xD8), C(0xF7, 0xC6, 0xD8), C(0xE9, 0xA8, 0xC4), C(0xE9, 0xA8, 0xC4));
             for (int y = 8; y < 240; y += 16) C2D_DrawRectSolid(0, y, 0, 400, 1, C(255, 255, 255, 90));
@@ -280,7 +280,7 @@ int main() {
                 txt(menu[i], 160, 63 + i * 44, 0.48f, off ? C(120, 110, 100) : cream, 0, true);
             }
         } else if (mode == PROFILES) {
-            Profile& P = profiles[profSel];
+            CharProfile& P = profiles[profSel];
             u32 ink = C(0x5A, 0x1E, 0x3A), hot = C(0xE0, 0x5A, 0x96);
             C2D_DrawRectSolid(0, 0, 0, 320, 240, C(0xFB, 0xE3, 0xEC));
             for (int y = 26; y < 200; y += 15) C2D_DrawRectSolid(10, y, 0, 300, 1, C(0xA8, 0xC8, 0xF0, 120));
