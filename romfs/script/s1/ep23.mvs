@@ -2,13 +2,13 @@
 @bg rooftop_party_night
 The Sterlings' New Year's party. Atlanta skyline. Jayden is here because Diana Harris is here. Paris is here because Jayden is here.
 @show jayden
-Jayden: London. Can I talk to you? About Paris. And about... the Kappa thing.
+Jayden: London. Can I talk to you? Suki and I are done. Officially. Since October. And I'm done pretending about Paris.
 > [Bitchy] "You get one minute. Clock's running." -> j1
 > [Good] "Talk to her, not me." -> j2
 > [Bold] "If you hurt her again, I'll end you. Now talk." -> j3
 *j1
 @add Jayden_Trust 1
-Jayden: (fast) I messed up. I told Paris everything. I told Jamal too. I'm not asking you to like me. I'm asking you to not stand in the way.
+Jayden: (fast) I should've ended it with Suki months ago instead of texting your sister at midnight. I messed up. I'm not asking you to like me. I'm asking you to not stand in the way. I've loved her since we were six.
 @jump j_done
 *j2
 @add Paris_Friendship 2
@@ -17,7 +17,7 @@ He walks to Paris. You watch them talk for an hour on the balcony. She laughs on
 @jump j_done
 *j3
 @add Jayden_Trust 2
-Jayden: That's fair. Honestly, that's the least scary threat I've gotten. Jamal's was worse.
+Jayden: That's fair. Honestly, that's the least scary threat I've gotten. Jason's was worse. He just stared at me and ate a whole cookie without blinking.
 *j_done
 @show paris
 At 11:58, Paris pulls you aside, glowing.

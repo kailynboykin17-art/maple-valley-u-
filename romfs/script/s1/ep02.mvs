@@ -33,9 +33,9 @@ At 2:14 a.m. she finally replies: "k". She hears nothing back. It bothers her mo
 Paris: Who are you smiling at?
 London: I'm not smiling. My face is relaxed.
 Paris: Your face has never been relaxed in its life.
-Paris's own phone lights up. Jayden. A heart emoji. She flips it face-down fast.
+Paris's own phone lights up. Jayden: "you looked good at practice today." Jayden Harris, Mom's best friend's son, Paris's oldest friend. Jayden, who is dating Suki. Paris flips the phone face-down fast.
 > [Good] Pretend you didn't see it. -> b_good
-> [Bitchy] "Jayden? Mom's best friend's SON? Groundbreaking." -> b_bitchy
+> [Bitchy] "Jayden? SUKI'S Jayden? Bold of him." -> b_bitchy
 > [Sweet] "...You like him, huh?" -> b_sweet
 *b_good
 @add Paris_Friendship 2
@@ -43,12 +43,13 @@ Paris notices you noticing, and noticing you not saying anything. She squeezes y
 @jump b_done
 *b_bitchy
 @add Paris_Friendship -2
-Paris: At least mine has a mom Mom trusts.
-That one lands. Neither of them says goodnight.
+Paris: He's my oldest friend, London. We've known each other since we were five. That's all it is.
+It's obviously not all it is. And Paris knows you know. That one lands. Neither of them says goodnight.
 @jump b_done
 *b_sweet
 @add Paris_Friendship 2
-Paris: Don't say it out loud. If you say it out loud it's real.
+Paris: Since we were six. Don't say it out loud. He has a girlfriend. If you say it out loud it's real.
 London: It's real, Paris.
+Paris: (whispering) I know. And he likes me too. That's the worst part.
 *b_done
 @load s1/ep03.mvs

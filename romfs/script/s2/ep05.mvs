@@ -36,7 +36,7 @@ Nicole: (quietly) ...She's right. Game faces. We'll kill each other after.
 @add Riley_Friendship 4
 @add Nia_Friendship 2
 @show nia
-Nia walks over and stands on Riley's other side. Doesn't say anything. Doesn't have to. Riley looks at Nia like it's the first time.
+Nia walks over and stands on Riley's other side. Doesn't say anything. Doesn't have to. Riley looks at Nia, and for the first time realizes Nia was never trying to control her. She was just hurt.
 @jump f_done
 *f3
 @add Brooke_Friendship -3

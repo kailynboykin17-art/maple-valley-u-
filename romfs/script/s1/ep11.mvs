@@ -1,17 +1,17 @@
 @title EPISODE 11 • SAME FACE
 @bg penthouse_night
 @show paris
-Paris: How long have you known?
+Paris: Jayden told me what he saw at the party. Suki and Jamal. How long have you known?
 London: Known what?
 Paris: London. We have the same face. I know when you're lying with it.
 > [Good] Tell her everything. Now. -> p1
 > [Bad] "Know WHAT, Paris?" Keep lying. -> p2
 > [Sweet] "I wanted to protect you." -> p3
-> [Bitchy] "Maybe ask your boyfriend." -> p4
+> [Bitchy] "Why do YOU care so much? He's not yours." -> p4
 *p1
 @add Paris_Friendship 2
 @add Paris_Truth 1
-You tell her. Kappa party. Suki. Jayden. Cassie. All of it. Paris listens without crying until the very end.
+You tell her. Kappa party. Suki. Jamal. Cassie. All of it. Paris listens without crying until the very end.
 Paris: You should've told me the first night.
 London: I know.
 @jump p_done
@@ -29,7 +29,8 @@ That one is going to stay with you.
 *p4
 @add Paris_Friendship -2
 @add Paris_Truth 1
-Paris doesn't yell. She calls Jayden on speaker, right there, and asks. He tells the truth. It's worse than yelling.
+Paris: (very quietly) He's not mine. I know. I've known since I was six that he's not mine. Thanks for the reminder.
+She doesn't yell. It's worse than yelling.
 *p_done
 @show alexa
 @bg dorm_room_night

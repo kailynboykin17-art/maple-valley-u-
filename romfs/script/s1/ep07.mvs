@@ -2,7 +2,7 @@
 @bg track_stadium_day
 @show suki
 Relay cards go up at noon. Suki's name is on the 4x400. So is a sticky note on her locker: "Tick tock. — C"
-Suki: She's gonna tell. She's gonna tell Jamal and Paris and the whole team and I'm gonna be "the girl who."
+Suki: She's gonna tell. She's gonna tell Jayden and Paris and the whole team and I'm gonna be "the girl who."
 > [Bold] "Then we tell them first. On our terms." -> a1
 > [Bad] "Give Cassie the spot. It's one race." -> a2
 > [Sweet] "Whatever happens, you have me." -> a3
@@ -32,14 +32,15 @@ Cassie goes pale under her bronzer.
 *a_done
 @if Suki_Truth 1 told
 @bg locker_room
-@show jamal
-Jamal: Suki's been dodging me all week. Is she okay? You'd tell me.
-London looks at the kindest guy on the team and lies straight to his face. "She's fine. Midterms."
+@show jayden
+Jayden: Suki's been dodging me all week. Is she okay? You'd tell me.
+London looks at the kindest guy on the team and lies straight to his face. Behind him, Jamal won't meet her eyes. "She's fine. Midterms."
 @jump end
 *told
 @bg bleachers_evening
-@show jamal
-Suki tells him. All of it. Jamal doesn't yell. He just walks to the end of the bleachers and sits alone in the cold.
-Jamal: (much later, to London) Thank you for not letting her hide it. I mean that.
+@show jayden
+Suki tells him. All of it. Jayden doesn't yell. He just walks to the end of the bleachers and sits alone in the cold.
+Jayden: (much later, to London) Thank you for not letting her hide it. Honestly? I think we've both been pretending for months.
+He says it looking at the penthouse lights across campus. At Paris's window.
 *end
 @load s1/ep08.mvs

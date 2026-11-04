@@ -267,7 +267,7 @@ int main() {
             drawBg();
             if (!portrait.empty()) {
                 Img* p = loadTex("romfs:/gfx/char/" + portrait + ".tex", 192, 256, 256, 256);
-                if (p->ok) C2D_DrawImageAt(p->img, 196, 21, 0.0f, nullptr, 1.0f, 1.0f);
+                if (p->ok) C2D_DrawImageAt(p->img, 244, 24, 0.0f, nullptr, 0.72f, 0.72f);
             }
             // header bar
             C2D_DrawRectSolid(0, 0, 0, 400, 20, C(0x0C, 0x08, 0x08, 0xC8));

@@ -3,7 +3,7 @@
 @show cassie
 Cassie: London. Quick question. Totally random.
 London: Nothing you've ever said has been random.
-Cassie: What would you do for, hypothetically, somebody to NOT say something about Suki and a certain sprinter?
+Cassie: What would you do for, hypothetically, somebody to NOT say something about Suki and a certain long jumper?
 > [Bitchy] "Say one word and I'll end you, Cassie." -> x_bitchy
 > [Bold] "What do you want?" -> x_bold
 > [Good] "Go tell Coach. Then explain how you know." -> x_good
@@ -31,7 +31,7 @@ That's real. London hates that it's real.
 @if Secret_Kept 1 kept
 @bg penthouse_night
 @show paris
-Paris: Jayden's been weird all week. Like guilty-weird. You'd tell me if you knew something, right?
+Paris: Jayden's been sad all week. Suki keeps dodging him. And Jamal can't even look at him. You'd tell me if you knew something, right?
 London looks at her twin — same face, softer heart — and says nothing. Not yet.
 @jump end
 *kept

@@ -26,26 +26,28 @@ His breath catches. Yours too. Someone yells "KISS" and you both step back like 
 Diggy: My arm swing is beautiful and you know it.
 *h_done
 @show jayden
-Then you see it. Jayden in the hallway, a little too close to Suki. Suki shaking her head, trying to leave. Paris coming around the corner in three... two...
-> [Good] Intercept Paris and pull her to the dance floor. -> j1
-> [Bold] Walk up and tell Jayden to back off Suki. Loud. -> j2
-> [Bad] Let Paris see. She deserves to know. -> j3
+Then you see it. Jamal in the hallway, a little too close to Suki. Suki shaking her head, trying to leave. And Jayden, her boyfriend, coming around the corner in three... two...
+> [Good] Intercept Jayden and pull him to the dance floor. -> j1
+> [Bold] Walk up and tell Jamal to back off. Loud. -> j2
+> [Bad] Let Jayden see. He deserves to know. -> j3
 *j1
 @add Paris_Friendship 1
 @add Suki_Friendship 2
-Paris spins, laughing, wings everywhere. She never sees it. You're not sure that was kind.
+Jayden dances with you, confused. Over your shoulder he keeps looking at Paris, not for Suki. He never sees the hallway. You're not sure that was kind.
 @jump j_done
 *j2
 @add Suki_Friendship 2
 @add Team_Reputation 1
 @add Paris_Suspicious 2
-Jayden: Whoa, London, chill—
-London: I am extremely chill. Go find your angel.
-Paris, from behind you: "...What's going on?"
+@show jamal
+Jamal: Whoa, London, chill—
+London: I am extremely chill. Go find literally anyone else.
+@show jayden
+Jayden, from behind you: "...What's going on?"
 @jump j_done
 *j3
 @add Paris_Suspicious 3
 @add Suki_Friendship -2
-Paris stops. Sees. Her face doesn't break; it just closes, like a door.
+Jayden stops. Sees. His face doesn't break; it just closes, like a door. Across the room, Paris sees his face, and runs to him before anyone else does.
 *j_done
 @load s1/ep11.mvs

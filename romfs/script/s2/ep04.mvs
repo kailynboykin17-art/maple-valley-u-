@@ -25,12 +25,12 @@ Nia sits on your bed. "Okay. I'll wait." She waits for two hours. Riley never co
 @add Nia_Friendship 3
 @add Nia_Secret 1
 Nia goes very still. Then she sits down on the edge of your bed like her legs gave out.
-Nia: Because I'm in love with her. And she's at a party trying to get some point guard to notice her. That's why.
+Nia: Because I liked Tyler first. Since August. I told her. I told HER, Sasha. And she's at his house right now.
 @jump c_done
 *c4
 @add Nia_Friendship -3
 @add Nia_Secret 1
-Nia: (flat) No. I'm not. Thanks for reminding me.
+Nia: (flat) No. I'm her best friend. That's supposed to count for something.
 The door closes softly. Somehow that's worse than slamming.
 *c_done
 @bg basketball_house_night

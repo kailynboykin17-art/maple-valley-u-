@@ -5,7 +5,7 @@ Suki is crying in the stairwell. Suki never cries. Suki laughs too loud and borr
 Suki: Don't. Don't be nice to me. I can't handle you being nice to me.
 > [Sweet] Sit down next to her without a word. -> s_sweet
 > [Bitchy] "Okay. Then I'll be mean. What did you do?" -> s_bitchy
-> [Good] "Do you want me to get Jamal?" -> s_good
+> [Good] "Do you want me to get Jayden?" -> s_good
 *s_sweet
 @add Suki_Friendship 3
 She leans on your shoulder. Five minutes. Ten. Then, quiet:
@@ -16,15 +16,15 @@ Suki laughs, wet and broken. "See, that's why I like you."
 @jump s_done
 *s_good
 @add Suki_Friendship -1
-Suki: NO. God, no. Not Jamal. Please.
+Suki: NO. God, no. Not Jayden. Please.
 *s_done
-Suki: I kissed somebody at the Kappa party. Somebody who isn't Jamal.
+Suki: I kissed somebody at the Kappa party. Somebody who isn't Jayden.
 London: Who?
-Suki: ...Jayden.
-London's stomach drops. Paris's Jayden. Mom's best friend's son. Heart-emoji Jayden.
-> [Bold] "You have to tell Jamal. Tonight." -> t_bold
+Suki: ...Jamal.
+London's stomach drops. Jamal. Sweet, kind Jamal. Jayden's own relay teammate. And Jayden is the boy Paris has quietly loved since they were six.
+> [Bold] "You have to tell Jayden. Tonight." -> t_bold
 > [Bad] "Then nobody ever finds out." -> t_bad
-> [Bitchy] "You kissed PARIS'S Jayden?" -> t_bitchy
+> [Bitchy] "You kissed JAMAL? Jayden's teammate?" -> t_bitchy
 > [Sweet] "Okay. We'll figure it out. Together." -> t_sweet
 *t_bold
 @add Suki_Friendship -1
@@ -39,8 +39,8 @@ You promise. It feels like swallowing a stone.
 @jump t_done
 *t_bitchy
 @add Suki_Friendship -2
-Suki: They're not even together! ...Are they?
-London doesn't answer. That's the answer.
+Suki: Me and Jayden have been falling apart since summer! He doesn't even look at me anymore. He looks at— (she stops)
+At Paris. Neither of them says it. Neither of them has to.
 @jump t_done
 *t_sweet
 @add Suki_Friendship 2

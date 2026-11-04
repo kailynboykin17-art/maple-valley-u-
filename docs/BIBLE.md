@@ -12,8 +12,8 @@ Coach: **Holloway** — immune to Frank Sterling's donations.
 
 | Character | Event | Notes | Route |
 |---|---|---|---|
-| Paris Sterling | 100/200 | London's identical twin; sweet, emotionally smart | Jayden Harris |
-| Suki Bennett | 800/1500 | impulsive, charismatic; cheating arc, blackmailed by Cassie | Jamal Thompson |
+| Paris Sterling | 100/200 | London's identical twin; sweet; loves childhood friend Jayden (mutual) | Jayden Harris (ENDGAME) |
+| Suki Bennett | 800/1500 | dating Jayden; kisses Jamal at Kappa; blackmailed by Cassie | Jamal Thompson |
 | Alana Brooks | 5K/10K | calm, disciplined; Cassie's roommate | Cam Hayes (rival school, fake dating) |
 | Alexa Carter | pole vault | biracial, quiet, observant; Paris's best friend | Zane Rahman |
 | Cassie Morales | 100H/200 | Afro-Latina (Black dad, Mexican mom); hosts & serves at her mom's restaurant Casa Morales; nosy team gossip | — |
@@ -53,3 +53,4 @@ Threads: Brooke + basketball guy, Valentina juggling guys, Riley + basketball, A
 Crossovers with S1 cast (Noah ↔ Nicole) planned.
 Housing: everyone lives in the dorms except London & Paris (penthouse their parents bought). Diggy waits tables at Casa Morales.
 Secret crush: London has a huge crush on Diggy she will never admit. Paris, Alana, Cassie, Alexa and Maggie all know.
+Romance canon: Jayden dates Suki but he and Paris (childhood friends) have mutual crushes — Paris/Jayden are ENDGAME. Soccer: everyone straight except Jordan & Brooke (both bi). Nia liked Tyler first; Riley went after him anyway.
