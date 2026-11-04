@@ -170,7 +170,7 @@ likes=Designer bags, early runs, winning, Paris (don't tell her), Diggy (she wil
 dislikes=Being told no, Coach's whistle, losing, cheap perfume
 food=Truffle fries
 music=Beyonce, Aaliyah
-bio=Rich, gorgeous and impossible to impress. While the whole team lives in the dorms, London and Paris live in an off-campus penthouse their parents bought them. London talks back to everyone, especially Coach Holloway, and fights for the people she loves like it's a final. Under the attitude is a girl who's scared that if she lets anyone in, they'll leave. She has a huge crush on Diggy that she will never admit, and Paris, Alana, Cassie, Alexa and Maggie all know anyway.
+bio=Rich, gorgeous and impossible to impress. While the whole team lives in the dorms, London and Paris live in an off-campus penthouse their parents bought them. London talks back to everyone, especially Coach Holloway, and fights for the people she loves like it's a final. Under the attitude is a girl who's scared that if she lets anyone in, they'll leave. She's been in recovery from an eating disorder since she was fourteen, and she's doing the work: weekly appointments, check-ins with trainer Maya Ellis. It's half the reason her parents are so protective. She has a huge crush on Diggy that she will never admit, and Paris, Alana, Cassie, Alexa and Maggie all know anyway.
 
 id=paris
 name=Paris Sterling

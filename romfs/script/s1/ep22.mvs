@@ -10,11 +10,12 @@ Vega: (setting down her wine) Frank. What did you do.
 > [Bold] "You bussed tables. You KNOW what it's like. And you did that to him anyway?" -> f3
 *f1
 @add Parent_Trust -2
-Frank: (quietly) I paid for his mother's surgery. That part I'd do again tomorrow. The other part... the other part was me being scared.
+Frank: (quietly) I paid for his mother's surgery. That part I'd do again tomorrow. The other part... the other part was me being scared. You've worked so hard to get well, baby. I was scared anything new could knock you off course.
+London: Daddy. My recovery is mine. Not yours. And not Diggy's.
 @jump f_done
 *f2
 @add Parent_Trust 2
-Frank: (sitting down slowly) I paid for his mother's surgery. And then I said something I shouldn't have. You two almost died, London. I watched you in those little incubators for nineteen days. I've been trying to control things ever since.
+Frank: (sitting down slowly) I paid for his mother's surgery. And then I said something I shouldn't have. You two almost died, London. I watched you in those little incubators for nineteen days. And then when you were fourteen and you got sick... I couldn't fix it. I couldn't buy it away. I've been trying to control everything else ever since.
 @jump f_done
 *f3
 @add Parent_Trust 1

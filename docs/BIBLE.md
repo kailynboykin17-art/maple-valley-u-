@@ -54,3 +54,4 @@ Crossovers with S1 cast (Noah ↔ Nicole) planned.
 Housing: everyone lives in the dorms except London & Paris (penthouse their parents bought). Diggy waits tables at Casa Morales.
 Secret crush: London has a huge crush on Diggy she will never admit. Paris, Alana, Cassie, Alexa and Maggie all know.
 Romance canon: Jayden dates Suki but he and Paris (childhood friends) have mutual crushes — Paris/Jayden are ENDGAME. Soccer: everyone straight except Jordan & Brooke (both bi). Nia liked Tyler first; Riley went after him anyway.
+London: in recovery from an eating disorder since age 14 (with the twins' early birth, it's why Frank & Vega are so protective). Handle with care: recovery-focused, no numbers/behaviors, never played for drama. Support: weekly therapist (Dr. Ames), Maya Ellis check-ins.
