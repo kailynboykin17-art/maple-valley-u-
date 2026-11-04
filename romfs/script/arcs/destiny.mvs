@@ -1,0 +1,45 @@
+@title STORY • DESTINY: SAY WHAT YOU WANT
+@bg chicago_street_day
+You're Destiny. Junior. Hurdles. Chicago, the summer before college. Your mom's beauty supply store. You've been working the register since you were twelve.
+Your mom: If you want something, baby, you say it. Clear. People can't read minds. And the ones who say they can are lying.
+@bg track_stadium_day
+@show coachlewis
+Coach Lewis: Destiny. Your trail leg is three degrees off. I can see it from the press box.
+Destiny: Coach. Nobody can see three degrees from the press box.
+Coach Lewis: I can.
+He's right. He's always right. It's infuriating.
+> [Good] "Show me. Slow motion. I'll fix it today." -> a1
+> [Bitchy] "Then come down from the press box and show me, Coach." -> a2
+*a1
+@add Discipline 3
+Coach Lewis: (almost smiling) This is why you're my favorite. Don't tell Cassie.
+Destiny: Cassie thinks she's your favorite.
+Coach Lewis: Cassie thinks a lot of things.
+@jump a_done
+*a2
+@add Discipline 2
+He comes down. He shows you. In his dress shoes. He clears the hurdle perfectly. The whole team stops to stare. You will respect him forever.
+*a_done
+@bg locker_room
+@show cassie
+Cassie is sitting on the bench. She just got out-leaned at the line and missed a PR by a hundredth.
+Cassie: Destiny. How do you never cry?
+> [Sweet] "I cry. In my car. Every week. Nobody knows." -> b1
+> [Good] "I cry when it matters. This one doesn't. Next week does." -> b2
+> [Bold] "I don't cry. I get mad and then I get faster." -> b3
+*b1
+@add Cassie_Bond 3
+Cassie: (eyes huge) You're telling ME? The biggest gossip on this TEAM?
+Destiny: Yeah. 'Cause I know you won't tell.
+Cassie never tells. Not that one. Not ever.
+@jump end
+*b2
+@add Cassie_Bond 2
+Cassie: (sniffling) That's so mature. I hate it.
+@jump end
+*b3
+@add Cassie_Bond 1
+Cassie: (standing up, determined) Okay. I'm mad. I'm mad! I'm getting faster!
+She does a lap. She is not faster. But she's smiling.
+*end
+Destiny has spent two years telling everybody on the team to just say what they want. This year, a few of them listened.

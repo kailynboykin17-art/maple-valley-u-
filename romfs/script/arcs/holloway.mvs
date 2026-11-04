@@ -1,0 +1,49 @@
+@title STORY • HOLLOWAY: UNDER THE LIGHTS
+@bg holloway_kitchen_morning
+You're Simone Holloway. Head coach. 47. Detroit raised. It's 4:30 a.m. and you're drinking black coffee over a stack of meet results.
+Your son Marcus, home from college, stumbles into the kitchen.
+Marcus: Ma. It's literally dark outside.
+Holloway: That's when champions get up.
+Marcus: You've said that every morning since I was five.
+Holloway: And it's been true every morning since you were five.
+@bg athletic_office_day
+@show holloway
+The athletic director drops a folder on your desk. Frank Sterling's latest donation. New lights, new timing system, new everything.
+Athletic Director: Simone. Mr. Sterling asked, very politely, if London might get "some flexibility" on the lineup.
+> [Bitchy] "Tell Mr. Sterling his daughter can earn it like everybody else." -> a1
+> [Good] "London gets the same rules as everyone. That's the flexibility." -> a2
+> [Bold] "Then he can coach her himself. With his new lights." -> a3
+*a1
+@add Integrity 3
+Athletic Director: (sighing) I'll... phrase that differently.
+Holloway: Don't.
+@jump a_done
+*a2
+@add Integrity 2
+The AD nods. He knew what you'd say. He just had to ask.
+@jump a_done
+*a3
+@add Integrity 2
+Athletic Director: Simone.
+Holloway: He can borrow my whistle.
+*a_done
+@bg track_stadium_morning
+@show london
+6:04 a.m. London Sterling walks onto the track four minutes after start. She's talking back before her feet hit the rubber.
+You were London once. Detroit, 1996. Fastest girl in the state. Mouthiest girl in the state. Your coach made you run until you learned the difference between confidence and attitude.
+> [Good] Two extra laps. Same as anybody. -> b1
+> [Sweet] Pull her aside later. Tell her about Detroit. -> b2
+*b1
+@add Tough_Love 2
+London: Put it on my dad's tab.
+Holloway: Three laps.
+You hide your smile behind your clipboard. You always do.
+@jump end
+*b2
+@add London_Bond 3
+Holloway: I was you. Exactly you. Mouth and all.
+London: (suspicious) What happened?
+Holloway: Somebody cared enough to not let me get away with it. So I'm not letting you get away with it.
+London doesn't say anything. But she's on time the next day. And the next. Mostly.
+*end
+Coach Holloway scares the whole team. She also knows every one of their birthdays, their moms' names and what they're afraid of. That's the part she never lets them see.

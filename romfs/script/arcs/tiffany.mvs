@@ -1,0 +1,55 @@
+@title STORY • TIFFANY: EXPLORING
+@bg dorm_room_night
+You're Tiffany. Junior. Sprinter. Charlotte, North Carolina. Your phone has a new text from Marcus. It's the fourth "I miss you" this week. You've broken up four times in two years.
+Marcus: "can we talk. i'll be better."
+> [Bold] "you said that in august, marcus." -> a1
+> [Sweet] Reply: "i miss you too." -> a2
+> [Good] Leave it on read. Do your face mask. -> a3
+*a1
+@add Self 2
+Marcus: "i know. i mean it this time."
+He always means it. That's never been the problem.
+@jump a_done
+*a2
+@add Marcus 2
+@add Self -1
+You hit send and feel the familiar swoop of falling back into it. You know exactly how this ends. You do it anyway.
+@jump a_done
+*a3
+@add Self 3
+Face mask on, phone face-down. You watch a whole movie without checking it once. It's the longest you've gone in two years.
+*a_done
+@bg track_stadium_day
+@show london
+The sophomore Sterling girl is glaring at you from across the track. You were talking to Diggy. You were laughing too loud, on purpose. You know exactly what you were doing.
+@show destiny
+Destiny: Tiff. Stop flirting with sophomores to make Marcus jealous. It's embarrassing for both of us.
+> [Bitchy] "I'm not doing it for Marcus." -> b1
+> [Sweet] "...Is it that obvious?" -> b2
+> [Bold] "What else am I supposed to do, Des?" -> b3
+*b1
+Destiny: Mm-hm. That's why you looked at the bleachers every time you laughed. Where Marcus was sitting.
+You didn't know she noticed. Destiny notices everything.
+@jump b_done
+*b2
+@add Destiny_Bond 2
+Destiny: To me? Yeah. To him? Probably not. He doesn't notice anything. That's kind of my point, girl.
+@jump b_done
+*b3
+@add Destiny_Bond 3
+Destiny: (sitting down next to you) Try something new. Be alone for a little while. On purpose. See who you are when nobody's looking.
+*b_done
+@bg tiffany_apartment_night
+That night you do something you haven't done since freshman year. You take yourself out to dinner. Alone. Casa Morales. A sophomore named Cassie seats you.
+Cassie: Table for one? Iconic. I'm putting you by the window.
+> [Good] Order whatever you want. Just for you. -> c1
+> [Sweet] Text Marcus a picture. "wish you were here." -> c2
+*c1
+@add Self 3
+You order the most expensive thing on the menu. You eat it slowly. Nobody watches you. You watch the street. You feel, for the first time in a while, like you.
+@jump end
+*c2
+@add Marcus 1
+He replies in four seconds. "omw." You put the phone face-down. You almost tell him not to come. You don't. Maybe next time.
+*end
+Tiffany has been "exploring" for two years. This year she's learning the thing she was looking for might be herself.

@@ -1,0 +1,40 @@
+@title STORY • SHANE: GENTLE GIANT
+@bg beach_sunset
+You're Shane Fa'avae. Honolulu, last summer, in your memory. Your whole family on the beach. Your little cousins climbing you like a tree.
+Your dad: You're going so far away, son. Who's going to protect them over there?
+Shane: Protect who, Dad?
+Your dad: Whoever needs it. That's who we are.
+@bg campus_quad_night
+Present day. 11 p.m. A freshman thrower named Tyrell is sitting alone outside the dorm. Shaking. Phone in his hand.
+> [Sweet] Sit down next to him. Don't say anything yet. -> a1
+> [Good] "Hey, man. You good?" -> a2
+*a1
+@add Protector 3
+You sit. Five minutes. Then he talks. His mom's sick. He's eight hours from home. He doesn't know anybody.
+Shane: You know me now.
+@jump a_done
+*a2
+@add Protector 2
+Tyrell: (fast) I'm fine.
+Shane: Okay. I'm gonna sit here anyway. My legs are tired.
+Your legs aren't tired. He knows. He talks anyway.
+*a_done
+@bg throws_ring_day
+@show coachvega
+Coach Vega: Fa'avae. You've got the strongest arm I've coached in ten years and you throw like you're scared to hurt the ball.
+Shane: Maybe I am, Coach.
+Coach Vega: (laughing) Kid. Being gentle with people is a superpower. Being gentle with a shot put is a waste of a superpower.
+> [Bold] Throw it like you mean it. -> b1
+> [Sweet] "I don't know how to be two people, Coach." -> b2
+*b1
+@add Strength 3
+It flies. Past the line. Past the cones. Caleb drops his water bottle. Coach Vega takes his hat off.
+Coach Vega: There he is. Big Shane. Now go hug somebody, I can see you need it.
+You hug Caleb. Caleb wheezes.
+@jump end
+*b2
+@add Strength 2
+Coach Vega: You're not two people. You're one big guy who's soft with his friends and strong with his work. Lot of us dads figured that out late. You're early.
+You throw a PR on the next attempt. Then you cry a little. Coach Vega pretends not to notice. He's crying too.
+*end
+Shane Fa'avae is the biggest person on the team and the softest. This year, he learns he doesn't have to choose.

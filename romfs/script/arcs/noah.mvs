@@ -1,0 +1,48 @@
+@title STORY • NOAH: NICOLE'S BIG BROTHER
+@bg dorm_room_day
+You're Noah Miller. Distance runner. Professionally chill. Your phone has 47 texts from your little sister Nicole, the soccer captain, and it's 9 a.m.
+Nicole: "valentina is talking to marco AGAIN"
+Nicole: "who is marco you ask. a shortstop. a SHORTSTOP noah"
+Nicole: "answer me"
+> [Sweet] Call her. -> a1
+> [Good] "who is marco" -> a2
+> [Bold] "nic it's 9am. i'm a distance runner. i have one emotion and it's tired" -> a3
+*a1
+@add Nicole_Bond 3
+She talks for twenty-two minutes. You say "mm" eleven times. At the end she says "thanks for always listening." You realize you'd do it a thousand more times.
+@jump a_done
+*a2
+Nicole: "THAT'S WHAT I SAID"
+You've accidentally said the right thing. You'll take it.
+@jump a_done
+*a3
+@add Nicole_Bond 1
+Nicole: "rude. love you. go run"
+*a_done
+@bg trail_morning
+@show logan
+Long run with Logan. Ten miles. He says four words total. It's your favorite part of the week.
+Logan: (mile seven) You okay?
+Noah: Why?
+Logan: You're running fast. You only run fast when you're thinking.
+> [Good] "Nicole's whole team is falling apart and she thinks it's her fault." -> b1
+> [Sweet] "I miss home. Denver. Mountains. My mom's breakfast burritos." -> b2
+> [Bold] "I'm thinking about transferring." -> b3
+*b1
+@add Logan_Bond 2
+Logan: (after a whole mile) You can't fix it for her. You can just be there when it breaks.
+Noah: When did you get so wise?
+Logan: I read.
+@jump end
+*b2
+@add Logan_Bond 2
+Logan: (stopping on the trail) There's a mountain view three miles that way. Want to see it?
+You run an extra six miles. Totally worth it.
+@jump end
+*b3
+@add Logan_Bond 3
+Logan stops running completely. He's never stopped running in the middle of a long run.
+Logan: Don't.
+That's the most emotional thing he's ever said. You don't transfer.
+*end
+Noah Miller acts like nothing bothers him. Really, he just carries his worry quietly, in the background, like a long, easy run.

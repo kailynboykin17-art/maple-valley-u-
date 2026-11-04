@@ -1,0 +1,52 @@
+@title STORY • CALEB: ICE IS A SIDE DISH
+@bg dorm_room_morning
+You're Caleb Walker. Throws. Austin, Texas. You've slept through your alarm, your second alarm, and Shane gently shaking you.
+Shane: Coach King's leaderboard is up. You're last. Again.
+Caleb: Last is just first from the other side, Shane.
+Shane: That's not true at all.
+@bg weight_room_morning
+@show coachking
+Coach King: Walker. Bottom of the board three weeks straight. Talk to me.
+Everyone thinks you're lazy. It's easier to let them think that.
+> [Bitchy] "Maybe your board is just mean, Coach." -> a1
+> [Sweet] "...I'm working two nights a week. I'm tired." -> a2
+> [Good] "I'll do better." -> a3
+*a1
+Coach King: (not smiling) Extra set. Every rep, tell me something nice about the board.
+You run out of nice things at rep four.
+@jump a_done
+*a2
+@add Honesty 3
+Coach King lowers the clipboard.
+Coach King: Where?
+Caleb: My uncle's BBQ truck. My parents split up this summer. Dad's... not sending money anymore.
+Coach King: (quiet) Why didn't you tell anybody?
+Caleb: 'Cause I'm the funny one. The funny one doesn't get to be sad. That's the deal.
+@jump a_done
+*a3
+Coach King: Words are cheap. Show me.
+You show him. You're still last. But it's a closer last.
+*a_done
+@bg dorm_kitchen_night
+@show maggie
+Maggie's Sunday stew. Everyone's laughing. Maggie looks at you.
+Maggie: Caleb. You've brought ice to three dinners. Is it a bit? Or is it... the only thing you could afford?
+The table goes quiet.
+> [Bitchy] "It's a bit, Maggie. I'm hilarious." -> b1
+> [Sweet] "...It was the only thing I could afford." -> b2
+> [Bold] "It's both. And it's genius. Ice goes with everything." -> b3
+*b1
+Everybody laughs. Maggie doesn't. She sends you home with three containers of stew anyway. She doesn't say anything about it.
+@jump end
+*b2
+@add Honesty 3
+@show shane
+Nobody laughs. Shane puts his big arm around you. Diggy, who works doubles too, just nods at you from across the table like, "I know."
+From then on, every Sunday, there's a Tupperware with your name on it.
+@jump end
+*b3
+@add Team_Love 2
+Maggie: (laughing, eyes wet) Okay. You're on ice duty for life.
+Caleb: An honor.
+*end
+Caleb Walker is the funniest guy on the team. He's learning that being funny and being okay aren't the same thing, and that his team will show up for either one.

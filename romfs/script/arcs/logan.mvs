@@ -1,0 +1,55 @@
+@title STORY • LOGAN: THROUGH THE VIEWFINDER
+@bg darkroom_night
+You're Logan Kim. The campus darkroom smells like chemicals and calm. You develop your film here every Thursday.
+Tonight's roll: the team. London glaring at Holloway. Diggy laughing with his whole face. Maggie mid-hug. Shane crying at a dinner. Noah staring at mountains.
+You've never shown anyone. You don't know why you take them. You just know you'd be sad if you didn't.
+Your phone: Mom. "Logan-ah, did you call your grandmother? She asked about you."
+> [Sweet] Call Halmeoni. Right now. -> a1
+> [Good] "sunday mom. promise." -> a2
+*a1
+@add Family 3
+Halmeoni: (in Korean) My quiet boy! Are you taking pictures still?
+Logan: Yes, Halmeoni.
+Halmeoni: Send me one. Of a girl.
+Logan: Halmeoni.
+Halmeoni: Of a FRIEND. Fine.
+@jump a_done
+*a2
+@add Family 1
+Mom: "ok. eat dinner. you forget when you're in that dark room."
+She's right. You do.
+*a_done
+@bg campus_quad_day
+@show maggie
+Maggie: Logan! Is that a CAMERA? Since when do you have a camera?
+Logan: ...Since eighth grade.
+Maggie: And you've NEVER shown us anything? That's illegal. Show me right now.
+> [Bold] Hand her the whole envelope. -> b1
+> [Good] Show her one. The one of her hugging Shane. -> b2
+> [Sweet] "...They're not very good." -> b3
+*b1
+@add Courage 3
+Maggie goes through every single one. She doesn't talk. Maggie always talks. When she gets to the one of Shane crying at Thanksgiving, she starts crying too.
+Maggie: Logan. You see us. Like, really see us.
+@jump b_done
+*b2
+@add Maggie_Bond 2
+Maggie: (staring at it) I didn't know I looked like that when I'm happy.
+Logan: You always look like that.
+@jump b_done
+*b3
+Maggie: (snatching one anyway) Shut up, this is incredible.
+*b_done
+@show coachbrooks
+A week later, Coach Brooks asks if you'd shoot the team photos for the banquet. Maggie told her. Of course Maggie told her.
+> [Good] "Yes." -> c1
+> [Sweet] "...Only if I can stay behind the camera." -> c2
+*c1
+@add Courage 2
+The banquet slideshow is all your photos. When it ends, the room is silent. Then London Sterling, of all people, starts clapping first.
+@jump end
+*c2
+Coach Brooks: Deal. But at the end, you're in one. Team rule.
+At the end, Maggie grabs the camera and takes one of you. You're laughing in it. You didn't know you looked like that either.
+*end
+Logan Kim says almost nothing. He's been telling the team he loves them the whole time, one photograph at a time.
