@@ -52,3 +52,4 @@ Couple: **Brooke & Jordan** — on/off, jealous, "toxic but can't let go."
 Threads: Brooke + basketball guy, Valentina juggling guys, Riley + basketball, Amara + a swimmer, Nicole + a baseball player, Nia… maybe. A party that went wrong. A secret someone. Fights that turn into silence.
 Crossovers with S1 cast (Noah ↔ Nicole) planned.
 Housing: everyone lives in the dorms except London & Paris (penthouse their parents bought). Diggy waits tables at Casa Morales.
+Secret crush: London has a huge crush on Diggy she will never admit. Paris, Alana, Cassie, Alexa and Maggie all know.

@@ -39,4 +39,54 @@ D: idk yet. depends on you
 @hide
 @show destiny
 Destiny: (passing by, to London) Tiff does this every semester. Don't play games, sophomore. Just say what you want.
+@bg penthouse_night
+@show paris
+That night, girls' night at the penthouse. Face masks, Hot Cheetos, and an ambush London did not see coming.
+@show maggie
+Maggie: So. We've called this meeting because of an issue.
+@show alana
+Alana: A recurring issue.
+@show alexa
+Alexa: (quietly) A six-foot-one issue.
+@show cassie
+Cassie: With CURLS.
+London: I have no idea what any of you are talking about.
+@show paris
+Paris: London. You changed your shirt three times before practice today. You don't change your shirt for Coach.
+> [Bitchy] "I spilled something. Twice. Three times." -> g1
+> [Bold] "Even if I liked him, which I DON'T, that's my business." -> g2
+> [Sweet] Throw a pillow at Paris's face. Say nothing. -> g3
+> [Bad] "I'd rather date Caleb." -> g4
+*g1
+@add Girls_Know 1
+Maggie: Three spills. In one morning. Before eating. Wow.
+Cassie: (writing it down) Spilled... three... times...
+@jump g_done
+*g2
+@add Girls_Know 1
+@add London_Confidence 1
+Alana: "Even if." She said "even if."
+Alexa: She said "even if."
+London: I'm leaving.
+Paris: It's your penthouse.
+@jump g_done
+*g3
+@add Girls_Know 1
+@add Paris_Friendship 1
+Paris: (through a pillow) That's a yes! In twin, that's a yes!
+@jump g_done
+*g4
+@add Girls_Know 1
+Maggie: Caleb brought ICE to a potluck.
+London: And?
+Cassie: You'd rather date a man whose signature dish is frozen water than admit you like Diggy?
+London: Correct.
+*g_done
+@show paris
+Paris: (later, when the others are asleep) You know we're not going to tell him, right? We'd never.
+London: There's nothing to tell.
+Paris: Okay.
+London: ...Nothing.
+Paris: Goodnight, London.
+London stares at the ceiling for a very long time.
 @load s1/ep15.mvs
